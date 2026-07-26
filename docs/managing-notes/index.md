@@ -3,6 +3,7 @@
 Organize, sync, and navigate your notes.
 
 - [Notebooks, Folders & Notes](notebooks-folders-notes.md)
+- [File Types](file-types.md)
 - [Importing & Migrating](importing-migrating.md)
 - [Tags](tags.md)
 - [Notebook Sync](notebook-sync.md)
