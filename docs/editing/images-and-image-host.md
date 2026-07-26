@@ -47,6 +47,13 @@ Once configured, uploading an image (or all images in a note) pushes the files t
 
 The **Custom Command** type uploads images by running an external command you define, so you can integrate any uploader or image service that provides a command-line tool. VNote passes the image to your command and uses the URL it returns.
 
+## How the editor manages image files
+
+The editor keeps a note's local image files in step with its content, so you rarely have to touch the assets folder yourself:
+
+- **Unused images are cleaned up.** When you close the last view of a note, VNote removes local image files that the note no longer references — images that were present when you opened it or inserted during the session but later deleted. This keeps the assets folder from filling up with orphaned files. Cleanup of unused images at an **image host** is optional and controlled by **Clear unused images at image host (based on current file only)** in [Settings](../customization/settings.md).
+- **Linked images are copied on paste.** When you paste text that contains relative links to existing local images (for example content moved from another note), VNote asks whether to **Paste with Linked Images** or **Paste as Plain Text**. Choosing *Paste with Linked Images* copies each referenced image into the current note's assets and rewrites the links, so they stay valid in the new location; repeated references to the same source are copied only once, and a summary reports how many were copied or skipped.
+
 ## Tips
 
 - Keep tokens private — treat a personal access token like a password.

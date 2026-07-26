@@ -30,6 +30,13 @@ The **Outline** dock widget shows the heading structure of the current note. It 
 - **Splits** — divide the content area into side-by-side views to compare two notes, or to reference one while editing another.
 - **Jump around** — use the outline, [Search](../search/index.md), [United Entry](../search/united-entry.md), and [History](../managing-notes/quick-access-history.md) to move quickly, especially in large notebooks.
 
+## Copying and pasting
+
+Beyond plain copy and paste, the Markdown editor has two helpers for moving formatted content in and out of VNote:
+
+- **Cross Copy** — in **read mode**, select the rendered content and use **Cross Copy** from the context menu to copy it as rich text tuned for a specific target application. VNote rewrites the underlying HTML per target — options include **No Background**, **Evernote**, **OneNote**, **Microsoft Word**, **WeChat Public Account Editor**, and **Raw HTML** — so the formatting survives when you paste into that app.
+- **Parse to Markdown and Paste** — when the clipboard contains HTML (for example content copied from a web page), use **Parse to Markdown and Paste** from the editor's context menu (default `Ctrl+G, Ctrl+P`) to convert that HTML to Markdown and insert it. If **Fetch images to local in Parse To Markdown And Paste** is enabled in [Settings](../customization/settings.md), remote images in the pasted content are downloaded into the note's assets and their links rewritten.
+
 ## Everyday editing
 
 The editor supports the usual essentials — undo/redo, find and replace within a note, and copy/paste — plus VNote-specific accelerators you will meet in the following pages:
