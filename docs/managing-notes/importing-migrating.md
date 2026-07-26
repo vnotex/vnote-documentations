@@ -37,6 +37,4 @@ A common setup is to keep the Notebook Root Folder inside a directory that a thi
 
 ## Migrating from other applications
 
-VNote does not include built-in importers for other note apps, but because it works with plain Markdown and images, exporting from another tool to Markdown is usually enough to bring your content over.
-
-Community tools can help with cleanup. For example, [ImageBedMoving](https://github.com/StarLeet/ImageBedMoving) gathers images referenced from scattered folders into VNote's assets folder (`vx_assets` by default) — handy right after building a notebook from an external folder. See [Data Migration](../help/data-migration.md) for the current list of helpers.
+VNote does not include built-in importers for other note apps, but because it works with plain Markdown and images, exporting from another tool to Markdown is usually enough to bring your content over. See [Data Migration](../help/data-migration.md) for tips on migrating from specific tools.

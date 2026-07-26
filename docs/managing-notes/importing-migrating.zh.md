@@ -37,6 +37,4 @@
 
 ## 从其他应用迁移
 
-VNote 没有内置针对其他笔记应用的导入器，但由于它处理纯 Markdown 与图片，通常只要从其他工具导出为 Markdown，就足以把内容迁移过来。
-
-社区工具可以帮助清理。例如 [ImageBedMoving](https://github.com/StarLeet/ImageBedMoving) 会把散落在各文件夹中被引用的图片汇集到 VNote 的附件文件夹（默认为 `vx_assets`）——在从外部文件夹构建笔记本之后尤其好用。当前的辅助工具清单参见[数据迁移](../help/data-migration.md)。
+VNote 没有内置针对其他笔记应用的导入器，但由于它处理纯 Markdown 与图片，通常只要从其他工具导出为 Markdown，就足以把内容迁移过来。从特定工具迁移的建议参见[数据迁移](../help/data-migration.md)。

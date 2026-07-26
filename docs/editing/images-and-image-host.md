@@ -51,4 +51,3 @@ The **Custom Command** type uploads images by running an external command you de
 
 - Keep tokens private — treat a personal access token like a password.
 - For portable, offline notes, prefer local images; for public sharing, prefer an image host.
-- To tidy images gathered from many folders into the assets folder (`vx_assets`), see the community tool noted in [Data Migration](../help/data-migration.md).
