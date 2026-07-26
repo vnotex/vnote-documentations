@@ -2,8 +2,8 @@ site_name: VNote
 site_url: https://docs.vnote.fun/
 site_description: Documentation for VNote, a privacy-focused Markdown note-taking application.
 site_author: VNote Team
-repo_name: vnotex/vnote-documentations
-repo_url: https://github.com/vnotex/vnote-documentations
+repo_name: vnotex/vnote
+repo_url: https://github.com/vnotex/vnote
 copyright: Copyright &copy; VNoteX Team
 
 theme:

@@ -2,10 +2,7 @@
 
 **A pleasant note-taking platform.**
 
-VNote is a free and open source, Qt-based note-taking application that focuses on
-Markdown. More than just an editor, VNote pairs an excellent editing experience
-with powerful notes management — and it runs on **Linux**, **Windows**, and
-**macOS**.
+VNote is a free and open source, Qt-based note-taking application that focuses on Markdown. More than just an editor, VNote pairs an excellent editing experience with powerful notes management — and it runs on **Linux**, **Windows**, and **macOS**.
 
 [Get Started](getting-started/index.md){ .md-button .md-button--primary }
 [Download VNote](https://github.com/vnotex/vnote/releases/latest){ .md-button }
@@ -18,32 +15,25 @@ with powerful notes management — and it runs on **Linux**, **Windows**, and
 
     ---
 
-    All notes are plain text on your local disk. One notebook is exactly one
-    directory — no database, no lock-in. Sync anywhere with the service of your
-    choice or per-notebook git.
+    All notes are plain text on your local disk. One notebook is exactly one directory — no database, no lock-in. Sync anywhere with the service of your choice or per-notebook git.
 
 -   :material-folder-multiple-outline:{ .lg .middle } __Simple notes management__
 
     ---
 
-    Self-contained notebooks, infinite levels of folders, and plain notes.
-    Organize with tags, quick access, and history; explore and edit external
-    files directly.
+    Self-contained notebooks, infinite levels of folders, and plain notes. Organize with tags, quick access, and history; explore and edit external files directly.
 
 -   :material-language-markdown:{ .lg .middle } __Pleasant Markdown experience__
 
     ---
 
-    In-place and side-by-side live preview, syntax highlighting, an interactive
-    outline, effective image management, math, and diagrams (PlantUML, Graphviz,
-    Mermaid, and more).
+    In-place and side-by-side live preview, syntax highlighting, an interactive outline, effective image management, math, and diagrams (PlantUML, Graphviz, Mermaid, and more).
 
 -   :material-tune:{ .lg .middle } __Made for power users__
 
     ---
 
-    Vi mode, versatile shortcuts, tabs and window splits, fuzzy search and jump,
-    plus deep customization through themes, styles, and behaviors.
+    Vi mode, versatile shortcuts, tabs and window splits, fuzzy search and jump, plus deep customization through themes, styles, and behaviors.
 
 </div>
 
@@ -63,8 +53,7 @@ with powerful notes management — and it runs on **Linux**, **Windows**, and
 
     ---
 
-    Organize notebooks, folders, and notes; use tags, sync, quick access, and
-    history.
+    Organize notebooks, folders, and notes; use tags, sync, quick access, and history.
 
     [:octicons-arrow-right-24: Managing Notes](managing-notes/index.md)
 
@@ -72,8 +61,7 @@ with powerful notes management — and it runs on **Linux**, **Windows**, and
 
     ---
 
-    Write and format across VNote's editors — Markdown, math, diagrams,
-    snippets, templates, mind maps, and Vi mode.
+    Write and format across VNote's editors — Markdown, math, diagrams, snippets, templates, mind maps, and Vi mode.
 
     [:octicons-arrow-right-24: Editing](editing/index.md)
 
@@ -115,5 +103,4 @@ with powerful notes management — and it runs on **Linux**, **Windows**, and
 - Report issues via [GitHub Issues](https://github.com/vnotex/vnote/issues).
 
 !!! tip "Need help?"
-    Check the [Help](help/index.md) section for frequently asked questions and
-    data migration guidance.
+    Check the [Help](help/index.md) section for frequently asked questions and data migration guidance.

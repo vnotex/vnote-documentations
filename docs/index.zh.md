@@ -2,9 +2,7 @@
 
 **一个舒适的笔记平台。**
 
-VNote 是一款免费、开源、基于 Qt 的笔记应用，专注于 Markdown。它不仅是一个编辑器，
-更将出色的编辑体验与强大的笔记管理融为一体，并且支持 **Linux**、**Windows** 和
-**macOS**。
+VNote 是一款免费、开源、基于 Qt 的笔记应用，专注于 Markdown。它不仅是一个编辑器，更将出色的编辑体验与强大的笔记管理融为一体，并且支持 **Linux**、**Windows** 和 **macOS**。
 
 [开始使用](getting-started/index.md){ .md-button .md-button--primary }
 [下载 VNote](https://github.com/vnotex/vnote/releases/latest){ .md-button }
@@ -17,29 +15,25 @@ VNote 是一款免费、开源、基于 Qt 的笔记应用，专注于 Markdown�
 
     ---
 
-    所有笔记都是保存在本地磁盘上的纯文本。一个笔记本对应一个目录——不依赖数据库，
-    没有厂商锁定。可自由选择第三方同步服务，或使用按笔记本的 git 同步。
+    所有笔记都是保存在本地磁盘上的纯文本。一个笔记本对应一个目录——不依赖数据库，没有厂商锁定。可自由选择第三方同步服务，或使用按笔记本的 git 同步。
 
 -   :material-folder-multiple-outline:{ .lg .middle } __直观的笔记管理__
 
     ---
 
-    独立的笔记本、无限层级的文件夹和开放的笔记。通过标签、快速访问和历史记录进行
-    组织，还能直接浏览和编辑外部文件。
+    独立的笔记本、无限层级的文件夹和开放的笔记。通过标签、快速访问和历史记录进行组织，还能直接浏览和编辑外部文件。
 
 -   :material-language-markdown:{ .lg .middle } __舒适的 Markdown 体验__
 
     ---
 
-    原地预览与双边实时预览、语法高亮、交互式大纲、高效的图片管理，以及数学公式和
-    图表（PlantUML、Graphviz、Mermaid 等）。
+    原地预览与双边实时预览、语法高亮、交互式大纲、高效的图片管理，以及数学公式和图表（PlantUML、Graphviz、Mermaid 等）。
 
 -   :material-tune:{ .lg .middle } __为进阶用户打造__
 
     ---
 
-    Vi 模式、丰富的快捷键、多标签页与窗口分割、模糊查找和跳转，并可通过主题、样式
-    和软件行为进行深度定制。
+    Vi 模式、丰富的快捷键、多标签页与窗口分割、模糊查找和跳转，并可通过主题、样式和软件行为进行深度定制。
 
 </div>
 
@@ -67,8 +61,7 @@ VNote 是一款免费、开源、基于 Qt 的笔记应用，专注于 Markdown�
 
     ---
 
-    在 VNote 的各类编辑器中书写与排版——Markdown、数学公式、图表、代码片段、模板、
-    思维导图和 Vi 模式。
+    在 VNote 的各类编辑器中书写与排版——Markdown、数学公式、图表、代码片段、模板、思维导图和 Vi 模式。
 
     [:octicons-arrow-right-24: 编辑](editing/index.md)
 
