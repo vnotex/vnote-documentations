@@ -1,5 +1,6 @@
 # Installation
 
-VNote is available for Windows, macOS, and Linux.
+Download and install VNote on Windows, macOS, and Linux.
 
-_Placeholder content — installation steps to be added._
+!!! note "Placeholder"
+    _Placeholder — to be written._

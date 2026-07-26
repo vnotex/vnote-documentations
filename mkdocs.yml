@@ -1,14 +1,16 @@
-site_name: VNote Documentation
+site_name: VNote
 site_url: https://docs.vnote.fun/
 site_description: Documentation for VNote, a privacy-focused Markdown note-taking application.
 site_author: VNote Team
 repo_name: vnotex/vnote-documentations
 repo_url: https://github.com/vnotex/vnote-documentations
-copyright: Copyright &copy; VNote Team
+copyright: Copyright &copy; VNoteX Team
 
 theme:
   name: material
   language: en
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
   features:
     - navigation.tracking
     - navigation.top
@@ -22,20 +24,23 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: teal
+      accent: teal
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: teal
+      accent: teal
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
   icon:
     repo: fontawesome/brands/github
+
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   - admonition
@@ -72,19 +77,82 @@ plugins:
           build: true
         - locale: zh
           name: 简体中文
-          site_name: VNote 文档
+          site_name: VNote
           nav_translations:
             Home: 主页
             Getting Started: 快速开始
+            Why VNote: 为什么选择 VNote
             Installation: 安装
-            User Guide: 用户指南
+            Quick Start: 快速上手
+            Dashboard: 仪表盘
+            Managing Notes: 管理笔记
+            Notebooks, Folders & Notes: 笔记本、文件夹与笔记
+            Importing & Migrating: 导入与迁移
+            Tags: 标签
+            Notebook Sync: 笔记本同步
+            Quick Access & History: 快速访问与历史
+            Editing: 编辑
+            Editor Basics: 编辑器基础
+            Markdown Syntax: Markdown 语法
+            Math & Diagrams: 数学与图表
+            Images & Image Host: 图片与图床
+            Snippets: 代码片段
+            Templates: 模板
+            Mind Maps: 思维导图
+            Vi Mode: Vi 模式
+            Search: 搜索
+            Search Panel: 搜索面板
+            United Entry: 统一入口
+            Productivity: 效率
+            Tasks: 任务
+            Export: 导出
+            Customization: 自定义
+            Settings: 设置
+            Themes & Styles: 主题与样式
+            Keyboard Shortcuts: 键盘快捷键
+            Help: 帮助
             FAQ: 常见问题
+            Data Migration: 数据迁移
 
 nav:
   - Home: index.md
   - Getting Started:
       - getting-started/index.md
+      - Why VNote: getting-started/why-vnote.md
       - Installation: getting-started/installation.md
-  - User Guide:
-      - user-guide/index.md
-  - FAQ: faq.md
+      - Quick Start: getting-started/quick-start.md
+      - Dashboard: getting-started/dashboard.md
+  - Managing Notes:
+      - managing-notes/index.md
+      - Notebooks, Folders & Notes: managing-notes/notebooks-folders-notes.md
+      - Importing & Migrating: managing-notes/importing-migrating.md
+      - Tags: managing-notes/tags.md
+      - Notebook Sync: managing-notes/notebook-sync.md
+      - Quick Access & History: managing-notes/quick-access-history.md
+  - Editing:
+      - editing/index.md
+      - Editor Basics: editing/editor-basics.md
+      - Markdown Syntax: editing/markdown-syntax.md
+      - Math & Diagrams: editing/math-and-diagrams.md
+      - Images & Image Host: editing/images-and-image-host.md
+      - Snippets: editing/snippets.md
+      - Templates: editing/templates.md
+      - Mind Maps: editing/mind-maps.md
+      - Vi Mode: editing/vi-mode.md
+  - Search:
+      - search/index.md
+      - Search Panel: search/search-panel.md
+      - United Entry: search/united-entry.md
+  - Productivity:
+      - productivity/index.md
+      - Tasks: productivity/tasks.md
+      - Export: productivity/export.md
+  - Customization:
+      - customization/index.md
+      - Settings: customization/settings.md
+      - Themes & Styles: customization/themes-and-styles.md
+      - Keyboard Shortcuts: customization/keyboard-shortcuts.md
+  - Help:
+      - help/index.md
+      - FAQ: help/faq.md
+      - Data Migration: help/data-migration.md
