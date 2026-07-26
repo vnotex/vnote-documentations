@@ -25,7 +25,7 @@ We recommend the **stable releases** for everyday use. If you want the newest fe
 1. Download the `.dmg` package, open it, and drag **VNote** into your `Applications` folder.
 2. The first time you launch it, macOS may warn that the app is from an unidentified developer. Right-click the app and choose **Open**, then confirm.
 
-VNote is also available through **Homebrew Cask**:
+A community-maintained **Homebrew Cask** may also be available:
 
 ```bash
 brew install --cask vnote

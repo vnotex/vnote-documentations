@@ -113,13 +113,14 @@ Tasks can use VNote variables as `${variableName}` in `command`, `args`, `option
 
 **Buffer:** `buffer`, `bufferNotebookFolder`, `bufferRelativePath`, `bufferName`, `bufferBaseName`, `bufferDir`, `bufferExt`, `selectedText`.
 
-**Task/paths:** `cwd`, `taskFile`, `taskDir`, `exeFile`, `pathSeparator`, `notebookTaskFolder`, `userTaskFolder`, `appTaskFolder`, `userThemeFolder`, `appThemeFolder`, `userDocsFolder`, `appDocsFolder`.
+**Task/paths:** `cwd`, `taskFile`, `taskDir`, `exeFile`, `pathSeparator`, `notebookTaskFolder`, `taskFolder`, `themeFolder`.
 
 **Special:**
 
 - `${magic:snippet_name}` — call a VNote [snippet](../editing/snippets.md).
 - `${env:env_name}` — read an environment variable.
 - `${config:[main|session].json_path}` — read a VNote configuration value, e.g. `${config:main.core.shortcuts.FullScreen}`.
+- `${shell:command}` — substitute the output of a shell command.
 
 ### Input variables
 

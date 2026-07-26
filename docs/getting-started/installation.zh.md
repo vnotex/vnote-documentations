@@ -25,7 +25,7 @@ VNote 提供 **Linux**、**Windows** 和 **macOS** 版本。它免费且开源�
 1. 下载 `.dmg` 安装包，打开后将 **VNote** 拖入 `Applications` 文件夹。
 2. 首次启动时，macOS 可能提示该应用来自身份不明的开发者。右键点击应用并选择**打开**，然后确认。
 
-VNote 也可通过 **Homebrew Cask** 安装：
+此外也可能有社区维护的 **Homebrew Cask** 可供使用：
 
 ```bash
 brew install --cask vnote

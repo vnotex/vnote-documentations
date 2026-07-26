@@ -113,13 +113,14 @@ VNote 不提供终端，因此若要在终端中运行程序，请使用 `start`
 
 **缓冲区：**`buffer`、`bufferNotebookFolder`、`bufferRelativePath`、`bufferName`、`bufferBaseName`、`bufferDir`、`bufferExt`、`selectedText`。
 
-**任务/路径：**`cwd`、`taskFile`、`taskDir`、`exeFile`、`pathSeparator`、`notebookTaskFolder`、`userTaskFolder`、`appTaskFolder`、`userThemeFolder`、`appThemeFolder`、`userDocsFolder`、`appDocsFolder`。
+**任务/路径：**`cwd`、`taskFile`、`taskDir`、`exeFile`、`pathSeparator`、`notebookTaskFolder`、`taskFolder`、`themeFolder`。
 
 **特殊：**
 
 - `${magic:snippet_name}`——调用 VNote [代码片段](../editing/snippets.md)。
 - `${env:env_name}`——读取环境变量。
 - `${config:[main|session].json_path}`——读取 VNote 配置值，例如 `${config:main.core.shortcuts.FullScreen}`。
+- `${shell:command}`——替换为某个 shell 命令的输出。
 
 ### 输入变量
 

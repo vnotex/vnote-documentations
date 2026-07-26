@@ -88,7 +88,7 @@ A typical theme directory:
 
 ```
 .
-├── cover.png
+├── cover.png          (optional)
 ├── highlight.css
 ├── icons
 │   ├── ***.svg
@@ -102,7 +102,7 @@ A typical theme directory:
 Some commonly replaced icons:
 
 - **Notes:** `folder_node.svg` (folder), `file_node.svg` (note).
-- **Top menu bar:** `notebook_menu.svg`, `new_note.svg`, `import_menu.svg`, `export_menu.svg`, `flash_page_menu.svg`, `quick_access_menu.svg`, `task_menu.svg`, `united_entry.svg`, `expand.svg`, `settings_menu.svg`, `menu.svg`.
+- **Top menu bar:** `new_note.svg`, `quick_access_menu.svg`, `united_entry.svg`, `expand.svg`, `settings.svg`, `task_dock.svg`, `split_menu.svg`, `search.svg`, `menu.svg`.
 - **Left navigation bar:** `navigation_dock.svg`, `history_dock.svg`, `tag_dock.svg`, `search_dock.svg`, `snippet_dock.svg`.
 
 ## Applying export styles

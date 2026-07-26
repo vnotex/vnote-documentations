@@ -6,30 +6,36 @@ VNote 生来就是为键盘操作而设计的。几乎每个操作都有快捷�
 
 VNote 的部分快捷键是组合序列，写作以逗号分隔的两部分。例如：
 
-- `Ctrl+G, I`——打开[代码片段](../editing/snippets.md)面板：按 `Ctrl+G`，松开，再按 `I`。
+- `Ctrl+G, S`——打开[代码片段](../editing/snippets.md)面板：按 `Ctrl+G`，松开，再按 `S`。
+- `Ctrl+G, I`——在光标处应用一个片段。
 - `Ctrl+G, G`——激活[统一入口](../search/united-entry.md)。
 
 `Ctrl+G` 前缀引出一系列「跳转 / 全局」操作；输入前缀后，VNote 会向你显示后续按键。
 
 ## 快捷键在哪里定义
 
-快捷键位于主配置文件 `vnotex.json` 的 `core.shortcuts` 之下。每个操作映射到一个按键序列，例如：
+快捷键位于主配置文件 `vnotex.json` 中，分为两张表：应用级操作在 `core.shortcuts` 之下，编辑器/编辑类操作（保存、加粗、标题、查找、应用片段等）在 `editor.shortcuts` 之下。每个操作映射到一个按键序列，例如：
 
 ```json
 "core": {
     "shortcuts": {
         "UnitedEntry": "Ctrl+G, G",
-        "FullScreen": "..."
+        "FullScreen": "F11"
+    }
+},
+"editor": {
+    "shortcuts": {
+        "ApplySnippet": "Ctrl+G, I"
     }
 }
 ```
 
-要查看每个操作及其默认绑定的权威、最新列表，请打开**默认**配置文件夹中的 `vnotex.json`——它是完整的参考并带有注释。这些文件夹的位置以及默认/用户层的工作方式参见[设置](settings.md)。
+要查看每个操作及其默认绑定的权威列表，请查看你的 `vnotex.json` 中的 `core.shortcuts` 和 `editor.shortcuts` 段落（默认值由 VNote 填入）。这些文件夹的位置以及默认/用户层的工作方式参见[设置](settings.md)。
 
 ## 自定义快捷键
 
-1. 打开你的**用户**配置 `vnotex.json`（如果其中还没有该键，从默认配置复制过来）。
-2. 修改 `core.shortcuts` 下的值为你想要的按键序列，使用相同的 `Modifier+Key` 与逗号组合序列写法。
+1. 打开你的**用户**配置 `vnotex.json`。
+2. 在 `core.shortcuts`（应用操作）或 `editor.shortcuts`（编辑操作）下，把值改为你想要的按键序列，使用相同的 `Modifier+Key` 与逗号组合序列写法。
 3. 重启 VNote 使更改生效。
 
 由于快捷键只是配置，你也可以通过同步用户配置在机器之间携带你的绑定——参见[设置](settings.md)与[让 VNote 便携化](settings.md#make-vnote-portable)。

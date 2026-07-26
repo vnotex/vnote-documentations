@@ -27,7 +27,7 @@ Combining these lets you go from a broad "find this phrase anywhere" to a narrow
 
 ## Search options
 
-The panel exposes options to refine a query, such as case sensitivity, whole-word or fuzzy matching, and regular expressions. Use them to tighten results when a plain keyword returns too much.
+The panel exposes options to refine a query: case sensitivity, regular expressions, and a wildcard file pattern. Use them to tighten results when a plain keyword returns too much.
 
 ## Working with results
 

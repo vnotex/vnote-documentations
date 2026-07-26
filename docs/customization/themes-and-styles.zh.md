@@ -88,7 +88,7 @@ vnotex--NotebookNodeExplorer QTreeView { font-size: 14pt; }
 
 ```
 .
-├── cover.png
+├── cover.png          （可选）
 ├── highlight.css
 ├── icons
 │   ├── ***.svg
@@ -102,7 +102,7 @@ vnotex--NotebookNodeExplorer QTreeView { font-size: 14pt; }
 一些常被替换的图标：
 
 - **笔记：**`folder_node.svg`（文件夹）、`file_node.svg`（笔记）。
-- **顶部菜单栏：**`notebook_menu.svg`、`new_note.svg`、`import_menu.svg`、`export_menu.svg`、`flash_page_menu.svg`、`quick_access_menu.svg`、`task_menu.svg`、`united_entry.svg`、`expand.svg`、`settings_menu.svg`、`menu.svg`。
+- **顶部菜单栏：**`new_note.svg`、`quick_access_menu.svg`、`united_entry.svg`、`expand.svg`、`settings.svg`、`task_dock.svg`、`split_menu.svg`、`search.svg`、`menu.svg`。
 - **左侧导航栏：**`navigation_dock.svg`、`history_dock.svg`、`tag_dock.svg`、`search_dock.svg`、`snippet_dock.svg`。
 
 ## 应用导出样式

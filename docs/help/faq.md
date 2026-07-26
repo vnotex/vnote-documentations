@@ -36,11 +36,11 @@ On **Windows**, these three symptoms are usually caused by the display-card driv
 
 ## Where are my notes stored?
 
-Wherever you put them. Each notebook is an ordinary directory (its *Notebook Root Folder*) containing plain Markdown files and a `vx_images` folder for images. Nothing is hidden in a database. See [Notebooks, Folders & Notes](../managing-notes/notebooks-folders-notes.md).
+Wherever you put them. Each notebook is an ordinary directory (its *Notebook Root Folder*) containing plain Markdown files, with images kept in an assets folder (`vx_assets` by default). Nothing is hidden in a database. See [Notebooks, Folders & Notes](../managing-notes/notebooks-folders-notes.md).
 
 ## How do I sync my notes across devices?
 
-VNote has no built-in cloud; you sync the notebook folder with any tool you trust — Dropbox, OneDrive, Nextcloud, or git. See [Notebook Sync](../managing-notes/notebook-sync.md).
+VNote has a built-in Git sync for bundled notebooks, and — since a notebook is just a folder — you can also sync it with any tool you trust, such as Dropbox, OneDrive, or Nextcloud. See [Notebook Sync](../managing-notes/notebook-sync.md).
 
 ## Can I use VNote portably (from a USB drive)?
 
@@ -48,4 +48,4 @@ Yes. Bundle the configuration next to the executable as described in [Make VNote
 
 ## How do I import my existing Markdown files?
 
-Use **New Notebook From Folder** to build a notebook around an existing directory, or import files and folders into a notebook. See [Importing & Migrating](../managing-notes/importing-migrating.md). For migrating from other apps, see [Data Migration](data-migration.md).
+Use **New Notebook** with **Type → Raw notebook** to build a notebook around an existing directory, or import files and folders into a notebook. See [Importing & Migrating](../managing-notes/importing-migrating.md). For migrating from other apps, see [Data Migration](data-migration.md).

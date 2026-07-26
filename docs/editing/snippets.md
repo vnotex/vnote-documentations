@@ -4,7 +4,7 @@ A **snippet** is a reusable piece of text you can insert with a couple of keystr
 
 ## Snippet management
 
-Each user-defined snippet is stored as a `json` file, so snippets are just files you can back up or share. VNote also ships **built-in** snippets, such as inserting the current date. Built-in snippets are read-only and shown with a `*` suffix after their name.
+Each user-defined snippet is stored as a `json` file, so snippets are just files you can back up or share. VNote also ships **built-in** snippets, such as inserting the current date. Built-in snippets are read-only; you can show or hide them with the panel's *show built-in snippets* toggle.
 
 The **Snippets** dock widget lists everything available.
 
@@ -12,7 +12,7 @@ The **Snippets** dock widget lists everything available.
 
 When you create a snippet, you set:
 
-- **Snippet Name** — the identifier used to search for the snippet.
+- **Name** — the identifier used to search for the snippet.
 - **Shortcut** — an optional two-digit code to locate a snippet quickly.
 - **Cursor Mark** — marks where the cursor lands after the snippet is applied. It should appear **once** in the content.
 - **Selection Mark** — marks where selected text is inserted. It may appear **multiple times**; every selection mark is replaced with the selected text when the snippet is applied.
@@ -31,7 +31,7 @@ In the editor, press `Ctrl+G, I` to bring up a panel of all snippets. From there
 
 - Type a snippet's two-digit code (for example `00`) to apply it directly.
 - Type part of a name (for example `my`) to search, then press `Enter` to apply the first match.
-- Press `Tab` to focus the snippet list, use `Ctrl+H/J/K/L` to navigate, and press `Enter` to apply the selected snippet.
+- Press `Tab` to move focus between the search box and the snippet list, use the arrow keys to navigate the list, and press `Enter` to apply the selected snippet.
 
 ### By symbol
 

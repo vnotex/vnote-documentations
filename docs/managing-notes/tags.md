@@ -10,7 +10,7 @@ Tags are stored in the notebook's configuration, so they travel with the noteboo
 
 ## Add and remove tags
 
-Open a note and use its tag control (in the note's context menu or the tag input) to add one or more tags. Type a new tag name to create it, or pick from tags you already use. Remove a tag from a note the same way. A note keeps working exactly as before — tagging changes nothing in the Markdown file's content.
+Open a note and use the **Tags** button in the note's toolbar to add one or more tags in the tag popup. Type a new tag name to create it, or pick from tags you already use. Remove a tag from a note the same way. A note keeps working exactly as before — tagging changes nothing in the Markdown file's content.
 
 ## Browse notes by tag
 
@@ -18,11 +18,11 @@ The **Tags** dock widget lists all tags in the current notebook. Select a tag to
 
 ## Find notes by tag with United Entry
 
-[United Entry](../search/united-entry.md) includes commands for tag-based lookup, so you can jump to tagged notes from the keyboard without opening the dock:
+[United Entry](../search/united-entry.md) can search by tag, so you can jump to tagged notes from the keyboard without opening the dock. Use the `find` command with the tag object and a scope:
 
-- `c` — search files by tag in the current notebook.
-- `v` — search files by tag in the current folder.
-- `z` — search files by tag across all notebooks.
+- `find -b tag -s notebook` — search by tag in the current notebook.
+- `find -b tag -s folder` — search by tag in the current folder.
+- `find -b tag -s all_notebook` — search by tag across all notebooks.
 
 Type the command, then the tag keyword, to filter instantly.
 

@@ -36,11 +36,11 @@ this.mathJaxScript = 'file://c:/Users/foo/mathjax/tex-svg.js';
 
 ## 我的笔记存放在哪里？
 
-存放在你放置它们的地方。每个笔记本都是一个普通目录（其*笔记本根文件夹*），其中包含纯 Markdown 文件和一个用于图片的 `vx_images` 文件夹。没有任何内容隐藏在数据库里。参见[笔记本、文件夹与笔记](../managing-notes/notebooks-folders-notes.md)。
+存放在你放置它们的地方。每个笔记本都是一个普通目录（其*笔记本根文件夹*），其中包含纯 Markdown 文件，图片则存放在附件文件夹中（默认为 `vx_assets`）。没有任何内容隐藏在数据库里。参见[笔记本、文件夹与笔记](../managing-notes/notebooks-folders-notes.md)。
 
 ## 如何在多台设备间同步笔记？
 
-VNote 没有内置云；你可以用任何你信任的工具同步笔记本文件夹——Dropbox、OneDrive、Nextcloud 或 git。参见[笔记本同步](../managing-notes/notebook-sync.md)。
+VNote 为捆绑笔记本提供了内置的 Git 同步；而且由于笔记本本身就是一个文件夹，你也可以用任何你信任的工具来同步它，例如 Dropbox、OneDrive 或 Nextcloud。参见[笔记本同步](../managing-notes/notebook-sync.md)。
 
 ## 我能便携地使用 VNote（从 U 盘）吗？
 
@@ -48,4 +48,4 @@ VNote 没有内置云；你可以用任何你信任的工具同步笔记本文�
 
 ## 如何导入我已有的 Markdown 文件？
 
-使用**从文件夹新建笔记本**围绕现有目录构建笔记本，或把文件和文件夹导入笔记本。参见[导入与迁移](../managing-notes/importing-migrating.md)。从其他应用迁移参见[数据迁移](data-migration.md)。
+使用**新建笔记本**并将**类型**设为**原始笔记本（Raw notebook）**围绕现有目录构建笔记本，或把文件和文件夹导入笔记本。参见[导入与迁移](../managing-notes/importing-migrating.md)。从其他应用迁移参见[数据迁移](data-migration.md)。

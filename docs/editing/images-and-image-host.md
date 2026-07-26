@@ -6,13 +6,13 @@ Notes often need pictures, and VNote makes images painless: paste one and it is 
 
 The fastest way to add an image is to **paste** it (a screenshot, or an image copied from elsewhere) directly into the editor. VNote:
 
-1. Saves the image file into the notebook — by default in a `vx_images` folder next to the note.
+1. Saves the image file into the notebook's assets — by default under a `vx_assets` folder in the notebook root (in a per-note subfolder).
 2. Inserts the Markdown link for you.
 
 You can also insert an image from a file, or drag and drop one into the editor. Because images live inside the notebook, they travel with it when you copy or [sync](../managing-notes/notebook-sync.md) the notebook.
 
 ```md
-![alt text](vx_images/example.png)
+![alt text](vx_assets/example.png)
 ```
 
 ## Local images vs. image host
@@ -30,7 +30,7 @@ An **image host** is an online service that holds your images. Unlike local imag
 
 ## Setting up an image host
 
-First configure an image host in the **Settings** dialog. Then choose local images or the image host in the editor.
+First configure an image host in the **Settings** dialog. VNote supports three image-host types — **GitHub Repository**, **Gitee Repository**, and **Custom Command** — then choose local images or the image host in the editor.
 
 ### GitHub / Gitee
 
@@ -43,8 +43,12 @@ Gitee follows a similar process; GitHub is used here as the example.
 
 Once configured, uploading an image (or all images in a note) pushes the files to that repository and rewrites the links to their online URLs.
 
+### Custom Command
+
+The **Custom Command** type uploads images by running an external command you define, so you can integrate any uploader or image service that provides a command-line tool. VNote passes the image to your command and uses the URL it returns.
+
 ## Tips
 
 - Keep tokens private — treat a personal access token like a password.
 - For portable, offline notes, prefer local images; for public sharing, prefer an image host.
-- To tidy images gathered from many folders into `vx_images`, see the community tool noted in [Data Migration](../help/data-migration.md).
+- To tidy images gathered from many folders into the assets folder (`vx_assets`), see the community tool noted in [Data Migration](../help/data-migration.md).

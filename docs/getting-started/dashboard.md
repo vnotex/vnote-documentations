@@ -6,9 +6,9 @@ When VNote opens, you land in its main interface. This page introduces the areas
 
 VNote's window is organized into three parts: the dock widgets on the sides, the content area in the middle, and the toolbar and menus along the top.
 
-## Navigation panel
+## Notebooks panel
 
-On the left, the **Navigation** panel shows your **notebooks**, **folders**, and **notes** in a tree. Use it to switch notebooks, expand folders to any depth, and open notes. Right-click any item for actions such as creating, renaming, importing, and exporting. See [Notebooks, Folders & Notes](../managing-notes/notebooks-folders-notes.md).
+On the left, the **Notebooks** panel shows your **notebooks**, **folders**, and **notes** in a tree. Use it to switch notebooks, expand folders to any depth, and open notes. Right-click any item for actions such as creating, renaming, importing, and exporting. See [Notebooks, Folders & Notes](../managing-notes/notebooks-folders-notes.md).
 
 ## Content area
 
@@ -18,7 +18,7 @@ The middle area is the **Content Area**, where you read and edit notes. VNote op
 
 Around the content area are dock widgets. They can be dragged and dropped freely and docked to the left, top, right, or bottom of the window. The most used are:
 
-- **Navigation** — the notebook/folder/note tree described above.
+- **Notebooks** — the notebook/folder/note tree described above.
 - **Outline** — the interactive heading structure of the current note; click a heading to jump to it.
 - **Search** — full-text and name search across notebooks; see [Search Panel](../search/search-panel.md).
 - **Tags** — browse and filter notes by [tag](../managing-notes/tags.md).
@@ -29,7 +29,7 @@ You can show or hide any dock widget from the view menu, and reset the layout if
 
 ## Toolbar and menus
 
-The top of the window provides quick access to common actions — new note, import, export, [Quick Access](../managing-notes/quick-access-history.md), [Tasks](../productivity/tasks.md), [United Entry](../search/united-entry.md), [Settings](../customization/settings.md), and more. A **Flash Page** lets you jot something down instantly without deciding where it belongs yet.
+The top of the window provides quick access to common actions — new note, import, export, [Quick Access](../managing-notes/quick-access-history.md), [Tasks](../productivity/tasks.md), [United Entry](../search/united-entry.md), [Settings](../customization/settings.md), and more. The **New → Quick Note** action lets you jot something down instantly without deciding where it belongs yet.
 
 ## Command-driven navigation
 

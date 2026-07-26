@@ -16,20 +16,22 @@ A notebook is independent and self-explanatory: everything it needs lives under 
 
 ### Create a notebook
 
-- **From an empty folder** — choose **New Notebook** and point VNote at an empty directory. This is the usual starting point.
-- **From an existing folder** — if you already have a directory full of Markdown files, choose **New Notebook From Folder** to build a notebook around them without moving anything. See [Importing & Migrating](importing-migrating.md).
+Choose **New Notebook** to create one. In the dialog, pick the notebook **Type**:
+
+- **Bundled notebook** — VNote manages the notebook's metadata and index under the root folder. Point it at an empty directory. This is the usual starting point.
+- **Raw notebook** — VNote indexes an existing plain folder of files as notebook nodes, without moving or restructuring anything. Choose this if you already have a directory of Markdown files. See [Importing & Migrating](importing-migrating.md).
 
 ### Open and close notebooks
 
-Notebooks you have created or imported appear in the notebook selector on the left. Closing a notebook only removes it from the list in VNote; the files on disk are untouched, and you can import it again at any time.
+Notebooks you have created or opened appear in the notebook selector on the left. Closing a notebook only removes it from the list in VNote; the files on disk are untouched, and you can open it again at any time.
 
 ## Folders
 
-Right-click a notebook or an existing folder in the navigation panel to create a **New Folder**. Because nesting is unlimited, you can model anything from a flat list of notes to a deep, structured knowledge base. Folders can be renamed, moved, and deleted from the same context menu.
+Right-click a notebook or an existing folder in the Notebooks panel to create a **New Folder**. Because nesting is unlimited, you can model anything from a flat list of notes to a deep, structured knowledge base. Folders can be renamed, moved, and deleted from the same context menu.
 
 ## Notes
 
-Select a notebook or folder and choose **New Note** to create one. Name it with a `.md` suffix for Markdown. From the note's context menu you can rename, move (cut and paste between folders), copy, delete, and export notes, as well as reveal the underlying file in your system file manager.
+Select a notebook or folder and choose **New Note** to create one. Name it with a `.md` suffix for Markdown. From the note's context menu you can rename, move (cut and paste between folders), copy, delete, and export notes, as well as reveal the underlying file with **Open Location** (or **Copy Path**).
 
 Deleting a note moves it to VNote's recycle bin inside the notebook, so it can be recovered until you empty it.
 

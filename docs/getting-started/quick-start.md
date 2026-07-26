@@ -11,7 +11,7 @@ VNote organizes notes into **notebooks**. A notebook is simply a directory on yo
 3. Give the notebook a name and, optionally, a description, then confirm.
 
 !!! tip "Already have Markdown files?"
-    Choose **New Notebook From Folder** instead to build a notebook from an existing directory of Markdown files. See [Importing & Migrating](../managing-notes/importing-migrating.md).
+    In the **New Notebook** dialog, set the notebook **Type** to **Raw notebook** to build a notebook around an existing directory of files. See [Importing & Migrating](../managing-notes/importing-migrating.md).
 
 ## 2. Create a folder (optional)
 
@@ -30,7 +30,7 @@ VNote gives Markdown a **live experience**: as you type, headings, lists, and em
 
 ## 5. Find your notes on disk
 
-Open the Notebook Root Folder in your file manager. Your note is there as a plain `.md` file, and any images you insert are saved alongside it (by default in a `vx_images` folder). Because everything is plain text, you can back it up, version it with git, or sync it however you like — see [Notebook Sync](../managing-notes/notebook-sync.md).
+Open the Notebook Root Folder in your file manager. Your note is there as a plain `.md` file, and any images you insert are saved as assets (by default under a `vx_assets` folder in the notebook root). Because everything is plain text, you can back it up, version it with git, or sync it however you like — see [Notebook Sync](../managing-notes/notebook-sync.md).
 
 ## Next steps
 
