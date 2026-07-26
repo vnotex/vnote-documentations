@@ -92,6 +92,7 @@ plugins:
             Notebook Sync: 笔记本同步
             Quick Access & History: 快速访问与历史
             Editing: 编辑
+            Editing workflow: 编辑工作流
             Editor Basics: 编辑器基础
             Markdown Syntax: Markdown 语法
             Math & Diagrams: 数学与图表
@@ -131,14 +132,16 @@ nav:
       - Quick Access & History: managing-notes/quick-access-history.md
   - Editing:
       - editing/index.md
-      - Editor Basics: editing/editor-basics.md
-      - Markdown Syntax: editing/markdown-syntax.md
-      - Math & Diagrams: editing/math-and-diagrams.md
-      - Images & Image Host: editing/images-and-image-host.md
-      - Snippets: editing/snippets.md
-      - Templates: editing/templates.md
+      - Editing workflow:
+          - Editor Basics: editing/editor-basics.md
+          - Snippets: editing/snippets.md
+          - Templates: editing/templates.md
+          - Vi Mode: editing/vi-mode.md
+      - Markdown:
+          - Markdown Syntax: editing/markdown-syntax.md
+          - Math & Diagrams: editing/math-and-diagrams.md
+          - Images & Image Host: editing/images-and-image-host.md
       - Mind Maps: editing/mind-maps.md
-      - Vi Mode: editing/vi-mode.md
   - Search:
       - search/index.md
       - Search Panel: search/search-panel.md

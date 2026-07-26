@@ -2,6 +2,8 @@
 
 VNote's editor is where you spend most of your time, so it is built to make Markdown feel natural: you keep track of your content while you write, and see a beautiful rendering when you read. This page covers the editing modes, the outline, tabs and splits, and the everyday actions that make up a writing session.
 
+Tabs, splits, the outline, and note navigation apply to every editor, but features such as edit/read mode, live preview, and Cross Copy or Parse to Markdown are specific to the Markdown editor.
+
 ## Edit mode and read mode
 
 Every note opens in one of two modes:
