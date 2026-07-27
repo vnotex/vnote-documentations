@@ -2,6 +2,9 @@
 
 Folders organize notes by location — a note lives in exactly one folder. **Tags** organize notes by topic, and a note can carry as many tags as you like. Together they let you keep a tidy folder tree while still grouping related notes that live far apart in it.
 
+!!! note "Tags require a bundled notebook"
+    Tags are stored in the notebook's index, which only [bundled notebooks](notebooks-folders-notes.md#which-type-should-i-use) have. In a raw notebook the **Tags** button is not shown, and the tag popup reports that tags are not supported for that notebook type.
+
 ## What tags are for
 
 Use tags whenever a single folder can't capture how you think about a note. A meeting note might be tagged `project-x` and `2026-q1`; a code snippet note might be tagged `python` and `reference`. Later you can pull up every note with a given tag regardless of where it sits in the folder tree.

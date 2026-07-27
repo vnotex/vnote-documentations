@@ -36,7 +36,7 @@ If the same file changed on two machines, VNote opens a **Resolve Sync Conflicts
 
 ## Folder-sync services
 
-If you prefer not to use Git — or you are syncing a raw notebook — you can rely on a folder-sync service instead. A notebook is entirely contained in its **Notebook Root Folder**: notes, images, attachments, and configuration all live inside it. To sync a notebook this way, you sync that folder.
+If you prefer not to use Git — or you are syncing a raw notebook — you can rely on a folder-sync service instead. A bundled notebook is entirely contained in its **Notebook Root Folder**: notes, images, attachments, and its index all live inside it. A raw notebook is simply the folder itself; VNote keeps that notebook's metadata and cache in the application data folder, so syncing the folder carries your files across while each machine keeps its own record of the notebook. Either way, you sync that folder.
 
 The general pattern is:
 
@@ -57,4 +57,4 @@ Services such as **Dropbox**, **OneDrive**, **Nextcloud**, **Google Drive**, or 
 
 ## What gets synced
 
-Everything under the Notebook Root Folder, including VNote's per-notebook index and configuration, is part of the notebook and should be synced together. Application-wide settings are stored separately in VNote's [configuration folder](../customization/settings.md) and are not part of a notebook — sync those only if you also want to carry your app settings between machines.
+Everything under the Notebook Root Folder should be synced together, including a bundled notebook's index and configuration. Application-wide settings are stored separately in VNote's [configuration folder](../customization/settings.md) and are not part of a notebook — sync those only if you also want to carry your app settings between machines.

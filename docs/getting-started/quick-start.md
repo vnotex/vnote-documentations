@@ -7,11 +7,11 @@ This page walks you from a fresh install to your first note in a few minutes. If
 VNote organizes notes into **notebooks**. A notebook is simply a directory on your disk, so the first step is to choose where your notes will live.
 
 1. Open VNote. On the left, open the notebook selector and choose **New Notebook**.
-2. Pick an **empty** directory as the *Notebook Root Folder*. Everything in this notebook — notes, images, and configuration — is stored here.
+2. Pick an **empty** directory as the *Notebook Root Folder*. With the default **Bundled notebook** type, everything in this notebook — notes, images, and configuration — is stored here.
 3. Give the notebook a name and, optionally, a description, then confirm.
 
 !!! tip "Already have Markdown files?"
-    In the **New Notebook** dialog, set the notebook **Type** to **Raw notebook** to build a notebook around an existing directory of files. See [Importing & Migrating](../managing-notes/importing-migrating.md).
+    Create the notebook as usual, then use **Import Folder** from the toolbar's **New** menu to bring your existing directory in. If you would rather adopt that folder exactly as it is, set the notebook **Type** to **Raw notebook** to browse it in place — at the cost of tags, attachments, and the recycle bin. See [Importing & Migrating](../managing-notes/importing-migrating.md).
 
 ## 2. Create a folder (optional)
 

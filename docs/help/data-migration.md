@@ -7,11 +7,11 @@ Because VNote works with plain Markdown files and images, moving your content in
 
 ## First: build a notebook from your files
 
-Whatever tool you export from, the goal is a folder of Markdown files. Once you have that, use **New Notebook** with **Type → Raw notebook** to turn it into a notebook without moving anything — see [Importing & Migrating](../managing-notes/importing-migrating.md).
+Whatever tool you export from, the goal is a folder of Markdown files. Once you have that, create a **bundled notebook** and import the folder into it — see [Importing & Migrating](../managing-notes/importing-migrating.md). If you would rather adopt the folder exactly as it is, use **New Notebook** with **Type → Raw notebook** instead, keeping in mind that raw notebooks have no tags, attachments, or recycle bin.
 
 ## Migrating from common tools
 
-- **Typora, Obsidian, and other Markdown editors** — these already store plain Markdown, so point VNote at the folder with **New Notebook → Type: Raw notebook**.
+- **Typora, Obsidian, and other Markdown editors** — these already store plain Markdown, so create a bundled notebook and import the folder. Use a raw notebook instead if you want to keep browsing that folder in place while another tool still manages its structure.
 - **Apps without Markdown export** — export or convert to Markdown first (many tools can, or [Pandoc](https://pandoc.org/) can convert common formats), then build a notebook from the result.
 
 ## Migrating a VNote notebook itself

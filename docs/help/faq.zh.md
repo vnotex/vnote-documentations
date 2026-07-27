@@ -36,7 +36,7 @@ this.mathJaxScript = 'file://c:/Users/foo/mathjax/tex-svg.js';
 
 ## 我的笔记存放在哪里？
 
-存放在你放置它们的地方。每个笔记本都是一个普通目录（其*笔记本根文件夹*），其中包含纯 Markdown 文件，图片则存放在附件文件夹中（默认为 `vx_assets`）。没有任何内容隐藏在数据库里。参见[笔记本、文件夹与笔记](../managing-notes/notebooks-folders-notes.md)。
+存放在你放置它们的地方。每个笔记本都是一个普通目录（其*笔记本根文件夹*），其中包含纯 Markdown 文件，图片则存放在附件文件夹中（默认为 `vx_assets`）。你的笔记绝不会被锁在数据库里——VNote 自身的索引和缓存与你的内容分开保存。参见[笔记本、文件夹与笔记](../managing-notes/notebooks-folders-notes.md)。
 
 ## 如何在多台设备间同步笔记？
 
@@ -48,4 +48,8 @@ VNote 为捆绑笔记本提供了内置的 Git 同步；而且由于笔记本本
 
 ## 如何导入我已有的 Markdown 文件？
 
-使用**新建笔记本**并将**类型**设为**原始笔记本（Raw notebook）**围绕现有目录构建笔记本，或把文件和文件夹导入笔记本。参见[导入与迁移](../managing-notes/importing-migrating.md)。从其他应用迁移参见[数据迁移](data-migration.md)。
+创建一个**捆绑笔记本**并把你的文件夹导入其中——参见[导入与迁移](../managing-notes/importing-migrating.md)。如果你更希望完全按原样接纳现有文件夹，可以用**新建笔记本 → 类型：原始笔记本**打开它，它会就地浏览该文件夹，但没有标签、附件和回收站。从其他应用迁移参见[数据迁移](data-migration.md)。
+
+## 捆绑笔记本和原始笔记本有什么区别？
+
+捆绑笔记本会在其根文件夹下维护一份索引，正是这份索引让标签、附件、回收站以及内置的 Git 同步成为可能。原始笔记本没有索引——它像文件浏览器一样就地浏览一个文件夹——因此这些功能都不可用。请优先选择捆绑笔记本；只有当现有文件夹必须按原样被接纳，或者由 VNote 之外的东西管理时，才选择原始笔记本。参见[笔记本、文件夹与笔记](../managing-notes/notebooks-folders-notes.md#which-type-should-i-use)。

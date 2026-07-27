@@ -36,7 +36,7 @@ On **Windows**, these three symptoms are usually caused by the display-card driv
 
 ## Where are my notes stored?
 
-Wherever you put them. Each notebook is an ordinary directory (its *Notebook Root Folder*) containing plain Markdown files, with images kept in an assets folder (`vx_assets` by default). Nothing is hidden in a database. See [Notebooks, Folders & Notes](../managing-notes/notebooks-folders-notes.md).
+Wherever you put them. Each notebook is an ordinary directory (its *Notebook Root Folder*) containing plain Markdown files, with images kept in an assets folder (`vx_assets` by default). Your notes are never locked inside a database — VNote's own index and caches are kept separately from your content. See [Notebooks, Folders & Notes](../managing-notes/notebooks-folders-notes.md).
 
 ## How do I sync my notes across devices?
 
@@ -48,4 +48,8 @@ Yes. Bundle the configuration next to the executable as described in [Make VNote
 
 ## How do I import my existing Markdown files?
 
-Use **New Notebook** with **Type → Raw notebook** to build a notebook around an existing directory, or import files and folders into a notebook. See [Importing & Migrating](../managing-notes/importing-migrating.md). For migrating from other apps, see [Data Migration](data-migration.md).
+Create a **bundled notebook** and import your folder into it — see [Importing & Migrating](../managing-notes/importing-migrating.md). If you would rather adopt the existing folder exactly as it is, open it with **New Notebook → Type: Raw notebook**, which browses it in place but has no tags, attachments, or recycle bin. For migrating from other apps, see [Data Migration](data-migration.md).
+
+## What is the difference between a bundled and a raw notebook?
+
+A bundled notebook keeps an index under its root folder, and that index is what enables tags, attachments, the recycle bin, and built-in Git sync. A raw notebook has no index — it browses a folder in place, like a file browser — so those features are unavailable. Prefer bundled, and choose raw only when the existing folder must be adopted as it is, or is managed outside VNote. See [Notebooks, Folders & Notes](../managing-notes/notebooks-folders-notes.md#which-type-should-i-use).
