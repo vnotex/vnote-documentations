@@ -10,9 +10,10 @@ exactly which code commit the docs currently reflect.
 ## Repos
 
 - **Docs repo** (this repo, current working directory): the MkDocs Material site.
-- **Code repo**: the sibling checkout at `../vnote`
-  (`https://github.com/vnotex/vnote`). Never modify the code repo — only read
-  from it.
+- **Code repo**: `https://github.com/vnotex/vnote`. **Clone it fresh into a temp folder** and
+  read its history from there. Never modify the docs repo's working tree while
+  cloning — clone to a path outside this repo (e.g.
+  `$env:TEMP\vnote-code-<random>`).
 
 ## Sync marker
 
@@ -22,7 +23,7 @@ The code commit the docs currently reflect is stored in the tracked file
 
 - If `.docs-code-sync` is **missing**, do not guess. Stop and ask the user which
   code commit the docs are currently up to date with (or whether to initialize
-  it to the current `../vnote` HEAD), then create the file with that SHA.
+  it to the cloned code repo's current HEAD), then create the file with that SHA.
 
 ## Arguments
 
@@ -32,13 +33,18 @@ to. If empty, use the current tip of the code repo's default branch.
 ## Workflow
 
 1. **Read the current synced commit** from `.docs-code-sync` (call it `FROM`).
-2. **Update the code repo's refs** without changing its working tree:
-   `git -C ../vnote fetch --all --tags`.
+2. **Clone the code repo into a temp folder** (shallow, enough history to cover
+   the range — depth 100 is enough):
+   `git clone --depth 100 https://github.com/vnotex/vnote "$env:TEMP\vnote-code"`.
+   If `FROM` is not present in the shallow clone (range spans more than ~100
+   commits), deepen with `git -C "$env:TEMP\vnote-code" fetch --deepen 100`
+   (repeat as needed) or re-clone with a larger depth. Clean up the temp folder
+   when done.
 3. **Resolve the target** (call it `TO`): `$ARGUMENTS` if provided, otherwise the
-   fetched default-branch tip (e.g. `origin/HEAD`). Resolve both `FROM` and `TO`
-   to full SHAs.
+   cloned default-branch tip (`HEAD`). Resolve both `FROM` and `TO` to full SHAs
+   in the temp clone.
 4. **List new commits** in the range with:
-   `git -C ../vnote log --no-merges --stat FROM..TO`.
+   `git -C "$env:TEMP\vnote-code" log --no-merges --stat FROM..TO`.
    If the range is empty, report that docs are already up to date and stop.
 5. **Assess each new commit** for user-facing documentation impact. Docs likely
    need updating/creating when a commit adds or changes: features, settings/
