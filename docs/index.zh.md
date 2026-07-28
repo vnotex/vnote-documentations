@@ -7,6 +7,8 @@ VNote 是一款免费、开源、基于 Qt 的笔记应用，专注于 Markdown�
 [开始使用](getting-started/index.md){ .md-button .md-button--primary }
 [下载 VNote](https://github.com/vnotex/vnote/releases/latest){ .md-button }
 
+![VNote 主窗口](assets/screenshots/main.webp){ .screenshot }
+
 ## 为什么选择 VNote
 
 <div class="grid cards" markdown>
@@ -61,7 +63,7 @@ VNote 是一款免费、开源、基于 Qt 的笔记应用，专注于 Markdown�
 
     ---
 
-    在 VNote 的各类编辑器中书写与排版——Markdown、数学公式、图表、代码片段、模板、思维导图和 Vi 模式。
+    在 VNote 的各类编辑器中书写与排版——Markdown、数学公式、图表、片段、模板、思维导图和 Vi 模式。
 
     [:octicons-arrow-right-24: 编辑](editing/index.md)
 

@@ -15,9 +15,13 @@ Tags are stored in the notebook's configuration, so they travel with the noteboo
 
 Open a note and use the **Tags** button in the note's toolbar to add one or more tags in the tag popup. Type a new tag name to create it, or pick from tags you already use. Remove a tag from a note the same way. A note keeps working exactly as before — tagging changes nothing in the Markdown file's content.
 
+![Adding a tag to a note from the tag popup](../assets/screenshots/tag-new.webp){ .screenshot loading=lazy }
+
 ## Browse notes by tag
 
 The **Tags** dock widget lists all tags in the current notebook. Select a tag to see every note that carries it, then open a note directly from the list. This turns a scattered set of notes into a focused, topic-based view.
+
+![The Tags dock widget listing every tag in the notebook](../assets/screenshots/tags.webp){ .screenshot loading=lazy }
 
 ## Find notes by tag with United Entry
 

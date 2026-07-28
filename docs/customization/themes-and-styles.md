@@ -6,6 +6,8 @@ A **theme** controls how VNote looks — the interface, the editor and read mode
 
 A theme corresponds to a folder inside the `themes` folder. Choose and manage themes in the **Settings** dialog. See [Settings](settings.md) for where the configuration and theme folders live.
 
+![The main interface with the Pure theme applied](../assets/screenshots/main-pure.webp){ .screenshot loading=lazy }
+
 ### Add a theme
 
 The easiest way to start is from an existing theme:

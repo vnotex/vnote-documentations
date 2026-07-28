@@ -6,6 +6,8 @@ Most of VNote's behavior can be adjusted, either through the **Settings** dialog
 
 Open **Settings** from the toolbar or menu to change common options — appearance and [theme](themes-and-styles.md), editor behavior, [Vi mode](../editing/vi-mode.md), read/render options, [image host](../editing/images-and-image-host.md), and more. For anything not exposed in the dialog, you can edit the configuration files described below.
 
+![The Settings dialog](../assets/screenshots/settings.webp){ .screenshot loading=lazy }
+
 ## Layers of configuration
 
 VNote's configuration is layered, applied in order:

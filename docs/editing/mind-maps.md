@@ -16,6 +16,8 @@ Create a mind map the same way you create any note — through **New Note** — 
 
 The mind-map editor is a visual, node-based canvas: you add child and sibling nodes, connect and rearrange them, and build out branches to structure ideas radially. This makes mind maps well suited to brainstorming, planning, and outlining relationships that are awkward to express as a linear document.
 
+![A mind map open in VNote's mind-map editor](../assets/screenshots/mindmap.webp){ .screenshot loading=lazy }
+
 Mind-map editing has its own settings, separate from the text and Markdown editors. See [Settings](../customization/settings.md) for where editor configuration lives.
 
 ## Mind maps vs. Markdown outlines

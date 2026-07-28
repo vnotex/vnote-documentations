@@ -12,6 +12,12 @@ Some VNote shortcuts are chords, written as two parts separated by a comma. For 
 
 The `Ctrl+G` prefix leads to a family of "go / global" actions; type the prefix and VNote shows you the follow-up keys.
 
+## Navigation mode
+
+**Navigation mode** lets you reach a widget in a few keystrokes, without the mouse. Press `Ctrl+G, W` and VNote overlays key labels on whatever you can navigate to right now — a whole widget, or the individual items inside one; type the key, or the two-key sequence, shown on the one you want. Any key that does not match cancels the mode, so `Esc` gets you out.
+
+![Navigation mode, with key labels overlaid on the interface](../assets/screenshots/navigation-mode.webp){ .screenshot loading=lazy }
+
 ## Where shortcuts are defined
 
 Shortcuts live in the main configuration file `vnotex.json`, in two tables: application-level actions under `core.shortcuts`, and editor/editing actions (Save, bold, headings, Find, apply snippet, and so on) under `editor.shortcuts`. Each action maps to a key sequence, for example:
@@ -47,5 +53,7 @@ When [Vi mode](../editing/vi-mode.md) is enabled, Vi keys handle text editing **
 ## Tips
 
 - Learn the `Ctrl+G` prefix first — it unlocks snippets and United Entry, two of the biggest time-savers.
+- Navigation mode (`Ctrl+G, W`) is the fastest way to reach a widget you rarely click.
+- `Ctrl+G, A` jumps straight to the Notebooks dock without entering navigation mode.
 - Reference shortcuts from [tasks](../productivity/tasks.md) with `${config:main.core.shortcuts.<Action>}` if you script around them.
 - If a shortcut seems inactive, check for a conflict in `core.shortcuts` and confirm you restarted VNote after editing the file.

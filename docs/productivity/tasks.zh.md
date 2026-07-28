@@ -2,6 +2,8 @@
 
 VNote 内置了一套简单的**任务**系统，其设计参照 [VSCode Tasks](https://code.visualstudio.com/docs/editor/tasks)，让你能在 VNote 内运行第三方程序和脚本。用它来编译当前笔记、运行本地服务器、用其他编辑器打开文件、驱动 git，或任何你能编写脚本完成的事。
 
+![列出可用任务的任务菜单](../assets/screenshots/tasks.webp){ .screenshot loading=lazy }
+
 ## 任务如何加载
 
 VNote 从三个位置加载任务，因此任务既可以随应用分发，也可以在你的整个环境中共享，或限定于某个笔记本：
@@ -117,7 +119,7 @@ VNote 不提供终端，因此若要在终端中运行程序，请使用 `start`
 
 **特殊：**
 
-- `${magic:snippet_name}`——调用 VNote [代码片段](../editing/snippets.md)。
+- `${magic:snippet_name}`——调用 VNote [片段](../editing/snippets.md)。
 - `${env:env_name}`——读取环境变量。
 - `${config:[main|session].json_path}`——读取 VNote 配置值，例如 `${config:main.core.shortcuts.FullScreen}`。
 - `${shell:command}`——替换为某个 shell 命令的输出。

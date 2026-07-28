@@ -7,6 +7,8 @@ VNote is a free and open source, Qt-based note-taking application that focuses o
 [Get Started](getting-started/index.md){ .md-button .md-button--primary }
 [Download VNote](https://github.com/vnotex/vnote/releases/latest){ .md-button }
 
+![The VNote main window](assets/screenshots/main.webp){ .screenshot }
+
 ## Why VNote
 
 <div class="grid cards" markdown>

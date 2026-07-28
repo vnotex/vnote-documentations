@@ -66,7 +66,7 @@ VNote 从寥寥数篇笔记到庞大、深度嵌套的知识库都能胜任。
 - 语法高亮与可交互的[大纲](../editing/editor-basics.md)。
 - 高效的[图片管理](../editing/images-and-image-host.md)，包括图床。
 - [数学公式与图表](../editing/math-and-diagrams.md)，支持 PlantUML、Graphviz、Mermaid 等。
-- [代码片段](../editing/snippets.md)、[模板](../editing/templates.md)与[思维导图](../editing/mind-maps.md)，助力结构化写作。
+- [片段](../editing/snippets.md)、[模板](../editing/templates.md)与[思维导图](../editing/mind-maps.md)，助力结构化写作。
 
 ## 为高级用户打造
 

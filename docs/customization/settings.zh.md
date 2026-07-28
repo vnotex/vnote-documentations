@@ -6,6 +6,8 @@ VNote 的大部分行为都可以调整，既可以通过**设置**对话框，�
 
 从工具栏或菜单打开**设置**，即可更改常用选项——外观与[主题](themes-and-styles.md)、编辑器行为、[Vi 模式](../editing/vi-mode.md)、阅读/渲染选项、[图床](../editing/images-and-image-host.md)等。对话框中未暴露的项，可以编辑下文所述的配置文件。
 
+![设置对话框](../assets/screenshots/settings.webp){ .screenshot loading=lazy }
+
 ## 配置的层级
 
 VNote 的配置是分层的，按顺序应用：

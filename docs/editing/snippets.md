@@ -8,6 +8,8 @@ Each user-defined snippet is stored as a `json` file, so snippets are just files
 
 The **Snippets** dock widget lists everything available.
 
+![The Snippets dock widget](../assets/screenshots/snippets.webp){ .screenshot loading=lazy }
+
 ## Defining a snippet
 
 When you create a snippet, you set:

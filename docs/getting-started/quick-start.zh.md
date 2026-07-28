@@ -36,4 +36,4 @@ VNote 为 Markdown 提供**实时体验**：随着你的输入，标题、列表
 
 - 了解[仪表盘](dashboard.md)与主界面。
 - 通过[笔记本、文件夹与笔记](../managing-notes/notebooks-folders-notes.md)和[标签](../managing-notes/tags.md)进行组织。
-- 探索[编辑](../editing/index.md)功能，从数学与图表到代码片段与模板。
+- 探索[编辑](../editing/index.md)功能，从数学与图表到片段与模板。

@@ -13,6 +13,10 @@
 
 从编辑器工具栏或用模式快捷键在两者间切换。导出也基于阅读模式——参见[导出](../productivity/export.md)。
 
+![编辑模式：带语法高亮的 Markdown 源码](../assets/screenshots/md-edit.webp){ .screenshot loading=lazy }
+
+![阅读模式：同一篇笔记的渲染效果](../assets/screenshots/md-read.webp){ .screenshot loading=lazy }
+
 ## 实时预览
 
 在编辑模式下，VNote 无需切到阅读模式即可预览富元素：
@@ -32,6 +36,8 @@
 - **分屏**——把内容区分成并排的多个视图，用于对比两篇笔记，或在编辑一篇时参考另一篇。
 - **快速跳转**——借助大纲、[搜索](../search/index.md)、[统一入口](../search/united-entry.md)和[历史](../managing-notes/quick-access-history.md)快速移动，在大型笔记本中尤为有用。
 
+![内容区被拆分为并排的多个视图](../assets/screenshots/splits.webp){ .screenshot loading=lazy }
+
 ## 复制与粘贴
 
 除了普通的复制和粘贴，Markdown 编辑器还提供两个用于在 VNote 内外搬运带格式内容的辅助功能：
@@ -46,7 +52,7 @@
 - [Markdown 语法](markdown-syntax.md)：VNote 能识别的格式。
 - [图片与图床](images-and-image-host.md)：粘贴与管理图片。
 - [数学与图表](math-and-diagrams.md)：公式与图表。
-- [代码片段](snippets.md)与[模板](templates.md)：避免重复输入。
+- [片段](snippets.md)与[模板](templates.md)：避免重复输入。
 - [Vi 模式](vi-mode.md)：模式化、以键盘驱动的编辑。
 
 几乎每个操作都有键盘快捷键；参见[键盘快捷键](../customization/keyboard-shortcuts.md)，让双手无需离开键盘。

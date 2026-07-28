@@ -9,3 +9,8 @@
   --md-primary-fg-color:        #00897b;
   --md-accent-fg-color:         #26a69a;
 }
+
+.md-typeset img.screenshot {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.2rem;
+}

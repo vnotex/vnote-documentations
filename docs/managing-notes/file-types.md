@@ -14,6 +14,8 @@ A VNote note is just a file on disk, and VNote recognizes a handful of built-in 
 
 Markdown is the core note type and gets VNote's full editing experience — see [Editing](../editing/index.md). Mind maps are a distinct visual note type covered in [Mind Maps](../editing/mind-maps.md).
 
+![A PDF opened in VNote's built-in viewer](../assets/screenshots/pdf.webp){ .screenshot loading=lazy }
+
 ## How the type is chosen
 
 VNote matches a file's extension against the table above. A file whose extension is not listed but whose contents are plain text is treated as a **Text** file, so you can open and edit it directly. Anything else falls under **Others** and is handed off to the program your operating system associates with it.

@@ -6,9 +6,13 @@ When VNote opens, you land in its main interface. This page introduces the areas
 
 VNote's window is organized into three parts: the dock widgets on the sides, the content area in the middle, and the toolbar and menus along the top.
 
+![VNote's main window: dock widgets on the sides, the content area in the middle](../assets/screenshots/main.webp){ .screenshot }
+
 ## Notebooks panel
 
-On the left, the **Notebooks** panel shows your **notebooks**, **folders**, and **notes** in a tree. Use it to switch notebooks, expand folders to any depth, and open notes. Right-click any item for actions such as creating, renaming, importing, and exporting. See [Notebooks, Folders & Notes](../managing-notes/notebooks-folders-notes.md).
+On the left, the **Notebooks** panel shows your **notebooks**, **folders**, and **notes** in a tree. Use it to switch notebooks, expand folders to any depth, and open notes. Right-click any item for actions such as creating, renaming, importing, and exporting. The panel's title-bar menu offers two layouts: **Combined View**, which shows folders and notes in a single tree, and **Separate View, Double Columns**, which puts the folder tree and the selected folder's notes side by side. See [Notebooks, Folders & Notes](../managing-notes/notebooks-folders-notes.md).
+
+![The Notebooks panel in the two-column layout](../assets/screenshots/notes-two-columns.webp){ .screenshot loading=lazy }
 
 ## Content area
 

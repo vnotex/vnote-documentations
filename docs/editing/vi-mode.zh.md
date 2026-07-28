@@ -29,7 +29,7 @@ Vi 模式实现了你最常用的移动与操作符：
 
 ## Vi 模式与 VNote 快捷键
 
-Vi 模式管辖笔记内部的文本编辑。VNote 的应用级操作——切换笔记、打开面板、[统一入口](../search/united-entry.md)、[代码片段](snippets.md)——仍使用它们自己的[键盘快捷键](../customization/keyboard-shortcuts.md)，其中许多本身就是组合键（例如 `Ctrl+G, I`）。二者协同工作：Vi 用于编辑，VNote 快捷键用于在应用中导航。
+Vi 模式管辖笔记内部的文本编辑。VNote 的应用级操作——切换笔记、打开面板、[统一入口](../search/united-entry.md)、[片段](snippets.md)——仍使用它们自己的[键盘快捷键](../customization/keyboard-shortcuts.md)，其中许多本身就是组合键（例如 `Ctrl+G, I`）。二者协同工作：Vi 用于编辑，VNote 快捷键用于在应用中导航。
 
 ## 如果你不用 Vi
 

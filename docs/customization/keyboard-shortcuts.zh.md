@@ -6,11 +6,17 @@ VNote 生来就是为键盘操作而设计的。几乎每个操作都有快捷�
 
 VNote 的部分快捷键是组合序列，写作以逗号分隔的两部分。例如：
 
-- `Ctrl+G, S`——打开[代码片段](../editing/snippets.md)面板：按 `Ctrl+G`，松开，再按 `S`。
+- `Ctrl+G, S`——打开[片段](../editing/snippets.md)面板：按 `Ctrl+G`，松开，再按 `S`。
 - `Ctrl+G, I`——在光标处应用一个片段。
 - `Ctrl+G, G`——激活[统一入口](../search/united-entry.md)。
 
 `Ctrl+G` 前缀引出一系列「跳转 / 全局」操作；输入前缀后，VNote 会向你显示后续按键。
+
+## 导航模式
+
+**导航模式**让你只需几次按键就能抵达某个部件，无需使用鼠标。按下 `Ctrl+G, W`，VNote 会在你此刻可以导航到的对象上叠加按键标签——可能是整个部件，也可能是其中的各个条目；输入目标上显示的按键或两键序列即可。任何不匹配的按键都会取消该模式，因此按 `Esc` 就能退出。
+
+![导航模式：界面上叠加了按键标签](../assets/screenshots/navigation-mode.webp){ .screenshot loading=lazy }
 
 ## 快捷键在哪里定义
 
@@ -47,5 +53,7 @@ VNote 的部分快捷键是组合序列，写作以逗号分隔的两部分。�
 ## 小贴士
 
 - 先掌握 `Ctrl+G` 前缀——它解锁片段与统一入口这两项最省时的功能。
+- 导航模式（`Ctrl+G, W`）是抵达那些你很少点击的部件的最快方式。
+- `Ctrl+G, A` 无需进入导航模式，可直接跳转到笔记本停靠部件。
 - 如果你围绕快捷键编写脚本，可在[任务](../productivity/tasks.md)中用 `${config:main.core.shortcuts.<Action>}` 引用它们。
 - 如果某个快捷键似乎无效，检查 `core.shortcuts` 中是否存在冲突，并确认编辑文件后已重启 VNote。

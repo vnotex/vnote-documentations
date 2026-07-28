@@ -13,6 +13,10 @@ Every note opens in one of two modes:
 
 Toggle between the two from the editor toolbar or with the mode shortcut. Read mode is also what export is based on — see [Export](../productivity/export.md).
 
+![Edit mode: Markdown source with syntax highlighting](../assets/screenshots/md-edit.webp){ .screenshot loading=lazy }
+
+![Read mode: the same note rendered](../assets/screenshots/md-read.webp){ .screenshot loading=lazy }
+
 ## Live preview
 
 While in edit mode, VNote can preview rich elements without sending you to read mode:
@@ -31,6 +35,8 @@ The **Outline** dock widget shows the heading structure of the current note. It 
 - **Tabs** — notes open as tabs in the content area, so you can keep several open and switch between them.
 - **Splits** — divide the content area into side-by-side views to compare two notes, or to reference one while editing another.
 - **Jump around** — use the outline, [Search](../search/index.md), [United Entry](../search/united-entry.md), and [History](../managing-notes/quick-access-history.md) to move quickly, especially in large notebooks.
+
+![The content area split into side-by-side views](../assets/screenshots/splits.webp){ .screenshot loading=lazy }
 
 ## Copying and pasting
 

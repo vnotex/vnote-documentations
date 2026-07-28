@@ -16,6 +16,8 @@
 
 思维导图编辑器是一块可视化的、基于节点的画布：你可以添加子节点和同级节点、连接并重新排列它们，并展开分支以放射状地组织想法。这让思维导图非常适合头脑风暴、规划，以及梳理那些难以用线性文档表达的关系。
 
+![在 VNote 思维导图编辑器中打开的思维导图](../assets/screenshots/mindmap.webp){ .screenshot loading=lazy }
+
 思维导图编辑有其自己的设置，独立于文本编辑器和 Markdown 编辑器。编辑器配置的位置参见[设置](../customization/settings.md)。
 
 ## 思维导图与 Markdown 大纲

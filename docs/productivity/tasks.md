@@ -2,6 +2,8 @@
 
 VNote includes a simple **task** system, modeled on [VSCode Tasks](https://code.visualstudio.com/docs/editor/tasks), that lets you run third-party programs and scripts from within VNote. Use it to compile the current note, run a local server, open a file in another editor, drive git, or anything else you can script.
 
+![The task menu listing available tasks](../assets/screenshots/tasks.webp){ .screenshot loading=lazy }
+
 ## How tasks are loaded
 
 VNote loads tasks from three locations, so tasks can be shipped with the app, shared across your setup, or scoped to one notebook:

@@ -8,6 +8,8 @@ By default, press `Ctrl+G, G` to activate United Entry. You can change this by e
 
 Once open, typing an entry command filters the box to that command's mode. Adding a **space** after the command triggers a second, detailed help display for that command.
 
+![United Entry, with an entry command typed in](../assets/screenshots/united-entry.webp){ .screenshot loading=lazy }
+
 ## Entry commands
 
 United Entry ships with four built-in commands plus a few short aliases for common searches. Combine a command with a keyword to run the query.

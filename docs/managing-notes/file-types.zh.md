@@ -14,6 +14,8 @@ VNote 的笔记就是磁盘上的文件，而 VNote 会根据扩展名识别若�
 
 Markdown 是核心笔记类型，享有 VNote 完整的编辑体验——参见[编辑](../editing/index.md)。思维导图是一种独立的可视化笔记类型，详见[思维导图](../editing/mind-maps.md)。
 
+![在 VNote 内置查看器中打开的 PDF](../assets/screenshots/pdf.webp){ .screenshot loading=lazy }
+
 ## 类型如何确定
 
 VNote 会将文件的扩展名与上表逐一匹配。若某文件的扩展名不在表中，但其内容为纯文本，则会被当作 **Text** 文件处理，因此你可以直接打开并编辑它。其余情况归入 **Others**，交由操作系统关联的程序打开。

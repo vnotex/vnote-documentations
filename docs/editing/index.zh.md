@@ -7,7 +7,7 @@
 贯穿笔记创建与编辑界面的文本与 Markdown 编辑功能。
 
 - [编辑器基础](editor-basics.md)
-- [代码片段](snippets.md)
+- [片段](snippets.md)
 - [模板](templates.md)
 - [Vi 模式](vi-mode.md)
 
