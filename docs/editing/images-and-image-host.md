@@ -11,6 +11,8 @@ The fastest way to add an image is to **paste** it (a screenshot, or an image co
 
 You can also insert an image from a file, or drag and drop one into the editor. Because images live inside the notebook, they travel with it when you copy or [sync](../managing-notes/notebook-sync.md) the notebook.
 
+![The Insert Image From Clipboard dialog, with a preview and fields for the title and alt text](../assets/screenshots/image-insert.webp){ .screenshot loading=lazy }
+
 ```md
 ![alt text](vx_assets/example.png)
 ```

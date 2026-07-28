@@ -19,6 +19,10 @@ Features specific to the Markdown editor.
 - [Math & Diagrams](math-and-diagrams.md)
 - [Images & Image Host](images-and-image-host.md)
 
+## Text
+
+- [Text](text.md)
+
 ## Mind Maps
 
 - [Mind Maps](mind-maps.md)

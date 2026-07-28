@@ -35,6 +35,8 @@ In the editor, press `Ctrl+G, I` to bring up a panel of all snippets. From there
 - Type part of a name (for example `my`) to search, then press `Enter` to apply the first match.
 - Press `Tab` to move focus between the search box and the snippet list, use the arrow keys to navigate the list, and press `Enter` to apply the selected snippet.
 
+![The Select Snippet popup, with a search box above the available snippets](../assets/screenshots/snippet-apply.webp){ .screenshot loading=lazy }
+
 ### By symbol
 
 Type `%snippet_name%` directly in the editor and press `Ctrl+G, I` to expand that symbol into the snippet `snippet_name`. Many line-edit fields in VNote also accept this form, including the **New Note** dialog, the **New Notebook** dialog, and note [templates](templates.md).

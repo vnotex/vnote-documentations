@@ -19,6 +19,10 @@ Markdown 编辑器特有的功能。
 - [数学与图表](math-and-diagrams.md)
 - [图片与图床](images-and-image-host.md)
 
+## 文本
+
+- [文本](text.md)
+
 ## 思维导图
 
 - [思维导图](mind-maps.md)

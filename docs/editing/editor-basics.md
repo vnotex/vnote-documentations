@@ -40,10 +40,13 @@ The **Outline** dock widget shows the heading structure of the current note. It 
 
 ## Copying and pasting
 
-Beyond plain copy and paste, the Markdown editor has two helpers for moving formatted content in and out of VNote:
+Beyond plain copy and paste, the Markdown editor has several helpers for moving content in and out of VNote:
 
+- **Insert From Clipboard** — paste a URL and VNote asks how you want it inserted instead of dropping in the bare text. **Insert As Link** wraps it in a Markdown link and **Insert As Text** pastes it verbatim; further choices appear when the URL points at an image, at a local file, or at a file you can attach to the note.
 - **Cross Copy** — in **read mode**, select the rendered content and use **Cross Copy** from the context menu to copy it as rich text tuned for a specific target application. VNote rewrites the underlying HTML per target — options include **No Background**, **Evernote**, **OneNote**, **Microsoft Word**, **WeChat Public Account Editor**, and **Raw HTML** — so the formatting survives when you paste into that app.
 - **Parse to Markdown and Paste** — when the clipboard contains HTML (for example content copied from a web page), use **Parse to Markdown and Paste** from the editor's context menu (default `Ctrl+G, Ctrl+P`) to convert that HTML to Markdown and insert it. If **Fetch images to local in Parse To Markdown And Paste** is enabled in [Settings](../customization/settings.md), remote images in the pasted content are downloaded into the note's assets and their links rewritten.
+
+![The Insert From Clipboard popup, offering Insert As Link or Insert As Text](../assets/screenshots/link-insert.webp){ .screenshot loading=lazy }
 
 ## Everyday editing
 

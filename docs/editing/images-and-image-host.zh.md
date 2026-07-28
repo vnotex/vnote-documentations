@@ -11,6 +11,8 @@
 
 你也可以从文件插入图片，或将图片拖放进编辑器。由于图片存放在笔记本内，当你复制或[同步](../managing-notes/notebook-sync.md)笔记本时，它们会随之一起迁移。
 
+![「从剪切板插入图片」对话框，含预览以及标题和替代文本输入框](../assets/screenshots/image-insert.webp){ .screenshot loading=lazy }
+
 ```md
 ![替代文本](vx_assets/example.png)
 ```

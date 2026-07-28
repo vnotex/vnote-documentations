@@ -40,10 +40,13 @@
 
 ## 复制与粘贴
 
-除了普通的复制和粘贴，Markdown 编辑器还提供两个用于在 VNote 内外搬运带格式内容的辅助功能：
+除了普通的复制和粘贴，Markdown 编辑器还提供若干用于在 VNote 内外搬运内容的辅助功能：
 
+- **从剪切板插入（Insert From Clipboard）**——粘贴一个 URL 时，VNote 不会直接插入裸文本，而是询问你希望以何种方式插入。**插入为链接**会把它包装成 Markdown 链接，**插入为文本**则原样粘贴；当该 URL 指向图片、本地文件，或可作为附件添加到笔记的文件时，还会出现更多选项。
 - **交叉复制（Cross Copy）**——在**阅读模式**下，选中已渲染的内容，从右键菜单中使用**交叉复制**，即可将其作为针对特定目标应用优化过的富文本复制。VNote 会按目标改写底层 HTML——可选项包括**无背景**、**Evernote**、**OneNote**、**Microsoft Word**、**微信公众号编辑器**和**原始 HTML**——从而在粘贴到该应用时保留格式。
 - **解析为 Markdown 并粘贴（Parse to Markdown and Paste）**——当剪贴板中含有 HTML（例如从网页复制的内容）时，从编辑器的右键菜单中使用**解析为 Markdown 并粘贴**（默认 `Ctrl+G, Ctrl+P`），即可把该 HTML 转换为 Markdown 并插入。如果在[设置](../customization/settings.md)中启用了**在“解析为 Markdown 并粘贴”时将图片抓取到本地**，粘贴内容中的远程图片会被下载到笔记的附件中，并改写其链接。
+
+![「从剪切板插入」弹窗，可选择插入为链接或插入为文本](../assets/screenshots/link-insert.webp){ .screenshot loading=lazy }
 
 ## 日常编辑
 

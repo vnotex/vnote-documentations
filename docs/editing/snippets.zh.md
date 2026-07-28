@@ -35,6 +35,8 @@
 - 输入名称的一部分（例如 `my`）进行搜索，然后按 `Enter` 应用第一个匹配项。
 - 按 `Tab` 在搜索框与片段列表之间移动焦点，用方向键在列表中导航，再按 `Enter` 应用所选片段。
 
+![「选择片段」弹窗，搜索框位于可用片段列表上方](../assets/screenshots/snippet-apply.webp){ .screenshot loading=lazy }
+
 ### 通过符号
 
 在编辑器中直接输入 `%snippet_name%`，然后按 `Ctrl+G, I`，即可把该符号展开为片段 `snippet_name`。VNote 中许多单行输入框也接受这种写法，包括**新建笔记**对话框、**新建笔记本**对话框以及笔记[模板](templates.md)。

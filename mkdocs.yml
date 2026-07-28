@@ -100,6 +100,7 @@ plugins:
             Images & Image Host: 图片与图床
             Snippets: 片段
             Templates: 模板
+            Text: 文本
             Mind Maps: 思维导图
             Vi Mode: Vi 模式
             Search: 搜索
@@ -143,6 +144,7 @@ nav:
           - Markdown Syntax: editing/markdown-syntax.md
           - Math & Diagrams: editing/math-and-diagrams.md
           - Images & Image Host: editing/images-and-image-host.md
+      - Text: editing/text.md
       - Mind Maps: editing/mind-maps.md
   - Search:
       - search/index.md
