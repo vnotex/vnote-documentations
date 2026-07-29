@@ -80,6 +80,7 @@ plugins:
           site_name: VNote
           nav_translations:
             Home: 主页
+            Gallery: 界面展示
             Getting Started: 快速开始
             Why VNote: 为什么选择 VNote
             Installation: 安装
@@ -119,6 +120,7 @@ plugins:
 
 nav:
   - Home: index.md
+  - Gallery: gallery.md
   - Getting Started:
       - getting-started/index.md
       - Why VNote: getting-started/why-vnote.md
