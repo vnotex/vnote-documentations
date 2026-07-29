@@ -31,7 +31,7 @@ On **Windows**, these three symptoms are usually caused by the display-card driv
 
 1. Update your display-card driver.
 2. Schedule VNote to run with the integrated display card.
-3. If that doesn't help, try each `OpenGL` value one by one in the **Settings** dialog.
+3. If that doesn't help, try each `OpenGL` value one by one in **Settings**.
 4. Make sure VNote's executable folder is on the `C:` drive.
 
 ## Where are my notes stored?

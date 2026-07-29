@@ -4,7 +4,7 @@
 
 ## 主题
 
-一个主题对应 `themes` 文件夹内的一个文件夹。在**设置**对话框中选择和管理主题。配置文件夹与主题文件夹的位置参见[设置](settings.md)。
+一个主题对应 `themes` 文件夹内的一个文件夹。在**设置**中选择和管理主题。配置文件夹与主题文件夹的位置参见[设置](settings.md)。
 
 ![应用了 Pure 主题的主界面](../assets/screenshots/main-pure.webp){ .screenshot loading=lazy }
 

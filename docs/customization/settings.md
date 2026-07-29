@@ -1,12 +1,12 @@
 # Settings
 
-Most of VNote's behavior can be adjusted, either through the **Settings** dialog or by editing configuration files directly. This page explains how VNote's configuration is layered, where the files live, and how to make VNote portable.
+Most of VNote's behavior can be adjusted, either through the **Settings** tab or by editing configuration files directly. This page explains how VNote's configuration is layered, where the files live, and how to make VNote portable.
 
-## The Settings dialog
+## The Settings tab
 
-Open **Settings** from the toolbar or menu to change common options — appearance and [theme](themes-and-styles.md), editor behavior, [Vi mode](../editing/vi-mode.md), read/render options, [image host](../editing/images-and-image-host.md), and more. For anything not exposed in the dialog, you can edit the configuration files described below.
+Open **Settings** from the toolbar or menu and it opens as a tab in the main window, where you can change common options — appearance and [theme](themes-and-styles.md), editor behavior, [Vi mode](../editing/vi-mode.md), read/render options, [image host](../editing/images-and-image-host.md), and more. For anything not exposed there, you can edit the configuration files described below.
 
-![The Settings dialog](../assets/screenshots/settings.webp){ .screenshot loading=lazy }
+![The Settings tab](../assets/screenshots/settings.webp){ .screenshot loading=lazy }
 
 ## Layers of configuration
 

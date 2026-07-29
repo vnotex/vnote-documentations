@@ -31,7 +31,7 @@ this.mathJaxScript = 'file://c:/Users/foo/mathjax/tex-svg.js';
 
 1. 更新显卡驱动。
 2. 设置 VNote 使用集成显卡运行。
-3. 若无效，在**设置**对话框中逐一尝试各个 `OpenGL` 值。
+3. 若无效，在**设置**中逐一尝试各个 `OpenGL` 值。
 4. 确保 VNote 的可执行文件夹位于 `C:` 盘。
 
 ## 我的笔记存放在哪里？

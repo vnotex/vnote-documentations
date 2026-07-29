@@ -32,7 +32,7 @@ An **image host** is an online service that holds your images. Unlike local imag
 
 ## Setting up an image host
 
-First configure an image host in the **Settings** dialog. VNote supports three image-host types — **GitHub Repository**, **Gitee Repository**, and **Custom Command** — then choose local images or the image host in the editor.
+First configure an image host in **Settings**. VNote supports three image-host types — **GitHub Repository**, **Gitee Repository**, and **Custom Command** — then choose local images or the image host in the editor.
 
 ### GitHub / Gitee
 

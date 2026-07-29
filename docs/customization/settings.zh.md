@@ -1,12 +1,12 @@
 # 设置
 
-VNote 的大部分行为都可以调整，既可以通过**设置**对话框，也可以直接编辑配置文件。本页说明 VNote 的配置是如何分层的、文件位于何处，以及如何让 VNote 便携化。
+VNote 的大部分行为都可以调整，既可以通过**设置**标签页，也可以直接编辑配置文件。本页说明 VNote 的配置是如何分层的、文件位于何处，以及如何让 VNote 便携化。
 
-## 设置对话框
+## 设置标签页
 
-从工具栏或菜单打开**设置**，即可更改常用选项——外观与[主题](themes-and-styles.md)、编辑器行为、[Vi 模式](../editing/vi-mode.md)、阅读/渲染选项、[图床](../editing/images-and-image-host.md)等。对话框中未暴露的项，可以编辑下文所述的配置文件。
+从工具栏或菜单打开**设置**，它会以标签页的形式在主窗口中打开，你可以在其中更改常用选项——外观与[主题](themes-and-styles.md)、编辑器行为、[Vi 模式](../editing/vi-mode.md)、阅读/渲染选项、[图床](../editing/images-and-image-host.md)等。其中未暴露的项，可以编辑下文所述的配置文件。
 
-![设置对话框](../assets/screenshots/settings.webp){ .screenshot loading=lazy }
+![设置标签页](../assets/screenshots/settings.webp){ .screenshot loading=lazy }
 
 ## 配置的层级
 

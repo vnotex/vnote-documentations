@@ -4,9 +4,9 @@ The **Search** dock widget is VNote's full search interface. Where [United Entry
 
 ## Opening search
 
-Open the **Search** dock widget from the navigation bar or its shortcut. Type your query, choose the scope and target, and run the search; results appear in the panel, and selecting one opens the note.
+Open the **Search** dock widget from the navigation bar or its shortcut. Type your query, choose the scope and target, and run the search; matches are listed in the **Location List** below the content area, and selecting one opens the note.
 
-![The Search dock widget with results](../assets/screenshots/search.webp){ .screenshot loading=lazy }
+![The Search dock widget with results in the Location List](../assets/screenshots/search.webp){ .screenshot loading=lazy }
 
 ## What you can search
 
