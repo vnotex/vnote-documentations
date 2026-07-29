@@ -6,8 +6,8 @@ VNote 提供 **Linux**、**Windows** 和 **macOS** 版本。它免费且开源�
 
 各平台的独立安装包都发布在项目的发布页面：
 
-- [VNote 官网下载](https://vnote.fun/)
 - [GitHub Releases](https://github.com/vnotex/vnote/releases)
+- [Gitee Releases](https://gitee.com/vnotex/vnote/releases)
 
 日常使用推荐**稳定版**。如果你想在正式发布前体验最新功能，可以尝试 `master` 分支的最新持续构建，但需要承担一定的稳定性风险。
 
@@ -16,6 +16,13 @@ VNote 提供 **Linux**、**Windows** 和 **macOS** 版本。它免费且开源�
 1. 从发布页面下载 Windows 安装包（`.zip` 压缩包或安装程序）。
 2. 如果下载的是压缩包，将其解压到一个你有写入权限的文件夹，然后运行 `VNote.exe`。
 3. 如果下载的是安装程序，运行它并按提示操作。
+
+如果你使用 [Scoop](https://scoop.sh/)，VNote 已收录在 `extras` bucket 中：
+
+```powershell
+scoop bucket add extras
+scoop install extras/vnote
+```
 
 !!! tip "将 VNote 放在受保护目录之外"
     在 Windows 上，建议使用 `C:\Tools\VNote` 之类的位置，而不是 `C:\Program Files`。这样可以避免权限问题，在极少数情况下还能规避显卡驱动导致的崩溃。若 VNote 无法启动，请参见[常见问题](../help/faq.md)。

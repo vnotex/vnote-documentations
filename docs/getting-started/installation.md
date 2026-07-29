@@ -6,8 +6,8 @@ VNote is distributed for **Linux**, **Windows**, and **macOS**. It is free and o
 
 Standalone packages for every platform are published on the project's release pages:
 
-- [Downloads on the VNote website](https://vnote.fun/)
 - [GitHub Releases](https://github.com/vnotex/vnote/releases)
+- [Gitee Releases](https://gitee.com/vnotex/vnote/releases)
 
 We recommend the **stable releases** for everyday use. If you want the newest features before they are released, you can try the latest continuous build from the `master` branch, at the cost of some stability.
 
@@ -16,6 +16,13 @@ We recommend the **stable releases** for everyday use. If you want the newest fe
 1. Download the Windows package (a `.zip` archive or an installer) from the releases page.
 2. If you downloaded the archive, extract it to a folder you can write to, then run `VNote.exe`.
 3. If you downloaded an installer, run it and follow the prompts.
+
+If you use [Scoop](https://scoop.sh/), VNote is available in the `extras` bucket:
+
+```powershell
+scoop bucket add extras
+scoop install extras/vnote
+```
 
 !!! tip "Keep VNote outside protected folders"
     On Windows, prefer a location like `C:\Tools\VNote` over `C:\Program Files`. This avoids permission issues and, in rare cases, works around display-driver crashes. See the [FAQ](../help/faq.md) if VNote fails to start.

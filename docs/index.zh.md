@@ -5,6 +5,7 @@
 VNote 是一款免费、开源、基于 Qt 的笔记应用，专注于 Markdown。它不仅是一个编辑器，更将出色的编辑体验与强大的笔记管理融为一体，并且支持 **Linux**、**Windows** 和 **macOS**。
 
 [开始使用](getting-started/index.md){ .md-button .md-button--primary }
+[从 Gitee 下载 VNote](https://gitee.com/vnotex/vnote/releases){ .md-button }
 [下载 VNote](https://github.com/vnotex/vnote/releases/latest){ .md-button }
 
 ![VNote 主窗口](assets/screenshots/main.webp){ .screenshot }
