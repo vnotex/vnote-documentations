@@ -8,6 +8,12 @@ A theme corresponds to a folder inside the `themes` folder. Choose and manage th
 
 ![The main interface with the Pure theme applied](../assets/screenshots/main-pure.webp){ .screenshot loading=lazy }
 
+### LaTeX Light and LaTeX Dark
+
+Two of the built-in themes, **LaTeX Light** and **LaTeX Dark**, aim for a paper-and-ink look: serif body text with a capped line measure, headings distinguished by weight rather than size alone, booktabs-style tables with no vertical rules or zebra stripes, and boxed blockquotes. They cover the Markdown viewer, the editor and export, so a note looks the same on screen and on paper.
+
+No fonts are bundled with them. They fall back to fonts you already have, and installing **Latin Modern** — plus **Noto Serif CJK** if you write Chinese — gives the intended result.
+
 ### Add a theme
 
 The easiest way to start is from an existing theme:

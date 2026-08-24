@@ -18,6 +18,31 @@ VNote 的部分快捷键是组合序列，写作以逗号分隔的两部分。�
 
 ![导航模式：界面上叠加了按键标签](../assets/screenshots/navigation-mode.webp){ .screenshot loading=lazy }
 
+## 停靠部件与窗口的默认快捷键
+
+下面这些应用级操作是你日常最常用的。名称即 `core.shortcuts` 中使用的键名，`Ctrl+G` 是可配置的前导键：
+
+| 操作 | 默认按键 | 作用 |
+|------|----------|------|
+| `NavigationDock` | `Ctrl+G, A` | 聚焦笔记本停靠部件。 |
+| `OutlineDock` | `Ctrl+G, U` | 聚焦大纲停靠部件。 |
+| `SnippetDock` | `Ctrl+G, S` | 聚焦片段停靠部件。 |
+| `LocationListDock` | `Ctrl+G, C` | 聚焦位置列表停靠部件。 |
+| `SearchDock` | 未绑定 | 聚焦搜索停靠部件。 |
+| `HistoryDock` | 未绑定 | 聚焦历史停靠部件。 |
+| `TagDock` | 未绑定 | 聚焦标签停靠部件。 |
+| `ConsoleDock` | 未绑定 | 聚焦控制台停靠部件。 |
+| `CloseFocus` | `Ctrl+G, X` | 关闭当前聚焦的停靠部件——若焦点在编辑器上，则关闭当前标签页。 |
+| `Detach` | `Ctrl+G, Shift+D` | 把当前视图分离为独立窗口。 |
+| `StayOnTop` | `F10` | 把分离窗口固定在其他窗口之上。 |
+| `Export` | `Ctrl+G, T` | 打开[导出](../productivity/export.md)对话框。 |
+| `UnitedEntry` | `Ctrl+G, G` | 激活[统一入口](../search/united-entry.md)。 |
+
+标为未绑定的操作没有默认按键；可按下文所述在 `core.shortcuts` 中为它们指定。
+
+!!! note "`CloseTab` 已改名"
+    原先名为 `CloseTab` 的操作现已改名为 `CloseFocus`。已有 `vnotex.json` 中自定义的 `CloseTab` 绑定仍然有效，并会在下次保存配置时以 `CloseFocus` 写回。
+
 ## 快捷键在哪里定义
 
 快捷键位于主配置文件 `vnotex.json` 中，分为两张表：应用级操作在 `core.shortcuts` 之下，编辑器/编辑类操作（保存、加粗、标题、查找、应用片段等）在 `editor.shortcuts` 之下。每个操作映射到一个按键序列，例如：

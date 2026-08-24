@@ -17,6 +17,30 @@ You can also insert an image from a file, or drag and drop one into the editor. 
 ![alt text](vx_assets/example.png)
 ```
 
+## Image size
+
+Images are inserted at their natural size, but you can give them an explicit one. The **Insert Image** dialog has optional **Width (px)** and **Height (px)** fields; they are empty by default, and the image's natural size is shown as the placeholder, so filling in just one of them is enough.
+
+For an image that is already in the note, right-click it in edit mode and use the **Image** submenu:
+
+- **View Image** opens the image on its own.
+- **Copy** copies a local image to the clipboard; for an online image the entry is **Copy In-Place Preview**, which copies what the in-place preview shows.
+- **Copy Image Address** copies the link target.
+- **Set Size** opens the **Set Image Size** dialog with the same two fields.
+
+VNote rewrites the link with as little churn as possible:
+
+- A Markdown image that gets a size is rewritten as an `<img …/>` tag, because Markdown alone cannot express one.
+- Clearing the size of a Markdown link written with the `=WxH` suffix returns it to plain Markdown.
+- An existing HTML `<img>` is edited in place. Entering `0` removes that dimension, and VNote converts the tag back to Markdown only when the result is a clean round trip.
+- Hand-written attributes such as `class`, `style` and `data-*` are preserved.
+
+## Legacy image folders
+
+Notes created by older VNote versions keep their pictures in a `vx_images` or `_v_images` folder instead of the assets folder. When you open such a note, an inline banner offers to tidy it up: **Migrate to Assets Folder**, **Not Now**, or **Don't Ask Again**.
+
+Migration moves the files on disk. If another note links to the same picture in the shared legacy folder, that link breaks — so migrate a set of notes together, or leave them as they are. See [Notebooks, Folders & Notes](../managing-notes/notebooks-folders-notes.md) for how these folders relate to the notebook layout.
+
 ## Local images vs. image host
 
 VNote supports two storage strategies, and you can switch between them per note in the editor:

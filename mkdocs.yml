@@ -84,11 +84,13 @@ plugins:
             Getting Started: 快速开始
             Why VNote: 为什么选择 VNote
             Installation: 安装
+            Command Line: 命令行
             Quick Start: 快速上手
             Dashboard: 仪表盘
             Managing Notes: 管理笔记
             Notebooks, Folders & Notes: 笔记本、文件夹与笔记
             File Types: 文件类型
+            PDF Viewer: PDF 阅读器
             Importing & Migrating: 导入与迁移
             Tags: 标签
             Notebook Sync: 笔记本同步
@@ -104,10 +106,12 @@ plugins:
             Text: 文本
             Mind Maps: 思维导图
             Vi Mode: Vi 模式
+            Markdown: Markdown
             Search: 搜索
             Search Panel: 搜索面板
             United Entry: 统一入口
             Productivity: 效率
+            Quick Note: 快速笔记
             Tasks: 任务
             Export: 导出
             Customization: 自定义
@@ -125,12 +129,14 @@ nav:
       - getting-started/index.md
       - Why VNote: getting-started/why-vnote.md
       - Installation: getting-started/installation.md
+      - Command Line: getting-started/command-line.md
       - Quick Start: getting-started/quick-start.md
       - Dashboard: getting-started/dashboard.md
   - Managing Notes:
       - managing-notes/index.md
       - Notebooks, Folders & Notes: managing-notes/notebooks-folders-notes.md
       - File Types: managing-notes/file-types.md
+      - PDF Viewer: managing-notes/pdf-viewer.md
       - Importing & Migrating: managing-notes/importing-migrating.md
       - Tags: managing-notes/tags.md
       - Notebook Sync: managing-notes/notebook-sync.md
@@ -154,6 +160,7 @@ nav:
       - United Entry: search/united-entry.md
   - Productivity:
       - productivity/index.md
+      - Quick Note: productivity/quick-note.md
       - Tasks: productivity/tasks.md
       - Export: productivity/export.md
   - Customization:

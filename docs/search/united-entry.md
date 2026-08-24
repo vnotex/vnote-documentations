@@ -12,7 +12,7 @@ Once open, typing an entry command filters the box to that command's mode. Addin
 
 ## Entry commands
 
-United Entry ships with four built-in commands plus a few short aliases for common searches. Combine a command with a keyword to run the query.
+United Entry ships with five built-in commands plus a few short aliases for common searches. Combine a command with a keyword to run the query.
 
 Built-in commands:
 
@@ -22,6 +22,9 @@ Built-in commands:
 | `help`     | Help information about United Entry      |
 | `history`  | Recently opened files                   |
 | `windows`  | Open windows across workspaces          |
+| `task`     | Run a task                              |
+
+The `task` command lists the runnable [tasks](../productivity/tasks.md) you have defined, so you can start one without opening the Tasks dock. Only leaf tasks are listed, because only they can be run; a task inside a group is shown as `parent/child`. Typing after the command filters the list by label, ignoring case. With nothing to show it says **No tasks**, and when a filter excludes everything, **No matching tasks**.
 
 Default aliases (shortcuts for common `find` queries):
 

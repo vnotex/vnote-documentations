@@ -21,14 +21,34 @@ Toggle between the two from the editor toolbar or with the mode shortcut. Read m
 
 While in edit mode, VNote can preview rich elements without sending you to read mode:
 
-- **In-place preview** renders elements such as images, math, and diagrams directly inside the editor, right where they appear in the text.
+- **In-place preview** renders elements such as images, math, diagrams, and tables directly inside the editor, right where they appear in the text. In-place previews zoom together with the editor, and the source block is folded automatically when its preview appears — if you unfold it by hand, VNote leaves it unfolded.
 - **Side-by-side preview** opens a rendered pane next to the editor that scrolls in sync as you type, when you prefer to see the full result while writing.
 
 Use whichever fits the note; you can turn side-by-side preview on and off at any time.
 
+The **interactive table preview** is enabled by default: a Markdown table is previewed as a real editable sheet with syntax-highlighted cells, row, column and alignment operations from its **Table** menu, and `Enter` in the last cell appending a row. Edits go straight back into the Markdown source.
+
 ## The outline
 
-The **Outline** dock widget shows the heading structure of the current note. It updates as you write and is fully interactive — click any heading to jump straight to that section. For long notes, the outline is the fastest way to move around and to sanity-check your document's structure.
+The **Outline** dock widget shows the heading structure of the current note. It updates as you write and is fully interactive — click any heading to jump straight to that section. In edit mode it shows rendered heading titles rather than raw Markdown, and the pane scrolls horizontally when a label is too long to fit. For long notes, the outline is the fastest way to move around and to sanity-check your document's structure.
+
+## Detached windows
+
+A view does not have to stay inside the main window:
+
+- **Detach** in the tab context menu (`Ctrl+G, Shift+D`) moves the current tab into its own top-level window.
+- **Open as Detached** in the notebook explorer context menu opens a note directly in a detached window.
+- The `--detached-view` [command line](../getting-started/command-line.md) option does the same from a terminal or a script.
+
+A detached window carries a **Stay on Top** pin (`F10`) so you can keep it above other windows while you work elsewhere — useful for a reference note or a [PDF](../managing-notes/pdf-viewer.md).
+
+## The Home tab
+
+VNote starts on the [Dashboard](../getting-started/dashboard.md) Home tab. Opening a file in the main area closes it when it is the only tab there, so you are not left with a stale placeholder; opening a file in a detached window leaves it alone. Home comes back as soon as the main area is empty again. There is no setting to configure.
+
+## Reloading
+
+A note can change on disk — a sync, another editor, a script. VNote detects the change and reloads the buffer, and your caret position is restored afterwards. The same applies to an explicit reload, to changing a note's encoding, and to the resynchronization that happens when the window regains focus.
 
 ## Tabs, splits, and navigation
 

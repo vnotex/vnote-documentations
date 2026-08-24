@@ -8,6 +8,12 @@
 
 ![应用了 Pure 主题的主界面](../assets/screenshots/main-pure.webp){ .screenshot loading=lazy }
 
+### LaTeX Light 与 LaTeX Dark
+
+内置主题中的 **LaTeX Light** 和 **LaTeX Dark** 追求纸墨般的观感：衬线正文并限制每行宽度、以字重而非仅靠字号区分标题、booktabs 风格的表格（没有竖线也没有斑马纹），以及带边框的块引用。它们覆盖 Markdown 阅读视图、编辑器与导出，因此笔记在屏幕上和纸上看起来一致。
+
+这两个主题不附带任何字体。它们会回退到你系统中已有的字体；安装 **Latin Modern**——若你书写中文，再加上 **Noto Serif CJK**——即可获得预期效果。
+
 ### 添加主题
 
 最简单的起步方式是基于现有主题：

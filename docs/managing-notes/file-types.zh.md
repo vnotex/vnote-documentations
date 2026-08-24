@@ -9,7 +9,7 @@ VNote 的笔记就是磁盘上的文件，而 VNote 会根据扩展名识别若�
 | **Markdown** | `.md`、`.mkd`、`.rmd`、`.markdown` | Markdown 编辑器 | 可以 |
 | **Text（文本）** | `.txt`、`.text`、`.log`、许多源代码与配置文件后缀，以及任何被识别为纯文本的文件 | 文本编辑器 | 可以 |
 | **Mind Map（思维导图）** | `.emind` | 思维导图编辑器 | 可以 |
-| **PDF** | `.pdf` | 内置 PDF 查看器 | 不可以——仅供查看 |
+| **PDF** | `.pdf` | [内置 PDF 阅读器](pdf-viewer.md) | 不可以——仅供查看 |
 | **Others（其他）** | 其余任何文件 | 文本编辑器 | 可以——不会添加扩展名 |
 
 Markdown 是核心笔记类型，享有 VNote 完整的编辑体验——参见[编辑](../editing/index.md)。文本与源代码文件在[文本编辑器](../editing/text.md)中打开；思维导图则是一种独立的可视化笔记类型，详见[思维导图](../editing/mind-maps.md)。

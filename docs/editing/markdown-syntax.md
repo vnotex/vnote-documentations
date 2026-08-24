@@ -15,6 +15,8 @@ VNote is designed around **Markdown**, a lightweight and easy-to-use syntax for 
 
 Headers feed the interactive [outline](editor-basics.md), so use them to structure long notes.
 
+In edit mode, right-clicking an ATX header (a line starting with `#`) offers **Copy Link**, which copies the note's path together with the header's anchor — the same anchor read mode uses — ready to paste as a link into another note.
+
 ## Emphasis
 
 ```md
@@ -108,6 +110,7 @@ Here is another sentence within the quote.
 
 - A space is needed after the marker `>`.
 - For consecutive quoted lines you can add `>` only on the first line.
+- Pressing `Enter` inside a block quote continues it automatically, inserting the `>` marker for you. Nested and lazily continued quotes are handled too. Press `Enter` on an empty quoted line to leave the quote.
 
 ## Fenced code blocks
 
@@ -149,6 +152,8 @@ Here is a ~~text~~ with strikethrough.
 * [x] this is a complete item.
 * [ ] this is an incomplete item.
 ```
+
+Checkboxes are interactive: click one in **read mode**, or in the edit-mode in-place preview, and VNote toggles it and rewrites the corresponding source line, marking the note modified. While the editor's document is active it counts as a single undoable edit, so `Ctrl+Z` puts the box back. A read-only note refuses the toggle and tells you the note is read-only. There is nothing to configure — see [Editor Basics](editor-basics.md).
 
 ## Footnotes
 

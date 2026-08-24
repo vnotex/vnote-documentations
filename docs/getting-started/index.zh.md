@@ -4,5 +4,6 @@
 
 - [为什么选择 VNote](why-vnote.md)
 - [安装](installation.md)
+- [命令行](command-line.md)
 - [快速上手](quick-start.md)
 - [仪表盘](dashboard.md)

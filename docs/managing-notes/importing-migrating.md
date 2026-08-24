@@ -40,6 +40,34 @@ You can pull external content into an existing notebook without leaving VNote. S
 
 Imported items are placed under the selected location in the notebook.
 
+## Share a folder
+
+**Share Folder**, in the notebook explorer context menu, creates *a portable copy of this folder including metadata*. Use it to hand a slice of a notebook to someone else, or to move it into another notebook without losing anything.
+
+The action is available on an indexed folder of a **bundled** notebook that is not the notebook root. The result is an ordinary folder you can copy, zip or email — the folder's content plus a parallel `vx.json` metadata subtree — not an archive format of its own.
+
+A few details worth knowing:
+
+- Notes you have open are saved first, so the copy always carries their latest content.
+- Symbolic links, junctions and reparse points are not followed; VNote refuses them rather than duplicating what they point at.
+- If two names would collide on a case-insensitive filesystem, you are warned up front.
+- The copy is verified before it is published, so a failed share leaves nothing half-written behind.
+
+## Import a shared folder
+
+**New → Import Folder** in the toolbar opens the **Import Folder** dialog, which has two modes:
+
+- **External folder** — an ordinary folder from disk. Its notes are indexed as new notes, with fresh ids and timestamps.
+- **Shared folder from VNote** — a folder produced by **Share Folder**; the path field's placeholder says exactly that, *Folder produced by Share Folder*. Note ids, dates, tags and attachments are preserved, so the folder keeps its history as it travels between notebooks.
+
+The shared-folder mode needs a destination in a **writable bundled** notebook; raw notebooks and read-only notebooks are rejected, because there is no index to preserve the metadata in.
+
+Everything is validated before a single file is copied, and a failed or cancelled import leaves the notebook exactly as it was. Duplicate note ids, names that would collide, and re-importing a folder that is already in the notebook are refused rather than merged or overwritten.
+
+## Open a VNote 3 notebook
+
+VNote can read notebooks created by VNote 3. Choose **Open Notebook** and click **Open V3 Notebook** in that dialog, then point it at the old notebook's folder. See [Data Migration](../help/data-migration.md).
+
 ## Migrating a notebook to another computer
 
 Since everything a bundled notebook needs lives under its root folder, migration is a copy:

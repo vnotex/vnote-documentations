@@ -4,6 +4,7 @@
 
 - [笔记本、文件夹与笔记](notebooks-folders-notes.md)
 - [文件类型](file-types.md)
+- [PDF 阅读器](pdf-viewer.md)
 - [导入与迁移](importing-migrating.md)
 - [标签](tags.md)
 - [笔记本同步](notebook-sync.md)

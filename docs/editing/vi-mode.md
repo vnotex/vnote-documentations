@@ -4,7 +4,7 @@ VNote grew out of a Vim-inspired workflow, and it offers a built-in **Vi mode** 
 
 ## Enabling Vi mode
 
-Turn Vi mode on in [Settings](../customization/settings.md). Once enabled, the editor starts in **normal mode**, and the usual modal editing applies across your notes.
+Vi is one of the editor's three **input modes**, chosen under **Settings → Text Editor → Input mode**: **VSCode** (the default), **Normal**, and **Vi**. Select **Vi** and the editor starts in **normal mode**, and the usual modal editing applies across your notes.
 
 ## The modes
 
@@ -33,4 +33,4 @@ Vi mode governs text editing inside a note. VNote's application-level actions �
 
 ## If you don't use Vi
 
-Vi mode is entirely optional and off unless you enable it. With it disabled, the editor behaves like a conventional text editor. Either way, see [Keyboard Shortcuts](../customization/keyboard-shortcuts.md) to customize how you drive VNote.
+Vi mode is entirely optional and off unless you select it — the editor uses the **VSCode** input mode by default. Either way, see [Keyboard Shortcuts](../customization/keyboard-shortcuts.md) to customize how you drive VNote.

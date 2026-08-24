@@ -70,13 +70,28 @@ Notebooks you have created or opened appear in the notebook selector on the left
 
 Right-click a notebook or an existing folder in the Notebooks panel to create a **New Folder**. Because nesting is unlimited, you can model anything from a flat list of notes to a deep, structured knowledge base. Folders can be renamed, moved, and deleted from the same context menu.
 
+**Share Folder** creates a portable copy of a folder, metadata included, that another notebook can import without losing note ids, dates or tags — see [Importing & Migrating](importing-migrating.md#share-a-folder).
+
+## Ordering
+
+Items are shown in the order you arrange them. Drag a note or folder to move it, or choose **Sort** to reorder a whole level in one dialog. The dialog lists the items with **Name**, **Created** and **Modified** columns:
+
+- Click a column header for a one-shot reorder by that column; clicking it again reverses the direction. It is a one-shot operation, not a live sort, so the result becomes your manual order.
+- **Move to Top**, **Move Up**, **Move Down** and **Move to Bottom** adjust individual rows, and rows can be dragged.
+- Moving or dragging a row after a header click clears the sort indicator: you are back to plain manual ordering.
+
+When a name is too long for the panel, the tree scrolls horizontally rather than truncating it.
+
 ## Notes
 
-Select a notebook or folder and choose **New Note** to create one. Name it with a `.md` suffix for Markdown. From the note's context menu you can rename, move (cut and paste between folders), copy, delete, and export notes, as well as reveal the underlying file with **Open Location** (or **Copy Path**).
+Select a notebook or folder and choose **New Note** to create one. Name it with a `.md` suffix for Markdown. VNote proposes a default name that is not already taken, and remembers the [template](../editing/templates.md) you last used for that file type. From the note's context menu you can rename, move (cut and paste between folders), copy, delete, and export notes, as well as reveal the underlying file with **Open Location** (or **Copy Path**). **Open as Detached** opens the note in its own top-level window — see [Editor Basics](../editing/editor-basics.md#detached-windows).
+
 
 A note can also have **attachments** — arbitrary files associated with it. Use the **Attachments** button in the note's toolbar to add, open, rename, or remove them. VNote copies each one into that note's subfolder under the notebook's assets folder and records it in the index, so attachments require a bundled notebook.
 
 In a bundled notebook, deleting a note moves it to VNote's recycle bin inside the notebook, so it can be recovered until you empty it. Raw notebooks have no recycle bin.
+
+A note written by an older VNote version keeps its pictures in a legacy `vx_images` or `_v_images` folder; VNote offers to migrate them into the assets folder when you open it — see [Legacy image folders](../editing/images-and-image-host.md#legacy-image-folders).
 
 ## Everything is just files
 

@@ -24,7 +24,7 @@ Click **Add Task** on the task menu to open the user tasks folder. Create a fold
 }
 ```
 
-Reload tasks from the menu and a `hello` task appears. Click it to run.
+Reload tasks from the menu and a `hello` task appears. Click it to run. You can also run it from [United Entry](../search/united-entry.md) with the `task` command, without leaving the keyboard.
 
 ### Customize the menu item
 

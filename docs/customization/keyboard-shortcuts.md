@@ -18,6 +18,31 @@ The `Ctrl+G` prefix leads to a family of "go / global" actions; type the prefix 
 
 ![Navigation mode, with key labels overlaid on the interface](../assets/screenshots/navigation-mode.webp){ .screenshot loading=lazy }
 
+## Default dock and window shortcuts
+
+These application-level actions are the ones you reach for daily. The names are the keys used under `core.shortcuts`, and `Ctrl+G` is the configurable leader key:
+
+| Action | Default | What it does |
+|--------|---------|--------------|
+| `NavigationDock` | `Ctrl+G, A` | Focus the Notebooks dock. |
+| `OutlineDock` | `Ctrl+G, U` | Focus the Outline dock. |
+| `SnippetDock` | `Ctrl+G, S` | Focus the Snippets dock. |
+| `LocationListDock` | `Ctrl+G, C` | Focus the Location List dock. |
+| `SearchDock` | unbound | Focus the Search dock. |
+| `HistoryDock` | unbound | Focus the History dock. |
+| `TagDock` | unbound | Focus the Tags dock. |
+| `ConsoleDock` | unbound | Focus the Console dock. |
+| `CloseFocus` | `Ctrl+G, X` | Close the focused dock — or the current tab when the editor has focus. |
+| `Detach` | `Ctrl+G, Shift+D` | Detach the current view into its own window. |
+| `StayOnTop` | `F10` | Pin a detached window above the others. |
+| `Export` | `Ctrl+G, T` | Open the [Export](../productivity/export.md) dialog. |
+| `UnitedEntry` | `Ctrl+G, G` | Activate [United Entry](../search/united-entry.md). |
+
+Actions listed as unbound have no default; give them one in `core.shortcuts` as described below.
+
+!!! note "`CloseTab` was renamed"
+    The action formerly called `CloseTab` is now `CloseFocus`. A customized `CloseTab` binding in an existing `vnotex.json` is still honored, and is written back as `CloseFocus` the next time the configuration is saved.
+
 ## Where shortcuts are defined
 
 Shortcuts live in the main configuration file `vnotex.json`, in two tables: application-level actions under `core.shortcuts`, and editor/editing actions (Save, bold, headings, Find, apply snippet, and so on) under `editor.shortcuts`. Each action maps to a key sequence, for example:

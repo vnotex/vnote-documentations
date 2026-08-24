@@ -28,7 +28,13 @@ Along the bottom of the editor:
 
 ## Editor settings
 
-Most of the text editor's behavior is configured under **Settings → Text Editor**: line numbers (absolute, relative, or off), text folding, word wrap mode, tab expansion and width, whitespace highlighting, line spacing, zoom, spell check, and the **input mode** — which is where you turn on [Vi mode](vi-mode.md).
+Most of the text editor's behavior is configured under **Settings → Text Editor**: line numbers (absolute, relative, or off), text folding, word wrap mode, tab expansion and width, whitespace highlighting, line spacing, zoom, spell check, and the **input mode**.
+
+The **input mode** picks how keys are interpreted:
+
+- **VSCode** — the default. Familiar modeless editing with VSCode-style key bindings, including `Ctrl+Shift+[` and `Ctrl+Shift+]` to fold and unfold at the cursor.
+- **Normal** — plain, minimal editing with no extra key bindings.
+- **Vi** — modal editing; see [Vi mode](vi-mode.md).
 
 !!! note "These settings are shared with the Markdown editor"
     The text editor and the Markdown editor use one set of options, so changing the wrap mode or the line numbering affects both. Spell check is the exception: the Markdown editor keeps its own setting for it.

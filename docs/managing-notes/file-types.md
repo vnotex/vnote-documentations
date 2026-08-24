@@ -9,7 +9,7 @@ A VNote note is just a file on disk, and VNote recognizes a handful of built-in 
 | **Markdown** | `.md`, `.mkd`, `.rmd`, `.markdown` | Markdown editor | Yes |
 | **Text** | `.txt`, `.text`, `.log`, many source and configuration suffixes, and any other file detected as plain text | Text editor | Yes |
 | **Mind Map** | `.emind` | Mind-map editor | Yes |
-| **PDF** | `.pdf` | Built-in PDF viewer | No — view only |
+| **PDF** | `.pdf` | [Built-in PDF viewer](pdf-viewer.md) | No — view only |
 | **Others** | anything else | Text editor | Yes — no extension is added |
 
 Markdown is the core note type and gets VNote's full editing experience — see [Editing](../editing/index.md). Text and source files open in the [text editor](../editing/text.md), and mind maps are a distinct visual note type covered in [Mind Maps](../editing/mind-maps.md).

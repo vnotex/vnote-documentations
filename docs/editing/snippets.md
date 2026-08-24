@@ -69,6 +69,24 @@ Wrap the selection to color or highlight it:
 
 To select some text and instantly wrap it, select it, apply the snippet, and the `$$` marks are replaced with your selection while the cursor moves to `@@`.
 
+## Date and time placeholders
+
+The built-in snippets include date pieces you can use anywhere a snippet is accepted — in a snippet's own content, in a [template](templates.md), and in line-edit fields such as the [Quick Note](../productivity/quick-note.md) folder and note name:
+
+| Placeholder | Expands to |
+|-------------|------------|
+| `%yyyy%` | The four-digit year. |
+| `%MM%` | The two-digit month. |
+| `%dd%` | The two-digit day of the month. |
+| `%MMM%` | The abbreviated month name. |
+| `%MMMM%` | The full month name. |
+| `%ddd%` | The abbreviated weekday name. |
+| `%dddd%` | The full weekday name. |
+
+The name-producing placeholders follow **VNote's Language setting**, not your operating system's locale, so a Chinese interface gives Chinese month and weekday names on an English system. Changing the language takes effect after a restart.
+
+A folder path like `journal/%yyyy%/%MM%` therefore files each new note under the current year and month automatically.
+
 ## Snippets in templates
 
 Because templates support snippets, a template can auto-fill content when you create a note — for example inserting the note name as the title. See [Templates](templates.md).

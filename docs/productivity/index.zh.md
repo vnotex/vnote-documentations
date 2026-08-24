@@ -2,5 +2,6 @@
 
 自动化任务并导出你的成果。
 
+- [快速笔记](quick-note.md)
 - [任务](tasks.md)
 - [导出](export.md)

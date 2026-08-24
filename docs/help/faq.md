@@ -50,6 +50,14 @@ Yes. Bundle the configuration next to the executable as described in [Make VNote
 
 Create a **bundled notebook** and import your folder into it — see [Importing & Migrating](../managing-notes/importing-migrating.md). If you would rather adopt the existing folder exactly as it is, open it with **New Notebook → Type: Raw notebook**, which browses it in place but has no tags, attachments, or recycle bin. For migrating from other apps, see [Data Migration](data-migration.md).
 
+## Why did my note open in a separate window?
+
+That window is a **detached view**. It appears when you use **Detach** on a tab, **Open as Detached** in the notebook explorer, or the `--detached-view` [command line](../getting-started/command-line.md) option. Close it or drag its tab back to return the note to the main window — see [Editor Basics](../editing/editor-basics.md#detached-windows).
+
+## Does VNote update itself?
+
+No. VNote only checks whether a newer release exists and, if so, offers to open the release page; it downloads and installs nothing and never modifies its installation directory. See [Checking for updates](../getting-started/installation.md#checking-for-updates).
+
 ## What is the difference between a bundled and a raw notebook?
 
 A bundled notebook keeps an index under its root folder, and that index is what enables tags, attachments, the recycle bin, and built-in Git sync. A raw notebook has no index — it browses a folder in place, like a file browser — so those features are unavailable. Prefer bundled, and choose raw only when the existing folder must be adopted as it is, or is managed outside VNote. See [Notebooks, Folders & Notes](../managing-notes/notebooks-folders-notes.md#which-type-should-i-use).
