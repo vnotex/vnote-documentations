@@ -38,7 +38,7 @@ scoop install extras/vnote
 ```
 
 !!! warning "Windows 7 版本存在限制"
-    `win64-windows7` 安装包基于 Qt 5.15 构建，无法提供 Qt 6 版本的全部功能。内置的 [PDF 阅读器](../managing-notes/pdf-viewer.md)在该版本中无法工作——请改用外部应用打开 PDF。该安装包自带 OpenSSL 1.1.1w；早期的 Windows 7 版本搜索时完全返回不到结果，网络操作也会以 “TLS initialization failed” 失败，这个 OpenSSL 修复了上述问题。请勿把随包附带的文件分开存放。
+    `win64-windows7` 安装包基于 Qt 5.15 构建，无法提供 Qt 6 版本的全部功能。由于 pdf.js 6 需要更新的网页引擎，内置的 [PDF 阅读器](../managing-notes/pdf-viewer.md)在该版本中会被禁用；VNote 会改用已配置的外部应用，未配置时则使用系统默认应用打开 PDF。该安装包自带 OpenSSL 1.1.1w；早期的 Windows 7 版本搜索时完全返回不到结果，网络操作也会以 “TLS initialization failed” 失败，这个 OpenSSL 修复了上述问题。请勿把随包附带的文件分开存放。
 
 ## macOS
 

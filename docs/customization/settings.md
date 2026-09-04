@@ -8,6 +8,13 @@ Open **Settings** from the toolbar or menu and it opens as a tab in the main win
 
 ![The Settings tab](../assets/screenshots/settings.webp){ .screenshot loading=lazy }
 
+## General settings
+
+Two controls under **Settings → General** affect how VNote starts and identifies itself:
+
+- **Application display name** changes the name shown in window titles, the system tray, and **About**. Restart VNote after saving; an empty value resets the name to `VNote`.
+- **Start VNote on system startup** is available on Windows. Enable it to launch the current VNote executable automatically when you sign in to your Windows account. Saving the setting reports an error if the per-user startup entry cannot be updated.
+
 ## Layers of configuration
 
 VNote's configuration is layered, applied in order:

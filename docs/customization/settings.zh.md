@@ -8,6 +8,13 @@ VNote 的大部分行为都可以调整，既可以通过**设置**标签页，�
 
 ![设置标签页](../assets/screenshots/settings.webp){ .screenshot loading=lazy }
 
+## 常规设置
+
+**设置 → 常规**下有两项控件会影响 VNote 的启动方式与显示名称：
+
+- **应用显示名称（Application display name）**会更改窗口标题、系统托盘和**关于**中显示的名称。保存后请重启 VNote；留空会把名称重置为 `VNote`。
+- **系统启动时启动 VNote（Start VNote on system startup）**仅在 Windows 上提供。启用后，当前 VNote 可执行文件会在你登录 Windows 账户时自动启动。如果无法更新当前用户的启动项，保存设置时会报告错误。
+
 ## 配置的层级
 
 VNote 的配置是分层的，按顺序应用：

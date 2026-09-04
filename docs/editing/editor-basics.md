@@ -28,6 +28,10 @@ Use whichever fits the note; you can turn side-by-side preview on and off at any
 
 The **interactive table preview** is enabled by default: a Markdown table is previewed as a real editable sheet with syntax-highlighted cells, row, column and alignment operations from its **Table** menu, and `Enter` in the last cell appending a row. Edits go straight back into the Markdown source.
 
+Two options under **Settings → Markdown Editor** control how that write-back looks and how previews affect the source. **Align table source** formats a table edited through the preview as a column-aligned pipe table; it never reformats existing tables until you edit them. **Auto fold previewed blocks** folds a block's source when its in-place preview appears; it requires text folding, and turning it off does not unfold blocks already folded.
+
+Large notes render previews incrementally. Off-screen tables keep their layout space and are built only when needed, visible graph previews take priority, and read-mode diagrams appear progressively. Table cell syntax highlighting is capped at 5000 cells in extreme documents; the remaining cells and table content still render.
+
 ## The outline
 
 The **Outline** dock widget shows the heading structure of the current note. It updates as you write and is fully interactive — click any heading to jump straight to that section. In edit mode it shows rendered heading titles rather than raw Markdown, and the pane scrolls horizontally when a label is too long to fit. For long notes, the outline is the fastest way to move around and to sanity-check your document's structure.

@@ -17,6 +17,12 @@ Open a note and use the **Tags** button in the note's toolbar to add one or more
 
 ![Adding a tag to a note from the tag popup](../assets/screenshots/tag-new.webp){ .screenshot loading=lazy }
 
+### Edit tags on several files
+
+Select several notes in the notebook explorer, right-click one of the selected notes, and choose **Tags** to apply one change to the whole selection. The dialog distinguishes three states: a normal selected tag is on every file, an italic partial tag is on only some files and shows an “N of M” tooltip, and an unselected tag is on none of them.
+
+Click a partial or unselected tag to add it to every selected file; click a tag that is already on every file to remove it from all of them. Leaving a partial tag untouched preserves each file's existing state. Only eligible files from the clicked writable bundled notebook are included; folders and the notebook root are ignored.
+
 ## Browse notes by tag
 
 The **Tags** dock widget lists all tags in the current notebook. Select a tag to see every note that carries it, then open a note directly from the list. This turns a scattered set of notes into a focused, topic-based view. Long tag names are not truncated: the explorer scrolls horizontally when a label overflows.

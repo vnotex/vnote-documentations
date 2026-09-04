@@ -38,7 +38,7 @@ scoop install extras/vnote
 ```
 
 !!! warning "The Windows 7 build has limitations"
-    The `win64-windows7` package is built against Qt 5.15 and cannot offer everything the Qt 6 build does. The bundled [PDF viewer](../managing-notes/pdf-viewer.md) does not work there — open PDFs in an external application instead. This package ships its own OpenSSL 1.1.1w; earlier Windows 7 builds returned no search results at all and failed network operations with "TLS initialization failed", which that OpenSSL fixes. Keep the files that come with the package together.
+    The `win64-windows7` package is built against Qt 5.15 and cannot offer everything the Qt 6 build does. The built-in [PDF viewer](../managing-notes/pdf-viewer.md) is disabled there because pdf.js 6 requires a newer web engine; VNote opens PDFs with the configured external application or the system default instead. This package ships its own OpenSSL 1.1.1w; earlier Windows 7 builds returned no search results at all and failed network operations with "TLS initialization failed", which that OpenSSL fixes. Keep the files that come with the package together.
 
 ## macOS
 
