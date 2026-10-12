@@ -1,6 +1,6 @@
 # Gallery
 
-A tour of VNote's main window. Click an image to open it at full size, or follow the link on a card to read more. These screenshots were captured in earlier releases; menus and editor layouts may differ in VNote 4.9.1.
+A tour of VNote's main window. Click an image to open it at full size, or follow the link on a card to read more. The Markdown edit, read, and side-by-side preview cards show the [demo notebook](getting-started/quick-start.md#try-the-demo-notebook) captured in VNote 4.9.1 on Windows with the English interface. The other screenshots are from earlier releases; menus and editor layouts may differ.
 
 <div class="grid cards" markdown>
 
@@ -14,25 +14,35 @@ A tour of VNote's main window. Click an image to open it at full size, or follow
 
     [:octicons-arrow-right-24: Dashboard](getting-started/dashboard.md)
 
--   [![A note open in Markdown edit mode](assets/screenshots/md-edit.webp){ .screenshot loading=lazy }](assets/screenshots/md-edit.webp)
+-   [![Markdown Tour open in edit mode](assets/screenshots/demo-edit.webp){ .screenshot loading=lazy }](assets/screenshots/demo-edit.webp)
 
     __Markdown edit mode__
 
     ---
 
-    Editing a note with line numbers, syntax highlighting, and in-place previews of diagrams and math.
+    Markdown Tour in edit mode, with syntax highlighting, an in-place table preview, a checklist, and a Python code block.
 
     [:octicons-arrow-right-24: Editor Basics](editing/editor-basics.md)
 
--   [![The same note in Markdown read mode](assets/screenshots/md-read.webp){ .screenshot loading=lazy }](assets/screenshots/md-read.webp)
+-   [![Welcome open in read mode](assets/screenshots/demo-read.webp){ .screenshot loading=lazy }](assets/screenshots/demo-read.webp)
 
     __Markdown read mode__
 
     ---
 
-    The same note rendered, with code blocks, math, images, and diagrams in their final form.
+    Welcome rendered with headings, lists, and links to the tour and the sample project. The notebook tree shows the English and Chinese note pairs.
 
     [:octicons-arrow-right-24: Editor Basics](editing/editor-basics.md)
+
+-   [![Markdown Tour with source and Live Preview side by side](assets/screenshots/demo-preview.webp){ .screenshot loading=lazy }](assets/screenshots/demo-preview.webp)
+
+    __Side-by-side preview__
+
+    ---
+
+    One note, two views: edit the Markdown source on the left and see its rendered table, checklist, and code on the right.
+
+    [:octicons-arrow-right-24: Live preview](editing/editor-basics.md#live-preview)
 
 -   [![The content area split into two editor groups](assets/screenshots/splits.webp){ .screenshot loading=lazy }](assets/screenshots/splits.webp)
 

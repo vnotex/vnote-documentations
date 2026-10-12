@@ -1,6 +1,6 @@
 # 界面展示
 
-这里集中展示 VNote 主窗口的界面。点击图片可查看原图，或通过卡片上的链接了解更多。这些截图来自较早版本，VNote 4.9.1 的菜单和编辑器布局可能有所不同。
+这里集中展示 VNote 主窗口的界面。点击图片可查看原图，或通过卡片上的链接了解更多。Markdown 编辑模式、阅读模式和并排预览卡片展示 Windows 上的 VNote 4.9.1，使用英文界面和[示例笔记本](getting-started/quick-start.md#try-the-demo-notebook)中的中文笔记。其余截图来自较早版本，菜单和编辑器布局可能有所不同。
 
 <div class="grid cards" markdown>
 
@@ -14,25 +14,35 @@
 
     [:octicons-arrow-right-24: 仪表盘](getting-started/dashboard.md)
 
--   [![在 Markdown 编辑模式下打开的笔记](assets/screenshots/md-edit.webp){ .screenshot loading=lazy }](assets/screenshots/md-edit.webp)
+-   [![编辑模式下的 Markdown 导览](assets/screenshots/demo-edit.webp){ .screenshot loading=lazy }](assets/screenshots/demo-edit.webp)
 
     __Markdown 编辑模式__
 
     ---
 
-    编辑笔记时带有行号、语法高亮，以及图表和数学公式的原地预览。
+    编辑模式下的 Markdown 导览，展示语法高亮、原位表格预览、任务清单和 Python 代码块。
 
     [:octicons-arrow-right-24: 编辑器基础](editing/editor-basics.md)
 
--   [![同一篇笔记在 Markdown 阅读模式下的效果](assets/screenshots/md-read.webp){ .screenshot loading=lazy }](assets/screenshots/md-read.webp)
+-   [![阅读模式下的中文欢迎页](assets/screenshots/demo-read.webp){ .screenshot loading=lazy }](assets/screenshots/demo-read.webp)
 
     __Markdown 阅读模式__
 
     ---
 
-    同一篇笔记的渲染效果，代码块、数学公式、图片和图表都以最终形态呈现。
+    欢迎页展示渲染后的标题、列表，以及通往导览和示例项目的链接。笔记树中可见成对的英文和中文笔记。
 
     [:octicons-arrow-right-24: 编辑器基础](editing/editor-basics.md)
+
+-   [![Markdown 导览的源码与实时预览并排显示](assets/screenshots/demo-preview.webp){ .screenshot loading=lazy }](assets/screenshots/demo-preview.webp)
+
+    __并排预览__
+
+    ---
+
+    一篇笔记，两种视图：在左侧编辑 Markdown 源码，在右侧查看渲染后的表格、任务清单和代码。
+
+    [:octicons-arrow-right-24: 实时预览](editing/editor-basics.md)
 
 -   [![内容区被拆分为两个编辑器分组](assets/screenshots/splits.webp){ .screenshot loading=lazy }](assets/screenshots/splits.webp)
 

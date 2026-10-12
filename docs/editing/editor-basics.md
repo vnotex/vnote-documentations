@@ -13,9 +13,11 @@ Every note opens in one of two modes:
 
 Toggle between the two from the editor toolbar or with the mode shortcut. Read mode is also what export is based on — see [Export](../productivity/export.md).
 
-![Edit mode: Markdown source with syntax highlighting](../assets/screenshots/md-edit.webp){ .screenshot loading=lazy }
+The examples below use the [demo notebook](../getting-started/quick-start.md#try-the-demo-notebook) in VNote 4.9.1 on Windows, with the English interface.
 
-![Read mode: the same note rendered](../assets/screenshots/md-read.webp){ .screenshot loading=lazy }
+![Markdown Tour in edit mode, with syntax highlighting and an in-place table preview](../assets/screenshots/demo-edit.webp){ .screenshot loading=lazy }
+
+![Welcome in read mode, with rendered headings and links between demo notes](../assets/screenshots/demo-read.webp){ .screenshot loading=lazy }
 
 ## Live preview
 
@@ -24,7 +26,9 @@ While in edit mode, VNote can preview rich elements without sending you to read 
 - **In-place preview** renders elements such as images, math, diagrams, and tables directly inside the editor, right where they appear in the text. In-place previews zoom together with the editor, and the source block is folded automatically when its preview appears — if you unfold it by hand, VNote leaves it unfolded.
 - **Side-by-side preview** opens a rendered pane next to the editor that scrolls in sync as you type, when you prefer to see the full result while writing.
 
-Use whichever fits the note; you can turn side-by-side preview on and off at any time.
+Use whichever fits the note; toggle **Live Preview** in the Markdown editor toolbar’s three-dot **Menu** to show or hide the side-by-side pane. This is a preview of the current note, not a second editor group.
+
+![Markdown Tour with source on the left and the same note rendered in Live Preview on the right](../assets/screenshots/demo-preview.webp){ .screenshot loading=lazy }
 
 The **interactive table preview** is enabled by default: a Markdown table is previewed as a real editable sheet with syntax-highlighted cells, row, column and alignment operations from its **Table** menu, and `Enter` in the last cell appending a row. Edits go straight back into the Markdown source.
 

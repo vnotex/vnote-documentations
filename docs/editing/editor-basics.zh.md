@@ -13,9 +13,11 @@
 
 从编辑器工具栏或用模式快捷键在两者间切换。导出也基于阅读模式——参见[导出](../productivity/export.md)。
 
-![编辑模式：带语法高亮的 Markdown 源码](../assets/screenshots/md-edit.webp){ .screenshot loading=lazy }
+以下截图来自 Windows 上的 VNote 4.9.1，使用英文界面和[示例笔记本](../getting-started/quick-start.md#try-the-demo-notebook)中的中文笔记。
 
-![阅读模式：同一篇笔记的渲染效果](../assets/screenshots/md-read.webp){ .screenshot loading=lazy }
+![编辑模式下的 Markdown 导览，显示语法高亮和原位表格预览](../assets/screenshots/demo-edit.webp){ .screenshot loading=lazy }
+
+![阅读模式下的欢迎页，显示渲染后的标题和示例笔记间链接](../assets/screenshots/demo-read.webp){ .screenshot loading=lazy }
 
 ## 实时预览
 
@@ -24,7 +26,9 @@
 - **原位预览**把图片、数学公式、图表和表格等元素直接渲染在编辑器内、它们在文本中出现的位置。原位预览会随编辑器一同缩放；预览出现时其源码块会自动折叠——如果你手动展开，VNote 会尊重这一选择，不再自动折叠。
 - **并排预览**在编辑器旁打开一个渲染面板，随你输入同步滚动，适合你希望一边写作一边看到完整结果时使用。
 
-按笔记的需要选用；并排预览可随时开启或关闭。
+按笔记的需要选用；在 Markdown 编辑器工具栏的三点**菜单（Menu）**中切换**实时预览（Live Preview）**，即可显示或隐藏并排预览窗格。这是当前笔记的预览，并非第二个编辑器分组。
+
+![Markdown 导览的源码位于左侧，右侧实时预览显示同一篇笔记的渲染效果](../assets/screenshots/demo-preview.webp){ .screenshot loading=lazy }
 
 **交互式表格预览**默认启用：Markdown 表格会以可直接编辑的表格形式预览，单元格带语法高亮，可从其**表格**菜单进行行、列与对齐操作，在最后一个单元格按 `Enter` 还会追加一行。所有编辑都会写回 Markdown 源码。
 

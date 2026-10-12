@@ -2,6 +2,21 @@
 
 本页带你在几分钟内从全新安装走到第一篇笔记。如果你尚未安装 VNote，请参见[安装](installation.md)。
 
+## 试用示例笔记本 { #try-the-demo-notebook }
+
+想先探索一个现成的笔记本？[文档仓库](https://github.com/vnotex/vnote-documentations)中的 [`demo-notebook/`](https://github.com/vnotex/vnote-documentations/tree/main/demo-notebook) 提供成对的英文和中文示例，涵盖 Markdown、任务清单、表格、代码和笔记间链接。
+
+1. 克隆仓库，或在 GitHub 上选择 **Code → Download ZIP** 并解压。
+2. 尝试编辑之前，将 `demo-notebook/` 复制到可写位置；VNote 中的编辑会修改磁盘上的文件。
+3. 在 VNote 的**笔记本**面板中打开三点菜单，选择**打开文件夹为原生笔记本（Open Folder As Raw Notebook）**，然后选中复制后的 `demo-notebook` 文件夹，而非仓库根目录。
+4. 打开 `Welcome.zh.md`（英文示例为 `Welcome.md`），然后通过链接访问 **Markdown 导览**和 **Projects** 文件夹中的**发布计划**。
+
+此操作将文件夹作为**原始笔记本**就地打开，不会复制或迁移文件。不要使用**打开笔记本（Open Notebook）**，该操作需要捆绑笔记本。`.zh.md` 文件是与英文笔记并列的中文示例，而非语言包。如需标签、附件、回收站、加密或内置同步，请改用捆绑笔记本；参见[导入与迁移](../managing-notes/importing-migrating.md)。
+
+![在 VNote 中打开的示例笔记本：阅读模式下的中文欢迎页和左侧笔记树](../assets/screenshots/demo-read.webp){ .screenshot loading=lazy }
+
+*截图来自 Windows 上的 VNote 4.9.1，使用英文界面和仓库中的中文示例笔记。*
+
 ## 1. 创建笔记本
 
 VNote 将笔记组织为**笔记本**。一个笔记本就是磁盘上的一个目录，因此第一步是选择笔记的存放位置。

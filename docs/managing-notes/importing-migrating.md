@@ -13,6 +13,8 @@ You can also copy files straight into the Notebook Root Folder from outside VNot
 
 ### When a raw notebook is the better fit
 
+For a hands-on example, [open the demo notebook](../getting-started/quick-start.md#try-the-demo-notebook) from this documentation repository. The Notebooks panel menu also offers **Open Folder As Raw Notebook**: select `demo-notebook/` to browse it in place, without copying files. This is not **Import Folder** or **Open Notebook**; the latter opens a bundled notebook.
+
 Choose **Type → Raw notebook** and point VNote at your directory when the folder should be adopted as it stands:
 
 - Nothing is imported or restructured, and no VNote configuration file is written into the folder — VNote browses it in place, much like a file browser.

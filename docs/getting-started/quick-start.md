@@ -2,6 +2,21 @@
 
 This page walks you from a fresh install to your first note in a few minutes. If you have not installed VNote yet, see [Installation](installation.md).
 
+## Try the demo notebook
+
+Prefer to explore an existing notebook first? The [documentation repository](https://github.com/vnotex/vnote-documentations) includes [`demo-notebook/`](https://github.com/vnotex/vnote-documentations/tree/main/demo-notebook), with English and Chinese examples of Markdown, task lists, tables, code, and links between notes.
+
+1. Clone the repository, or choose **Code → Download ZIP** on GitHub and extract it.
+2. Copy `demo-notebook/` to a writable location before experimenting; edits in VNote change the files on disk.
+3. In VNote's **Notebooks** panel, open the three-dot menu and choose **Open Folder As Raw Notebook**, then select the copied `demo-notebook` folder, not the repository root.
+4. Open `Welcome.md` (or `Welcome.zh.md` for Chinese), then follow its links to **Markdown Tour** and **Projects/Release Plan**.
+
+This opens the folder in place as a **raw notebook**; it does not copy or migrate its files. Do not use **Open Notebook**, which expects a bundled notebook. The `.zh.md` files are Chinese examples alongside the English notes, not language packs. For tags, attachments, the recycle bin, encryption, or built-in sync, use a bundled notebook instead; see [Importing & Migrating](../managing-notes/importing-migrating.md#when-a-raw-notebook-is-the-better-fit).
+
+![The demo notebook open in VNote, with Welcome in read mode and its notes in the notebook tree](../assets/screenshots/demo-read.webp){ .screenshot loading=lazy }
+
+*Captured in VNote 4.9.1 on Windows, using the English interface and the repository's demo notes.*
+
 ## 1. Create a notebook
 
 VNote organizes notes into **notebooks**. A notebook is simply a directory on your disk, so the first step is to choose where your notes will live.
