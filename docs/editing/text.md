@@ -41,6 +41,16 @@ The **input mode** picks how keys are interpreted:
 
 The common editing actions work here as well — find and replace, word count, printing, readable width, and inserting [snippets](snippets.md) from the context menu.
 
+## Find and replace
+
+In-note **Find And Replace** supports matches spanning multiple lines. In regular-expression mode, `\n` matches a line break and `(?s)` lets `.` match line breaks. The replacement field’s tooltip explains `\1`, `\2` for captured groups, `\n` for a newline, `\t` for a tab, and `\\` for a literal backslash. These are in-note regex replacement rules; [search-panel replacement across notes](../search/search-panel.md#replacing-across-notes) always uses literal replacement text.
+
+## Line endings and navigation
+
+**Settings → Editor → Line ending** offers **Follow platform**, **Follow file**, **LF (Linux/macOS)**, **CR LF (Windows)**, and **CR**. A bundled notebook’s **Line ending** in its advanced properties can override the global editor setting, or use **Use global editor setting**. The override applies when built-in editors save content; existing notes are not converted until edited and saved. Saves also respect Git line-ending rules, so take the repository’s policy into account when choosing a notebook setting.
+
+Hold `Shift` while using the mouse wheel to scroll horizontally. `F9` enters presentation mode and `Escape` leaves it; text stays in its editor rather than becoming [Markdown slides](editor-basics.md#presentation-mode).
+
 ## Creating a text note
 
 Choose **New Note**, then pick **Text** in the **Type** dropdown. VNote appends the `.txt` extension, so the suggested name is `note.txt`. To create a file with some other extension, type the full name — the type selector follows the suffix you enter. See [File Types](../managing-notes/file-types.md) for what each type does.

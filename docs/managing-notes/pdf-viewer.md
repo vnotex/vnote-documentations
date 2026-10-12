@@ -6,11 +6,17 @@ VNote opens `.pdf` files in a built-in viewer based on pdf.js 6.2.108, so a PDF 
 
 ## Reading a PDF
 
-Open a PDF the way you open any other note — from the notebook explorer, from [Quick Access & History](quick-access-history.md), or by dragging the file into the content area. Native toolbar controls provide page navigation, zoom, rotation, text selection, hand scrolling, scroll and spread modes, document properties, presentation mode, and text search; less common controls are grouped under **More**.
+Open a PDF the way you open any other note — from the notebook explorer, from [Quick Access & History](quick-access-history.md), or by dragging the file into the content area. Native toolbar controls provide page navigation, zoom, rotation, text selection, hand scrolling, scroll and spread modes, document properties, presentation mode, and text search; less common controls, including **Readable Width**, are grouped under the three-dot **Menu**. **Find** sits beside **Outline**.
 
 Because a PDF opens in an ordinary view window, everything you know about tabs applies: you can split the content area and keep the PDF beside the note you are writing, or detach it into its own window. See [Editor Basics](../editing/editor-basics.md).
 
 The viewer's navigation pane contains thumbnails, bookmarks, attachments, and layers. It is hidden when a document opens so the page gets the full width; use **Toggle Sidebar** in the toolbar when you need it.
+
+## Presentation and appearance
+
+Press `F9` in the PDF view or choose **Presentation Mode** to present the whole view fullscreen. The native toolbar remains available and fades when inactive; the page refits when the viewport changes. Press `Escape` to leave presentation mode (close an open popup first).
+
+The viewer background and scrollbars follow the active VNote theme without recoloring the PDF pages themselves. Annotation tool icons also refresh when you change themes.
 
 ## Outline and bookmarks
 

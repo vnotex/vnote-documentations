@@ -4,16 +4,17 @@ Most of VNote's behavior can be adjusted, either through the **Settings** tab or
 
 ## The Settings tab
 
-Open **Settings** from the toolbar or menu and it opens as a tab in the main window, where you can change common options — appearance and [theme](themes-and-styles.md), editor behavior, [Vi mode](../editing/vi-mode.md), read/render options, [image host](../editing/images-and-image-host.md), and more. For anything not exposed there, you can edit the configuration files described below.
+Choose **Settings → Settings** from the main toolbar to open a tab in the main window, where you can change common options — appearance and [theme](themes-and-styles.md), editor behavior, [Vi mode](../editing/vi-mode.md), read/render options, [image host](../editing/images-and-image-host.md), and more. Click **Apply**, or use the editor **Save** shortcut (`Ctrl+S` by default), to save changed settings. Most supported changes apply immediately; follow any restart or reopen notice for the option you changed. **Edit JSON** on the Settings toolbar opens your `vnotex.json` in VNote for options not exposed in the form; see the configuration layers below.
 
 ![The Settings tab](../assets/screenshots/settings.webp){ .screenshot loading=lazy }
 
 ## General settings
 
-Two controls under **Settings → General** affect how VNote starts and identifies itself:
+Under **Settings → General**, you can control startup, naming, and shortcut policy:
 
 - **Application display name** changes the name shown in window titles, the system tray, and **About**. Restart VNote after saving; an empty value resets the name to `VNote`.
 - **Start VNote on system startup** is available on Windows. Enable it to launch the current VNote executable automatically when you sign in to your Windows account. Saving the setting reports an error if the per-user startup entry cannot be updated.
+- **Allow Ctrl+Alt shortcuts** is on by default. Disable it to avoid conflicts with `AltGr` on some keyboard layouts, then restart VNote. It suppresses configured shortcuts containing `Ctrl+Alt`, including global hotkeys, without deleting your custom bindings.
 
 ## Layers of configuration
 
@@ -25,7 +26,7 @@ VNote's configuration is layered, applied in order:
 
 ## What's in the configuration folder
 
-The configuration folder contains several folders and the main file:
+Choose **Settings → Open Configuration Folder** to locate your configuration. The folder contains several folders and the main file:
 
 ```
 .
@@ -53,4 +54,7 @@ When a `config` folder exists next to the executable at startup, VNote reads and
 
 - [Themes & Styles](themes-and-styles.md) — change the look of the interface, editor, and read mode.
 - [Keyboard Shortcuts](keyboard-shortcuts.md) — remap actions, including [United Entry](../search/united-entry.md).
+- [Mind Maps](../editing/mind-maps.md) — native editor settings and when to reopen a map.
+- [Notebooks, Folders & Notes](../managing-notes/notebooks-folders-notes.md) — notebook-specific recycle bin location and retention settings.
+- [Encrypted Notes](../managing-notes/encrypted-notes.md) — protection settings and **Settings → Lock All**.
 - If VNote crashes after a version update, deleting `vnotex.json` from the user configuration folder is a common fix — see the [FAQ](../help/faq.md).

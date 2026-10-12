@@ -4,7 +4,9 @@ VNote exports your notes to shareable formats: **Markdown**, **HTML**, and **PDF
 
 ## Starting an export
 
-Open the export dialog from the toolbar, from the Markdown **read-mode context menu → Export**, or with `Ctrl+G, T`. A file opened from outside any notebook can be exported too, not just notes that belong to a notebook.
+Open the export dialog from the main file toolbar, from the Markdown **read-mode context menu → Export**, or with `Ctrl+G, T`. A file opened from outside any notebook can be exported too, not just notes that belong to a notebook.
+
+[Encrypted note bodies](../managing-notes/encrypted-notes.md) cannot be exported or printed, even while unlocked. If an export selection contains encrypted notes, VNote refuses the export rather than exporting a partial selection.
 
 ## General settings
 
@@ -12,7 +14,7 @@ In the export dialog you choose the scope and the target:
 
 - **Scope** — export the current note, all notes in the current folder, or all notes in the current notebook.
 - **Target format** — `Markdown`, `HTML`, `PDF`, or `Custom`.
-- **Rendering style** — you can apply a different style for the exported output than the one you edit with (styles come from your [theme](../customization/themes-and-styles.md)). The dialog remembers the theme you used last.
+- **Rendering style / Syntax style** — choose styles for the exported page and code highlighting, independently of the editor (styles come from your [theme](../customization/themes-and-styles.md)). The dialog remembers these choices. Click the compact palette-icon **Follow Theme** button to select the active theme’s rendering and syntax styles.
 
 ## Markdown
 
@@ -21,6 +23,10 @@ Exports the note as a `Markdown` file into a single folder, together with its im
 ## HTML
 
 Exports the note to a single `HTML` page that opens anywhere in a browser. **Complete page (pack all resources)** copies the resources the page references next to the exported file — or embeds them when **Embed images** is also checked — so the page renders standalone.
+
+HTML uses the selected theme’s palette, including table borders and other themed colors. **Add outline panel** supplies a collapsible outline with active-section highlighting and keyboard-accessible controls. Code blocks retain **Copy** and **Collapse/Expand** controls; copying a collapsed block copies all its code. [Heading folding](../editing/editor-basics.md) also applies to HTML export when enabled.
+
+Following a relative `.md` link in an exported page offers the corresponding `.html` target, preserving any query string or heading fragment. Accept to follow the HTML version, or decline to keep the original Markdown target. This choice does not create or check the target file: export the linked notes and keep their relative layout yourself.
 
 ## PDF
 

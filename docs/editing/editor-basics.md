@@ -28,13 +28,30 @@ Use whichever fits the note; you can turn side-by-side preview on and off at any
 
 The **interactive table preview** is enabled by default: a Markdown table is previewed as a real editable sheet with syntax-highlighted cells, row, column and alignment operations from its **Table** menu, and `Enter` in the last cell appending a row. Edits go straight back into the Markdown source.
 
-Two options under **Settings → Markdown Editor** control how that write-back looks and how previews affect the source. **Align table source** formats a table edited through the preview as a column-aligned pipe table; it never reformats existing tables until you edit them. **Auto fold previewed blocks** folds a block's source when its in-place preview appears; it requires text folding, and turning it off does not unfold blocks already folded.
+Two options under **Settings → Markdown Editor** control how that write-back looks and how previews affect the source. **Align table source** formats directly edited tables and changes made through the preview as column-aligned pipe tables; it never reformats existing tables until you edit them. **Auto fold previewed blocks** folds a block's source when its in-place preview appears; it requires text folding, and turning it off does not unfold blocks already folded.
 
 Large notes render previews incrementally. Off-screen tables keep their layout space and are built only when needed, visible graph previews take priority, and read-mode diagrams appear progressively. Table cell syntax highlighting is capped at 5000 cells in extreme documents; the remaining cells and table content still render.
 
 ## The outline
 
 The **Outline** dock widget shows the heading structure of the current note. It updates as you write and is fully interactive — click any heading to jump straight to that section. In edit mode it shows rendered heading titles rather than raw Markdown, and the pane scrolls horizontally when a label is too long to fit. For long notes, the outline is the fastest way to move around and to sanity-check your document's structure.
+
+Drag a heading in the outline to move its whole section, including subsections; VNote adjusts heading levels to preserve the hierarchy. **Settings → Markdown Editor → Read → Heading folding**, enabled by default, controls foldable headings in read mode and exported HTML. It is separate from source folding in the editor.
+
+## Heading numbering
+
+There are two distinct numbering options under **Markdown Editor**:
+
+- **Read → Auto Section Number** is on by default. It displays numbers for headings in documents that are not already numbered, without rewriting the source; the outline also supports automatic numbering.
+- **Edit → Auto Section Number** is off by default. Enabling it writes and maintains numbers in Markdown heading source, replacing existing numeric prefixes where necessary. Empty headings do not participate in source-numbering counters.
+
+Both modes and the outline share **Settings → Editor → Section Number Pattern** and **Detect Heading 1 for Section Number**. The latter is on by default: a sole leading level-1 heading is treated as the document title and excluded; turn it off to number from the first heading.
+
+The note view's three-dot **Menu** includes **Allow Auto Section Number**, on by default for each window. Turn it off to temporarily disable automatic numbering in that window's read mode, edit mode, and outline without changing saved global settings. Turning it off restores only source prefixes changed by automatic numbering during the current editor session, not every manually written number; source changes still need saving. If restoration cannot run, make the note current and editable, then turn the option on and off to retry.
+
+## Presentation mode
+
+Press `F9` to present Markdown as slides and `Escape` to leave. The bundled reveal.js slide engine works offline; remote resources in your note, such as online images, still need a connection. Level-2 and level-3 headings start slides, and a level-3 slide retains its parent level-2 heading. Use Left/Right or Space to move between slides; oversized content scrolls within its slide, including with Up/Down, `PageUp`, and `PageDown`. Presentation does not rewrite the note source.
 
 ## Detached windows
 
@@ -61,6 +78,8 @@ A note can change on disk — a sync, another editor, a script. VNote detects th
 - **Jump around** — use the outline, [Search](../search/index.md), [United Entry](../search/united-entry.md), and [History](../managing-notes/quick-access-history.md) to move quickly, especially in large notebooks.
 
 ![The content area split into side-by-side views](../assets/screenshots/splits.webp){ .screenshot loading=lazy }
+
+Use **Save All** in a tab’s context menu to save all modified notes. **Outline** and **Find And Replace** remain on the view toolbar, while secondary actions live in the three-dot **Menu**. Navigation mode can reach Markdown content across visible splits in both edit and read modes.
 
 ## Copying and pasting
 

@@ -4,9 +4,15 @@
 
 ## 主题
 
-一个主题对应 `themes` 文件夹内的一个文件夹。在**设置**中选择和管理主题。配置文件夹与主题文件夹的位置参见[设置](settings.md)。
+一个主题对应 `themes` 文件夹内的一个文件夹。通过主工具栏的**设置 → 主题**切换主题，也可以在设置标签页中管理外观。配置文件夹与主题文件夹的位置参见[设置](settings.md)。
 
 ![应用了 Pure 主题的主界面](../assets/screenshots/main-pure.webp){ .screenshot loading=lazy }
+
+### 浅色主题与即时切换
+
+内置浅色主题包括 **Pink Shock**、**Lucius**、**Dreamy（梦幻）**和 **Jadeite（翡翠）**。Lucius 采用柔和克制的浅色调，Jadeite 结合亚麻色与青绿色。Dreamy 现采用受 Phycat Mauve 启发的浅色调色板，搭配淡紫背景、梅紫强调色与圆角渐变标题；编辑器和阅读视图的语法颜色也与界面协调一致。
+
+**Native** 主题的内容区域使用系统文字颜色，思维导图也不例外。切换主题会直接刷新已打开 Markdown 笔记的代码块和数学公式语法颜色，无需重新打开，也不会丢失草稿、选区或撤销/重做历史。加密 Markdown 预览同样使用内置主题样式；其限制参见[加密笔记](../managing-notes/encrypted-notes.md)。
 
 ### LaTeX Light 与 LaTeX Dark
 

@@ -6,9 +6,9 @@ This page explains what makes VNote different and who it is for. If you just wan
 
 ## What VNote is
 
-VNote organizes your writing into **notebooks**. A notebook is simply a directory on your disk, and every note inside it is a plain text file — most often Markdown. There is no proprietary database and no hidden storage: what you see in the file system is exactly what VNote works with.
+VNote organizes your writing into **notebooks**. A notebook is a directory on your disk containing your notes and supporting files. Ordinary Markdown and text notes are plain text; optional [encrypted notes](../managing-notes/encrypted-notes.md) protect their bodies in a format that VNote unlocks with your password.
 
-Because your notes are ordinary files, you stay in control. You can back them up, version them, edit them with another tool, or move them to a different computer, all without asking VNote for permission.
+You stay in control of your local files: back them up, version them, or move the complete notebook to another computer. Ordinary Markdown and text notes can also be edited with other tools. For encrypted notes, preserve the notebook metadata and key files as well as your password; encryption does not erase plaintext from earlier backups or Git history.
 
 ## Why choose VNote
 
@@ -18,7 +18,7 @@ Because your notes are ordinary files, you stay in control. You can back them up
 
     ---
 
-    All notes are plain text on your local disk. One notebook is exactly one directory — no database, no lock-in. Sync anywhere with the service of your choice, or track a notebook with git.
+    Notes are local files, with optional note-body encryption. One notebook is one directory. Choose folder synchronization or built-in Git, WebDAV, or Jianguoyun sync.
 
 -   :material-folder-multiple-outline:{ .lg .middle } __Simple notes management__
 
@@ -44,10 +44,10 @@ Because your notes are ordinary files, you stay in control. You can back them up
 
 Privacy and longevity are the heart of VNote's design.
 
-- **Plain text, on your machine.** Notes live locally as Markdown and other text files. They remain readable decades from now, with or without VNote.
-- **One notebook, one directory.** There is no central database to corrupt or migrate. Copy the folder and you have copied the notebook.
-- **Sync your way.** Put a notebook in Dropbox, OneDrive, Nextcloud, or any folder-sync tool — or use per-notebook git for full version history. See [Notebook Sync](../managing-notes/notebook-sync.md).
-- **No lock-in.** Because everything is standard files, you can leave VNote at any time and take your notes with you.
+- **Local files.** Ordinary Markdown and text notes remain readable without VNote; [encryption](../managing-notes/encrypted-notes.md) is an opt-in exception for their bodies.
+- **One notebook, one directory.** Back up the complete notebook, including its metadata and encryption keys, rather than just the note files.
+- **Sync your way.** Use a folder-sync tool or built-in Git, WebDAV (including Nextcloud), or Jianguoyun synchronization. See [Notebook Sync](../managing-notes/notebook-sync.md) for setup and provider differences.
+- **Control your data.** Keep ordinary notes in standard formats; decrypt protected notes in VNote before editing their contents with another application.
 
 ## Simple, scalable notes management
 
@@ -82,7 +82,7 @@ VNote is a good fit if you:
 - Want your notes to be **plain files you own**, not entries in someone else's cloud database.
 - Take a lot of **Markdown** notes and care about the editing experience.
 - Keep a **large or long-lived** knowledge base and need folders, tags, and search that scale.
-- Prefer to **choose your own sync** (folder sync or git) rather than a built-in account.
+- Prefer to **choose your own sync** (folder sync, Git, WebDAV, or Jianguoyun) rather than a VNote-hosted account.
 - Enjoy **keyboard-driven, customizable** tools — especially if you like Vi.
 
 You may prefer another tool if you need real-time multi-user collaboration or a fully managed, account-based cloud service — VNote focuses on local-first, single-user note-taking.

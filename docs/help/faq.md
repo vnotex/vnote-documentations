@@ -4,22 +4,9 @@ Answers to common questions and fixes for issues people hit most often. If your 
 
 ## How do I specify a custom MathJax script? { #custom-mathjax }
 
-VNote uses **MathJax 3** to render math. To choose which MathJax build it loads:
+VNote now uses bundled, offline **KaTeX** by default. To use MathJax, select it under **Settings → Markdown Editor → Math renderer**, then set **Override MathJax script** to your script URL (including a local file URL if needed). Leave the override empty to use the default script; you no longer need to copy and edit `web/js/mathjax.js`.
 
-1. Copy `web/js/mathjax.js` from the **default** configuration folder into the same path (`web/js/mathjax.js`) under your **user** configuration folder. VNote will use your copy instead of the default.
-2. Edit the copied file and set the script URL. The default is:
-
-    ```js
-    this.mathJaxScript = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
-    ```
-
-To use a **local** copy for offline use, [download MathJax](https://docs.mathjax.org/en/latest/web/hosting.html) and point to it:
-
-```js
-this.mathJaxScript = 'file://c:/Users/foo/mathjax/tex-svg.js';
-```
-
-See [Math & Diagrams](../editing/math-and-diagrams.md) and [Settings](../customization/settings.md) for context.
+For the full procedure and examples, see [Customizing MathJax](../editing/math-and-diagrams.md#customizing-mathjax).
 
 ## VNote crashes after a version update
 
@@ -36,11 +23,11 @@ On **Windows**, these three symptoms are usually caused by the display-card driv
 
 ## Where are my notes stored?
 
-Wherever you put them. Each notebook is an ordinary directory (its *Notebook Root Folder*) containing plain Markdown files, with images kept in an assets folder (`vx_assets` by default). Your notes are never locked inside a database — VNote's own index and caches are kept separately from your content. See [Notebooks, Folders & Notes](../managing-notes/notebooks-folders-notes.md).
+Wherever you put them. Each notebook has a directory called its *Notebook Root Folder*. Ordinary Markdown notes remain plain files, and separate images are stored in an assets folder (`vx_assets` by default); VNote's index and caches are separate from the content. Optional [encrypted notes](../managing-notes/encrypted-notes.md) in bundled notebooks are the exception: their bodies are not plaintext files for external editors. See [Notebooks, Folders & Notes](../managing-notes/notebooks-folders-notes.md).
 
 ## How do I sync my notes across devices?
 
-VNote has a built-in Git sync for bundled notebooks, and — since a notebook is just a folder — you can also sync it with any tool you trust, such as Dropbox, OneDrive, or Nextcloud. See [Notebook Sync](../managing-notes/notebook-sync.md).
+Bundled notebooks support built-in **Git**, **WebDAV** (including Nextcloud), and **Jianguoyun (WebDAV)** sync. External folder-sync tools such as Dropbox or OneDrive remain an alternative; do not let competing sync methods modify the same notebook at the same time. See [Notebook Sync](../managing-notes/notebook-sync.md).
 
 ## Can I use VNote portably (from a USB drive)?
 
@@ -52,12 +39,12 @@ Create a **bundled notebook** and import your folder into it — see [Importing 
 
 ## Why did my note open in a separate window?
 
-That window is a **detached view**. It appears when you use **Detach** on a tab, **Open as Detached** in the notebook explorer, or the `--detached-view` [command line](../getting-started/command-line.md) option. Close it or drag its tab back to return the note to the main window — see [Editor Basics](../editing/editor-basics.md#detached-windows).
+That window is a **detached view**. A [Quick Note](../productivity/quick-note.md) scheme can be configured to open notes there. It appears when you use **Detach** on a tab, **Open as Detached** in the notebook explorer, or the `--detached-view` [command line](../getting-started/command-line.md) option. Close it or drag its tab back to return the note to the main window — see [Editor Basics](../editing/editor-basics.md#detached-windows).
 
 ## Does VNote update itself?
 
-No. VNote only checks whether a newer release exists and, if so, offers to open the release page; it downloads and installs nothing and never modifies its installation directory. See [Checking for updates](../getting-started/installation.md#checking-for-updates).
+Not without your action. Ordinary checks remain check-only; on Windows, the startup update notification also offers **Update Now** to launch an external updater after you explicitly choose it. Other platforms use manual updates. See [Checking for updates](../getting-started/installation.md#checking-for-updates).
 
 ## What is the difference between a bundled and a raw notebook?
 
-A bundled notebook keeps an index under its root folder, and that index is what enables tags, attachments, the recycle bin, and built-in Git sync. A raw notebook has no index — it browses a folder in place, like a file browser — so those features are unavailable. Prefer bundled, and choose raw only when the existing folder must be adopted as it is, or is managed outside VNote. See [Notebooks, Folders & Notes](../managing-notes/notebooks-folders-notes.md#which-type-should-i-use).
+A bundled notebook keeps an index under its root folder, and that index is what enables tags, attachments, the recycle bin, built-in Git/WebDAV/Jianguoyun sync, and optional note-body encryption. A raw notebook has no index — it browses a folder in place, like a file browser — so those features are unavailable. Prefer bundled, and choose raw only when the existing folder must be adopted as it is, or is managed outside VNote. See [Notebooks, Folders & Notes](../managing-notes/notebooks-folders-notes.md#which-type-should-i-use).

@@ -87,6 +87,10 @@ The name-producing placeholders follow **VNote's Language setting**, not your op
 
 A folder path like `journal/%yyyy%/%MM%` therefore files each new note under the current year and month automatically.
 
+## Note folder placeholder
+
+`%folder%` expands to the current note’s notebook-relative folder path. Use it in snippets and [note templates](templates.md), or snippet-enabled fields that supply that note context. It is not the notebook’s absolute disk path.
+
 ## Snippets in templates
 
 Because templates support snippets, a template can auto-fill content when you create a note — for example inserting the note name as the title. See [Templates](templates.md).

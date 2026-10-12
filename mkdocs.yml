@@ -90,6 +90,7 @@ plugins:
             Managing Notes: 管理笔记
             Notebooks, Folders & Notes: 笔记本、文件夹与笔记
             File Types: 文件类型
+            Encrypted Notes: 加密笔记
             PDF Viewer: PDF 阅读器
             Importing & Migrating: 导入与迁移
             Tags: 标签
@@ -136,6 +137,7 @@ nav:
       - managing-notes/index.md
       - Notebooks, Folders & Notes: managing-notes/notebooks-folders-notes.md
       - File Types: managing-notes/file-types.md
+      - Encrypted Notes: managing-notes/encrypted-notes.md
       - PDF Viewer: managing-notes/pdf-viewer.md
       - Importing & Migrating: managing-notes/importing-migrating.md
       - Tags: managing-notes/tags.md

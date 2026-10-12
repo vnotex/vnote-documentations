@@ -30,7 +30,7 @@ VNote gives Markdown a **live experience**: as you type, headings, lists, and em
 
 ## 5. Find your notes on disk
 
-Open the Notebook Root Folder in your file manager. Your note is there as a plain `.md` file, and any images you insert are saved as assets (by default under a `vx_assets` folder in the notebook root). Because everything is plain text, you can back it up, version it with git, or sync it however you like — see [Notebook Sync](../managing-notes/notebook-sync.md).
+Open the Notebook Root Folder in your file manager. The ordinary note you just created is a plain `.md` file. Images inserted as files are stored separately (by default under `vx_assets`); Base64 images are embedded in the note. Back up the complete notebook or configure [Notebook Sync](../managing-notes/notebook-sync.md). If you later enable [note-body encryption](../managing-notes/encrypted-notes.md), preserve its key files and password too: separate assets and earlier backups or Git history are not encrypted by that conversion.
 
 ## Next steps
 

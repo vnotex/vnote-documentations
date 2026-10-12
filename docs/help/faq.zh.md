@@ -4,22 +4,9 @@
 
 ## 如何指定自定义的 MathJax 脚本？ { #custom-mathjax }
 
-VNote 使用 **MathJax 3** 渲染数学公式。要选择它加载哪个 MathJax 构建：
+VNote 现在默认使用内置、可离线工作的 **KaTeX**。若要使用 MathJax，请在**设置 → Markdown 编辑器 → 数学公式渲染器（Math renderer）**中选择它，再在**覆盖 MathJax 脚本（Override MathJax script）**中填写脚本 URL（也可以是本地文件 URL）。留空则使用默认脚本；无需再复制并修改 `web/js/mathjax.js`。
 
-1. 把**默认**配置文件夹中的 `web/js/mathjax.js` 复制到**用户**配置文件夹下的相同路径（`web/js/mathjax.js`）。VNote 将使用你的副本而非默认版本。
-2. 编辑复制的文件并设置脚本 URL。默认值为：
-
-    ```js
-    this.mathJaxScript = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
-    ```
-
-若要使用**本地**副本以便离线使用，[下载 MathJax](https://docs.mathjax.org/en/latest/web/hosting.html) 并指向它：
-
-```js
-this.mathJaxScript = 'file://c:/Users/foo/mathjax/tex-svg.js';
-```
-
-背景信息参见[数学与图表](../editing/math-and-diagrams.md)和[设置](../customization/settings.md)。
+完整步骤和示例参见[自定义 MathJax](../editing/math-and-diagrams.md#customizing-mathjax)。
 
 ## VNote 在版本更新后崩溃
 
@@ -36,11 +23,11 @@ this.mathJaxScript = 'file://c:/Users/foo/mathjax/tex-svg.js';
 
 ## 我的笔记存放在哪里？
 
-存放在你放置它们的地方。每个笔记本都是一个普通目录（其*笔记本根文件夹*），其中包含纯 Markdown 文件，图片则存放在附件文件夹中（默认为 `vx_assets`）。你的笔记绝不会被锁在数据库里——VNote 自身的索引和缓存与你的内容分开保存。参见[笔记本、文件夹与笔记](../managing-notes/notebooks-folders-notes.md)。
+存放在你放置它们的地方。每个笔记本都有一个称为*笔记本根文件夹*的目录。普通 Markdown 笔记仍是纯文本文件，独立图片保存在资源文件夹中（默认为 `vx_assets`），索引和缓存与正文分开存储。捆绑笔记本中可选的[加密笔记](../managing-notes/encrypted-notes.md)是例外：其正文不是能供外部编辑器直接处理的明文文件。参见[笔记本、文件夹与笔记](../managing-notes/notebooks-folders-notes.md)。
 
 ## 如何在多台设备间同步笔记？
 
-VNote 为捆绑笔记本提供了内置的 Git 同步；而且由于笔记本本身就是一个文件夹，你也可以用任何你信任的工具来同步它，例如 Dropbox、OneDrive 或 Nextcloud。参见[笔记本同步](../managing-notes/notebook-sync.md)。
+捆绑笔记本支持内置的 **Git**、**WebDAV**（包括 Nextcloud）和**坚果云（WebDAV）**同步。Dropbox、OneDrive 等外部文件夹同步工具仍可作为替代方案；不要让多种同步方式同时修改同一个笔记本。参见[笔记本同步](../managing-notes/notebook-sync.md)。
 
 ## 我能便携地使用 VNote（从 U 盘）吗？
 
@@ -52,12 +39,12 @@ VNote 为捆绑笔记本提供了内置的 Git 同步；而且由于笔记本本
 
 ## 为什么我的笔记在一个独立窗口中打开了？
 
-那个窗口是**分离视图**。当你对标签页使用**分离（Detach）**、在笔记本浏览器中使用**以分离方式打开（Open as Detached）**，或使用[命令行](../getting-started/command-line.md)选项 `--detached-view` 时，就会出现它。关闭该窗口或把它的标签页拖回，即可让笔记回到主窗口——参见[编辑器基础](../editing/editor-basics.md)。
+那个窗口是**分离视图**。[快速笔记](../productivity/quick-note.md)方案可以设置为在其中打开笔记。当你对标签页使用**分离（Detach）**、在笔记本浏览器中使用**以分离方式打开（Open as Detached）**，或使用[命令行](../getting-started/command-line.md)选项 `--detached-view` 时，就会出现它。关闭该窗口或把它的标签页拖回，即可让笔记回到主窗口——参见[编辑器基础](../editing/editor-basics.md)。
 
 ## VNote 会自动更新吗？
 
-不会。VNote 只会检查是否存在更新的版本，若有则提示你打开发布页面；它不下载、不安装任何东西，也绝不修改自己的安装目录。参见[检查更新](../getting-started/installation.md)。
+不会在未经你操作的情况下更新。普通检查仍然只查询新版本；在 Windows 上，启动时的更新通知还提供**立即更新（Update Now）**，只有你主动选择后才会启动外部更新器。其他平台采用手动更新。参见[检查更新](../getting-started/installation.md)。
 
 ## 捆绑笔记本和原始笔记本有什么区别？
 
-捆绑笔记本会在其根文件夹下维护一份索引，正是这份索引让标签、附件、回收站以及内置的 Git 同步成为可能。原始笔记本没有索引——它像文件浏览器一样就地浏览一个文件夹——因此这些功能都不可用。请优先选择捆绑笔记本；只有当现有文件夹必须按原样被接纳，或者由 VNote 之外的东西管理时，才选择原始笔记本。参见[笔记本、文件夹与笔记](../managing-notes/notebooks-folders-notes.md#which-type-should-i-use)。
+捆绑笔记本会在其根文件夹下维护一份索引，正是这份索引让标签、附件、回收站、内置的 Git/WebDAV/坚果云同步以及可选的笔记正文加密成为可能。原始笔记本没有索引——它像文件浏览器一样就地浏览一个文件夹——因此这些功能都不可用。请优先选择捆绑笔记本；只有当现有文件夹必须按原样被接纳，或者由 VNote 之外的东西管理时，才选择原始笔记本。参见[笔记本、文件夹与笔记](../managing-notes/notebooks-folders-notes.md#which-type-should-i-use)。

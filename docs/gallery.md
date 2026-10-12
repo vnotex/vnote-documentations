@@ -1,6 +1,6 @@
 # Gallery
 
-A tour of VNote's main window. Click an image to open it at full size, or follow the link on a card to read more.
+A tour of VNote's main window. Click an image to open it at full size, or follow the link on a card to read more. These screenshots were captured in earlier releases; menus and editor layouts may differ in VNote 4.9.1.
 
 <div class="grid cards" markdown>
 
@@ -70,7 +70,7 @@ A tour of VNote's main window. Click an image to open it at full size, or follow
 
     ---
 
-    A mind map open in the built-in editor, with a searchable outline of its nodes.
+    The earlier web-based mind map editor, with a searchable node outline. VNote 4.9 uses a native editor; see the current guide for its controls and Tools dock.
 
     [:octicons-arrow-right-24: Mind Maps](editing/mind-maps.md)
 

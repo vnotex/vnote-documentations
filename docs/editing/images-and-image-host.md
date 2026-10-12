@@ -4,10 +4,14 @@ Notes often need pictures, and VNote makes images painless: paste one and it is 
 
 ## Inserting images
 
-The fastest way to add an image is to **paste** it (a screenshot, or an image copied from elsewhere) directly into the editor. VNote:
+Paste a screenshot or copied image into the editor, or use **Insert Image**. The dialog offers two choices:
 
-1. Saves the image file into the notebook's assets — by default under a `vx_assets` folder in the notebook root (in a per-note subfolder).
-2. Inserts the Markdown link for you.
+- **Image file** saves a separate image and inserts its link. For local storage, the file goes into the notebook’s assets — by default `vx_assets` in the notebook root, in a per-note subfolder.
+- **Base64** embeds the image bytes in the Markdown body using a reference-style image and a data-URI definition. It needs no separate image file; custom width/height fields are disabled for this choice.
+
+**Image file** is the ordinary default; **Base64** is placed first and selected by default for encrypted Markdown. Base64 is encoding, not encryption: embedded bytes are protected only when saved inside an [encrypted note body](../managing-notes/encrypted-notes.md). Separate image files and image-host uploads are not protected by note encryption.
+
+**Settings → Editor → Default image format** controls clipboard images saved as files: **JPEG** (default) composites transparency onto white; **PNG** preserves transparency. Original files and URLs retain their formats, and Base64 insertion remains lossless.
 
 You can also insert an image from a file, or drag and drop one into the editor. Because images live inside the notebook, they travel with it when you copy or [sync](../managing-notes/notebook-sync.md) the notebook.
 
@@ -21,12 +25,12 @@ You can also insert an image from a file, or drag and drop one into the editor. 
 
 Images are inserted at their natural size, but you can give them an explicit one. The **Insert Image** dialog has optional **Width (px)** and **Height (px)** fields; they are empty by default, and the image's natural size is shown as the placeholder, so filling in just one of them is enough.
 
-For an image that is already in the note, right-click it in edit mode and use the **Image** submenu:
+For an image that is already in the note, right-click it in edit mode; image actions now appear directly in the context menu:
 
 - **View Image** opens the image on its own.
-- **Copy** copies a local image to the clipboard; for an online image the entry is **Copy In-Place Preview**, which copies what the in-place preview shows.
+- **Copy Image** copies a local image to the clipboard; for an online image the entry is **Copy In-Place Preview**, which copies what the in-place preview shows.
 - **Copy Image Address** copies the link target.
-- **Set Size** opens the **Set Image Size** dialog with the same two fields.
+- **Resize Image** opens the width/height dialog with a **Scale (%)** slider. `100%` is the current size; moving the slider scales both dimensions proportionally. Manually changing dimensions establishes a new baseline. If dimensions are unavailable, enter both width and height to enable scaling; VNote does not fetch a remote image merely to resize it.
 
 VNote rewrites the link with as little churn as possible:
 
@@ -43,7 +47,7 @@ Migration moves the files on disk. If another note links to the same picture in 
 
 ## Local images vs. image host
 
-VNote supports two storage strategies, and you can switch between them per note in the editor:
+For images stored outside the note body, choose local storage or an image host in the editor:
 
 - **Local images** — files are stored inside the notebook. Self-contained and offline-friendly.
 - **Image host** — images are uploaded to an online service, and the note links to the online URL. The Markdown file then references nothing local, so you can share the plain text and readers see the images from anywhere.

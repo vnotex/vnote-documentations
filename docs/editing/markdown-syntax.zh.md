@@ -57,6 +57,8 @@ __This text will be bold__
 4. Item 4
 ```
 
+启用 **设置 → Markdown 编辑器 → 自动重新编号有序列表（Automatically renumber ordered lists）**（默认开启）后，编辑会保持源码中的列表编号连续，并保留各列表的起始数字；仅加载笔记不会重新编号。列表延续与缩进遵循列表结构，也支持 Vi 模式的另起一行操作。这与[标题编号](editor-basics.md)相互独立。
+
 ## 表格
 
 ```md
@@ -65,6 +67,8 @@ __This text will be bold__
 | cell1 | cell2 | cell3 |
 | cell4 | cell5 | cell6 |
 ```
+
+使用 Markdown 工具栏上的**插入表格（Insert Table）**，通过尺寸选择器指定行数与列数。表格可以紧接段落或列表项文字，无需空行。[交互式表格预览](editor-basics.md)的单元格支持行内图片和数学公式；**插入图片**会作用于选中的单元格，包括 Base64 图片或图床上传。单行 `$$…$$` 公式采用块级公式的排版样式，但在单元格、段落或列表中仍以内联方式放置。
 
 ## 图片和链接
 
@@ -83,13 +87,15 @@ __This text will be bold__
 ```
 
 - `=宽x高` 后缀用于设置渲染时的图片尺寸；省略其中一侧即可只设置一个维度。
-- 不推荐使用参考式的图片链接——VNote 不会预览这些图片。
+- VNote 的 **Base64** 插入功能生成的参考式图片链接受支持；参见[图片存储方式](images-and-image-host.md)。
 
 你也可以直接粘贴图片，VNote 会把文件保存到笔记本中并替你写好链接。粘贴、本地存储与图床参见[图片与图床](images-and-image-host.md)。
 
 ```md
 ![替代文本](vx_assets/example.png)
 ```
+
+**设置 → Markdown 编辑器**中的**隐藏较长的链接目标（Conceal long link destinations）**默认开启。它在编辑模式下缩短图片、链接和参考定义中过长目标的显示，不改动 Markdown 源码。悬停可查看完整目标，关闭该选项则始终完整显示。
 
 ## 块引用
 
@@ -219,6 +225,10 @@ alert-dark
 ```
 
 这与[片段](snippets.md)配合得很好：片段可以一键把选中文本包裹进这类标签。
+
+## 数学与图表
+
+VNote 支持 LaTeX 数学公式（默认使用 KaTeX，也可选择 MathJax），以及通过围栏代码块编写的 Mermaid、PlantUML（`puml`）、Graphviz（`dot`）、Flowchart.js（`flow`/`flowchart`）和 WaveDrom（`wavedrom`）图表。详见[数学与图表](math-and-diagrams.md)。
 
 ## 换行和段落
 

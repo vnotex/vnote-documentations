@@ -109,3 +109,5 @@ Mix and match any `--scope` with any `--object` (`name`, `content`, `tag`, `path
 ## United Entry vs. the search panel
 
 United Entry is fastest when you know what you want and want to jump. When you need browsable results and refinement options (regex, case sensitivity), use the [Search Panel](search-panel.md) instead — both use the same underlying search.
+
+Content search skips [encrypted note bodies](../managing-notes/encrypted-notes.md) and shows an exclusion notice; names and tags remain searchable. For replacement across notes, review results and use the replacement actions in the [Search Panel](search-panel.md#replacing-across-notes), including its save and recovery warnings.

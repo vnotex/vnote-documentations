@@ -1,10 +1,10 @@
 # Importing & Migrating
 
-Because a VNote notebook is just a directory of plain files, moving existing notes into VNote — or moving a VNote notebook between computers — is straightforward. This page covers bringing content in; for keeping a notebook in sync across machines, see [Notebook Sync](notebook-sync.md).
+A VNote notebook is a directory of files, so existing notes can be imported and complete notebooks can be moved between computers. Optional [encrypted notes](encrypted-notes.md) also require their key hierarchy and master password. This page covers bringing content in; for keeping a notebook in sync across machines, see [Notebook Sync](notebook-sync.md).
 
 ## Build a notebook from an existing folder
 
-The recommended way is to import your files into a **bundled notebook**, so that they gain everything the notebook index provides — [tags](tags.md), attachments, the recycle bin, and built-in [Git sync](notebook-sync.md):
+The recommended way is to import your files into a **bundled notebook**, so that they gain everything the notebook index provides — [tags](tags.md), attachments, the recycle bin, optional [note-body encryption](encrypted-notes.md), and built-in [Git, WebDAV, and Jianguoyun sync](notebook-sync.md):
 
 1. Choose **New Notebook**, leave **Type** set to **Bundled notebook**, and point it at an empty folder (a bundled notebook's root folder must be empty).
 2. Select the notebook or a folder in it, then choose **Import Folder** from the **New** menu in the toolbar and pick your existing directory. Your files are copied in as folders and notes.
@@ -20,11 +20,11 @@ Choose **Type → Raw notebook** and point VNote at your directory when the fold
 
 A raw notebook is not read-only: creating, renaming, moving, and importing notes, or pasting an image, all write to the folder as usual. What it avoids is a one-off migration of what is already there.
 
-The trade-off is that a raw notebook has no index, so tags, attachments, the recycle bin, and built-in Git sync are unavailable. See [Notebooks, Folders & Notes](notebooks-folders-notes.md#which-type-should-i-use) for the full comparison.
+The trade-off is that a raw notebook has no index, so tags, attachments, the recycle bin, note-body encryption, and built-in sync are unavailable. See [Notebooks, Folders & Notes](notebooks-folders-notes.md#which-type-should-i-use) for the full comparison.
 
 ## Import an existing notebook
 
-A bundled notebook is a self-contained directory, so importing one is a matter of pointing VNote at its root:
+Open an existing bundled notebook by pointing VNote at its root, keeping its configuration and encryption keys intact:
 
 1. Choose **Open Notebook** and select its **Notebook Root Folder**.
 2. VNote reads the notebook's configuration files and restores it — its folders, notes, and settings reappear as before.
@@ -42,7 +42,7 @@ Imported items are placed under the selected location in the notebook.
 
 ## Share a folder
 
-**Share Folder**, in the notebook explorer context menu, creates *a portable copy of this folder including metadata*. Use it to hand a slice of a notebook to someone else, or to move it into another notebook without losing anything.
+**Share Folder**, in the notebook explorer context menu, creates *a portable copy of this folder including metadata*. Use it to hand a slice of a notebook to someone else, or to import it into another notebook while retaining supported metadata.
 
 The action is available on an indexed folder of a **bundled** notebook that is not the notebook root. The result is an ordinary folder you can copy, zip or email — the folder's content plus a parallel `vx.json` metadata subtree — not an archive format of its own.
 
@@ -52,6 +52,8 @@ A few details worth knowing:
 - Symbolic links, junctions and reparse points are not followed; VNote refuses them rather than duplicating what they point at.
 - If two names would collide on a case-insensitive filesystem, you are warned up front.
 - The copy is verified before it is published, so a failed share leaves nothing half-written behind.
+
+If the shared folder contains encrypted notes, keep the entire produced folder and its key metadata together. The recipient needs the source master password to import it. This does not encrypt separate assets, comments, or visible metadata; see [Encrypted Notes](encrypted-notes.md).
 
 ## Import a shared folder
 
@@ -64,20 +66,33 @@ The shared-folder mode needs a destination in a **writable bundled** notebook; r
 
 Everything is validated before a single file is copied, and a failed or cancelled import leaves the notebook exactly as it was. Duplicate note ids, names that would collide, and re-importing a folder that is already in the notebook are refused rather than merged or overwritten.
 
+### Import encrypted shared notes
+
+Shared-folder import supports encrypted Markdown, text, and mind-map notes. Before importing, the destination bundled notebook must already have encryption initialized; if necessary, [create or encrypt a supported note](encrypted-notes.md) there first.
+
+1. Choose **Shared folder from VNote** and select the complete shared folder.
+2. If the destination is locked, enter its password in **Unlock Destination Notebook**.
+3. Enter the source notebook's master password in **Unlock Encrypted Bundle** when requested. Import authenticates the source and protects the imported bodies with the destination keys.
+4. Wait for the import result. Cancelling the source-password prompt leaves the destination unchanged; do not copy individual encrypted files into place to bypass authentication.
+
+For transfers between notebooks already open in VNote, see [Copy and move between notebooks](notebooks-folders-notes.md#copy-and-move-between-notebooks).
+
 ## Open a VNote 3 notebook
 
 VNote can read notebooks created by VNote 3. Choose **Open Notebook** and click **Open V3 Notebook** in that dialog, then point it at the old notebook's folder. See [Data Migration](../help/data-migration.md).
 
 ## Migrating a notebook to another computer
 
-Since everything a bundled notebook needs lives under its root folder, migration is a copy:
+With the default storage paths, migrate a bundled notebook by copying its complete root folder:
 
-1. Copy the Notebook Root Folder to the other machine (via a USB drive, a synced folder, or git).
-2. On the other machine, **open** that folder as a notebook.
+1. Copy the entire Notebook Root Folder to the other machine (via a USB drive, a synced folder, or Git), including configuration and encryption keys. Preserve the master password for any encrypted notes.
+2. On the other machine, **open** that folder as a notebook. Enter the master password when opening protected content, and configure sync credentials separately on that device if needed.
+
+Custom asset or recycle-bin paths outside the root are not part of this copy; include them separately and make sure the destination paths are appropriate. See [Encrypted Notes](encrypted-notes.md#backup-and-recovery) before restoring protected content from a backup.
 
 A raw notebook carries only your files. Copying the folder brings the content across, but the other machine opens it as a new raw notebook and builds its own local record of it.
 
-A common setup is to keep the Notebook Root Folder inside a directory that a third-party service synchronizes — such as Dropbox or OneDrive — and open it on each computer. You then edit and manage your notes in VNote while the files are synchronized by a service you already trust. See [Notebook Sync](notebook-sync.md) for details and for VNote's built-in Git sync.
+A common setup is to keep the Notebook Root Folder inside a directory that a third-party service synchronizes — such as Dropbox or OneDrive — and open it on each computer. You then edit and manage your notes in VNote while the files are synchronized by a service you already trust. See [Notebook Sync](notebook-sync.md) for details and for VNote's built-in Git, WebDAV, and Jianguoyun sync, including opening a notebook directly from a remote.
 
 ## Migrating from other applications
 

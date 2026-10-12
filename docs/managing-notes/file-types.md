@@ -8,7 +8,7 @@ A VNote note is just a file on disk, and VNote recognizes a handful of built-in 
 |------|------------|----------|-----------------------|
 | **Markdown** | `.md`, `.mkd`, `.rmd`, `.markdown` | Markdown editor | Yes |
 | **Text** | `.txt`, `.text`, `.log`, many source and configuration suffixes, and any other file detected as plain text | Text editor | Yes |
-| **Mind Map** | `.emind` | Mind-map editor | Yes |
+| **Mind Map** | `.mmm` (preferred), `.emind` | Native mind-map editor | Yes |
 | **PDF** | `.pdf` | [Built-in PDF viewer](pdf-viewer.md) | No — view only |
 | **Others** | anything else | Text editor | Yes — no extension is added |
 
@@ -18,9 +18,13 @@ Markdown is the core note type and gets VNote's full editing experience — see 
 
 ## How the type is chosen
 
-VNote matches a file's extension against the table above. A file whose extension is not listed but whose contents are plain text is treated as a **Text** file, so you can open and edit it directly. Anything left over falls under **Others**, which also opens in the [text editor](../editing/text.md) — VNote does not hand it to another application on its own.
+For ordinary, unencrypted files, VNote matches the extension against the table above. A file whose extension is not listed but whose contents are plain text is treated as a **Text** file, so you can open and edit it directly. Anything left over falls under **Others**, which also opens in the [text editor](../editing/text.md) — VNote does not hand it to another application on its own.
 
-To open a given extension somewhere else, add an entry under **Settings → File Associations → External Programs**. You can point a suffix at a specific command or at your system's default application, and from then on VNote hands those files over instead of opening them itself. The same settings page is where you edit the suffix list of each built-in type.
+To open a given extension somewhere else, add an entry under **Settings → File Associations → External Programs**. You can point a suffix at a specific command or at your system's default application, and from then on VNote hands those files over instead of opening them itself. The same settings page is where you edit the suffix list of each built-in type; existing custom mind-map suffixes are retained.
+
+### Encrypted-note exception
+
+Bundled notebooks can protect the bodies of Markdown, text, and mind-map notes. These are not ordinary plaintext files for external programs: VNote unlocks them and uses their protected note type to choose the editor. Do not rename an encrypted file's extension to convert it or expect an external editor to read it. See [Encrypted Notes](encrypted-notes.md) for supported operations and protection limits.
 
 ## Creating notes
 

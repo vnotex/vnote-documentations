@@ -43,9 +43,15 @@ Actions listed as unbound have no default; give them one in `core.shortcuts` as 
 !!! note "`CloseTab` was renamed"
     The action formerly called `CloseTab` is now `CloseFocus`. A customized `CloseTab` binding in an existing `vnotex.json` is still honored, and is written back as `CloseFocus` the next time the configuration is saved.
 
+## View presentation and global Quick Note
+
+**PresentationMode** defaults to `F9` and belongs to `editor.core.shortcuts`, not the application-level table above. It presents the active [Markdown](../editing/editor-basics.md), [text](../editing/text.md), [mind-map](../editing/mind-maps.md), or [PDF](../managing-notes/pdf-viewer.md) view; `Escape` exits. It is distinct from the main-window `FullScreen` action (`F11`).
+
+**NewQuickNote** uses `core.shortcuts.NewQuickNote` (default `Ctrl+Alt+Q`) and is registered as a global hotkey while VNote is running, subject to operating-system availability and shortcut conflicts. It opens the [Quick Note](../productivity/quick-note.md) scheme picker even when the main window is hidden. The default-on **Allow Ctrl+Alt shortcuts** setting can disable this and other `Ctrl+Alt` bindings after a restart; see [Settings](settings.md#general-settings).
+
 ## Where shortcuts are defined
 
-Shortcuts live in the main configuration file `vnotex.json`, in two tables: application-level actions under `core.shortcuts`, and editor/editing actions (Save, bold, headings, Find, apply snippet, and so on) under `editor.shortcuts`. Each action maps to a key sequence, for example:
+Shortcuts live in the main configuration file `vnotex.json`, in two tables: application-level actions under `core.shortcuts`, and editor/editing actions (Save, bold, headings, Find, apply snippet, and so on) under `editor.core.shortcuts`. Each action maps to a key sequence, for example:
 
 ```json
 "core": {
@@ -55,18 +61,21 @@ Shortcuts live in the main configuration file `vnotex.json`, in two tables: appl
     }
 },
 "editor": {
-    "shortcuts": {
-        "ApplySnippet": "Ctrl+G, I"
+    "core": {
+        "shortcuts": {
+            "ApplySnippet": "Ctrl+G, I",
+            "PresentationMode": "F9"
+        }
     }
 }
 ```
 
-To see the authoritative list of every action and its default binding, inspect the `core.shortcuts` and `editor.shortcuts` sections of your `vnotex.json` (the defaults are filled in by VNote). See [Settings](settings.md) for where these folders are and how the default/user layers work.
+To see the authoritative list of every action and its default binding, inspect the `core.shortcuts` and `editor.core.shortcuts` sections of your `vnotex.json` (the defaults are filled in by VNote). See [Settings](settings.md) for where these folders are and how the default/user layers work.
 
 ## Customizing a shortcut
 
 1. Open your **user** configuration `vnotex.json`.
-2. Under `core.shortcuts` (application actions) or `editor.shortcuts` (editing actions), set the value to the key sequence you want, using the same `Modifier+Key` and comma-chord notation.
+2. Under `core.shortcuts` (application actions) or `editor.core.shortcuts` (editing actions), set the value to the key sequence you want, using the same `Modifier+Key` and comma-chord notation.
 3. Restart VNote for the change to take effect.
 
 Because shortcuts are just configuration, you can also carry your bindings between machines by syncing your user configuration — see [Settings](settings.md) and [Make VNote portable](settings.md#make-vnote-portable).
@@ -81,4 +90,4 @@ When [Vi mode](../editing/vi-mode.md) is enabled, Vi keys handle text editing **
 - Navigation mode (`Ctrl+G, W`) is the fastest way to reach a widget you rarely click.
 - `Ctrl+G, A` jumps straight to the Notebooks dock without entering navigation mode.
 - Reference shortcuts from [tasks](../productivity/tasks.md) with `${config:main.core.shortcuts.<Action>}` if you script around them.
-- If a shortcut seems inactive, check for a conflict in `core.shortcuts` and confirm you restarted VNote after editing the file.
+- If a shortcut seems inactive, check the relevant shortcut table for conflicts, the Ctrl+Alt policy, and whether you restarted VNote after editing the file. Global hotkeys also require successful operating-system registration.

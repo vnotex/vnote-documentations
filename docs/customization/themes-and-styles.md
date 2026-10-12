@@ -4,9 +4,15 @@ A **theme** controls how VNote looks — the interface, the editor and read mode
 
 ## Themes
 
-A theme corresponds to a folder inside the `themes` folder. Choose and manage themes in **Settings**. See [Settings](settings.md) for where the configuration and theme folders live.
+A theme corresponds to a folder inside the `themes` folder. Switch themes through **Settings → Themes** on the main toolbar, or manage appearance in the Settings tab. See [Settings](settings.md) for where the configuration and theme folders live.
 
 ![The main interface with the Pure theme applied](../assets/screenshots/main-pure.webp){ .screenshot loading=lazy }
+
+### Light themes and live switching
+
+The built-in light themes include **Pink Shock**, **Lucius**, **Dreamy**, and **Jadeite**. Lucius uses a restrained light palette, while Jadeite combines linen and teal. Dreamy now uses a Phycat Mauve-inspired light palette with lavender surfaces, plum accents, and rounded gradient headings; its editor and reader syntax colors are coordinated with the interface.
+
+The **Native** theme follows system text colors for content, including mind maps. Switching themes refreshes Markdown code-block and math syntax colors in already-open notes without reopening them or discarding drafts, selection, or Undo/Redo history. Encrypted Markdown previews also follow the bundled theme styles; see [Encrypted Notes](../managing-notes/encrypted-notes.md) for their restrictions.
 
 ### LaTeX Light and LaTeX Dark
 

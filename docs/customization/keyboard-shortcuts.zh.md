@@ -43,9 +43,15 @@ VNote 的部分快捷键是组合序列，写作以逗号分隔的两部分。�
 !!! note "`CloseTab` 已改名"
     原先名为 `CloseTab` 的操作现已改名为 `CloseFocus`。已有 `vnotex.json` 中自定义的 `CloseTab` 绑定仍然有效，并会在下次保存配置时以 `CloseFocus` 写回。
 
+## 视图演示与全局快速笔记
+
+**PresentationMode** 默认为 `F9`，属于 `editor.core.shortcuts`，不在上面的应用级操作表中。它会演示当前的 [Markdown](../editing/editor-basics.md)、[文本](../editing/text.md)、[思维导图](../editing/mind-maps.md)或 [PDF](../managing-notes/pdf-viewer.md) 视图，按 `Escape` 退出。它与主窗口的 `FullScreen` 操作（`F11`）不同。
+
+**NewQuickNote** 使用 `core.shortcuts.NewQuickNote`（默认为 `Ctrl+Alt+Q`），VNote 运行期间会将其注册为全局热键，能否使用取决于操作系统支持及快捷键冲突情况。即使主窗口隐藏，它也能打开[快速笔记](../productivity/quick-note.md)方案选择器。默认开启的**允许 Ctrl+Alt 快捷键**设置可在关闭并重启后停用它及其他 `Ctrl+Alt` 绑定；参见[设置](settings.md#general-settings)。
+
 ## 快捷键在哪里定义
 
-快捷键位于主配置文件 `vnotex.json` 中，分为两张表：应用级操作在 `core.shortcuts` 之下，编辑器/编辑类操作（保存、加粗、标题、查找、应用片段等）在 `editor.shortcuts` 之下。每个操作映射到一个按键序列，例如：
+快捷键位于主配置文件 `vnotex.json` 中，分为两张表：应用级操作在 `core.shortcuts` 之下，编辑器/编辑类操作（保存、加粗、标题、查找、应用片段等）在 `editor.core.shortcuts` 之下。每个操作映射到一个按键序列，例如：
 
 ```json
 "core": {
@@ -55,18 +61,21 @@ VNote 的部分快捷键是组合序列，写作以逗号分隔的两部分。�
     }
 },
 "editor": {
-    "shortcuts": {
-        "ApplySnippet": "Ctrl+G, I"
+    "core": {
+        "shortcuts": {
+            "ApplySnippet": "Ctrl+G, I",
+            "PresentationMode": "F9"
+        }
     }
 }
 ```
 
-要查看每个操作及其默认绑定的权威列表，请查看你的 `vnotex.json` 中的 `core.shortcuts` 和 `editor.shortcuts` 段落（默认值由 VNote 填入）。这些文件夹的位置以及默认/用户层的工作方式参见[设置](settings.md)。
+要查看每个操作及其默认绑定的权威列表，请查看你的 `vnotex.json` 中的 `core.shortcuts` 和 `editor.core.shortcuts` 段落（默认值由 VNote 填入）。这些文件夹的位置以及默认/用户层的工作方式参见[设置](settings.md)。
 
 ## 自定义快捷键
 
 1. 打开你的**用户**配置 `vnotex.json`。
-2. 在 `core.shortcuts`（应用操作）或 `editor.shortcuts`（编辑操作）下，把值改为你想要的按键序列，使用相同的 `Modifier+Key` 与逗号组合序列写法。
+2. 在 `core.shortcuts`（应用操作）或 `editor.core.shortcuts`（编辑操作）下，把值改为你想要的按键序列，使用相同的 `Modifier+Key` 与逗号组合序列写法。
 3. 重启 VNote 使更改生效。
 
 由于快捷键只是配置，你也可以通过同步用户配置在机器之间携带你的绑定——参见[设置](settings.md)与[让 VNote 便携化](settings.md#make-vnote-portable)。
@@ -81,4 +90,4 @@ VNote 的部分快捷键是组合序列，写作以逗号分隔的两部分。�
 - 导航模式（`Ctrl+G, W`）是抵达那些你很少点击的部件的最快方式。
 - `Ctrl+G, A` 无需进入导航模式，可直接跳转到笔记本停靠部件。
 - 如果你围绕快捷键编写脚本，可在[任务](../productivity/tasks.md)中用 `${config:main.core.shortcuts.<Action>}` 引用它们。
-- 如果某个快捷键似乎无效，检查 `core.shortcuts` 中是否存在冲突，并确认编辑文件后已重启 VNote。
+- 如果某个快捷键似乎无效，检查相应快捷键表中的冲突、Ctrl+Alt 策略，并确认编辑文件后已重启 VNote。全局热键还需要操作系统成功注册。

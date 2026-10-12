@@ -28,8 +28,10 @@ Around the content area are dock widgets. They can be dragged and dropped freely
 - **Tags** — browse and filter notes by [tag](../managing-notes/tags.md).
 - **History** — recently opened notes; see [Quick Access & History](../managing-notes/quick-access-history.md).
 - **Snippets** — insert reusable text; see [Snippets](../editing/snippets.md).
+- **Comments** — available for views that support comments, such as the [PDF viewer](../managing-notes/pdf-viewer.md); hidden for unsupported views.
+- **Tools** — hosts tools supplied by the active view, such as [mind-map node properties](../editing/mind-maps.md). Its title follows the active tool panel, and it is unavailable when the view supplies no panel.
 
-You can show or hide any dock widget from the view menu, and reset the layout if you rearrange things.
+Show or hide available docks through **View → Windows List**. Use **Settings → Reset Main Window Layout** to restore the layout after rearranging it.
 
 ## Stickers
 
@@ -43,13 +45,19 @@ The board is **locked** by default, so a stray drag cannot disturb it. Choose **
 
 Lock the board again when you are done. Moving and resizing happen on the board itself: the old header **Move** submenu and **Resize…** dialog are gone, and the header keeps only **Remove**.
 
+### Greetings and usage tips
+
+The **Greeting** sticker normally shows a time-of-day greeting. During the first five minutes of each hour, it shows a usage tip instead. Separately, VNote can show a daily **VNote Tip** notification at startup: choose **OK** to dismiss it or **Never show again** to disable future daily tips. Tips follow the interface-language preference, rather than the regional date/number format.
+
 ## Notifications
 
-Next to the theme control, a notification button shows a badge when something needs your attention. It opens the notification centre, a newest-first list where an entry can offer **Details** or its own actions, and **Clear All** empties the list. Important messages also appear as a toast over the window — or as a tray balloon when the main window is hidden. There is nothing to configure.
+The toolbar notification button shows a badge when something needs your attention. It opens the notification centre, a newest-first list where an entry can offer **Details** or its own actions, and **Clear All** empties the list. Important messages also appear as a toast over the window — or as a tray balloon when the main window is hidden. The daily-tip opt-out described above does not disable other notifications.
 
 ## Toolbar and menus
 
 The top of the window provides quick access to common actions — new note, import, export, [Quick Access](../managing-notes/quick-access-history.md), [Tasks](../productivity/tasks.md), [United Entry](../search/united-entry.md), [Settings](../customization/settings.md), and more. The **New → Quick Note** action lets you jot something down instantly without deciding where it belongs yet — see [Quick Note](../productivity/quick-note.md).
+
+The text-only **View** menu contains window/layout controls and **Windows List**. The text-only **Settings** menu contains **Settings**, **Themes**, **Open Configuration Folder**, and help entries such as **Markdown Guide** and **Shortcuts Help**. Its **Lock All** action is described in [Encrypted Notes](../managing-notes/encrypted-notes.md).
 
 ## Command-driven navigation
 

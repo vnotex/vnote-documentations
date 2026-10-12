@@ -10,6 +10,9 @@ VNote 是一款免费、开源、基于 Qt 的笔记应用，专注于 Markdown�
 
 ![VNote 主窗口](assets/screenshots/main.webp){ .screenshot }
 
+!!! info "适用于 VNote 4.9.1 的文档"
+    文档已更新至 [VNote 4.9.1](https://github.com/vnotex/vnote/releases/tag/v4.9.1)，涵盖[加密笔记](managing-notes/encrypted-notes.md)、[WebDAV 与坚果云同步](managing-notes/notebook-sync.md)、原生[思维导图编辑器](editing/mind-maps.md)、[Markdown 演示](editing/editor-basics.md)，以及[由用户主动触发的 Windows 更新](getting-started/installation.md)。
+
 ## 为什么选择 VNote
 
 <div class="grid cards" markdown>
@@ -18,7 +21,7 @@ VNote 是一款免费、开源、基于 Qt 的笔记应用，专注于 Markdown�
 
     ---
 
-    所有笔记都是保存在本地磁盘上的纯文本。一个笔记本对应一个目录——不依赖数据库，没有厂商锁定。可自由选择第三方同步服务，或使用按笔记本的 git 同步。
+    笔记以文件形式保存在本地磁盘上，并可选择加密笔记正文。一个笔记本对应一个目录。可选择文件夹同步，或使用内置的 Git、WebDAV、坚果云同步。
 
 -   :material-folder-multiple-outline:{ .lg .middle } __直观的笔记管理__
 

@@ -10,6 +10,9 @@ VNote is a free and open source, Qt-based note-taking application that focuses o
 
 ![The VNote main window](assets/screenshots/main.webp){ .screenshot }
 
+!!! info "Documentation for VNote 4.9.1"
+    Updated through [VNote 4.9.1](https://github.com/vnotex/vnote/releases/tag/v4.9.1), including [encrypted notes](managing-notes/encrypted-notes.md), [WebDAV and Jianguoyun sync](managing-notes/notebook-sync.md), the native [mind map editor](editing/mind-maps.md), [Markdown presentations](editing/editor-basics.md), and [opt-in Windows updates](getting-started/installation.md).
+
 ## Why VNote
 
 <div class="grid cards" markdown>
@@ -18,7 +21,7 @@ VNote is a free and open source, Qt-based note-taking application that focuses o
 
     ---
 
-    All notes are plain text on your local disk. One notebook is exactly one directory — no database, no lock-in. Sync anywhere with the service of your choice or per-notebook git.
+    Your notes live as files on your local disk, with optional note-body encryption. One notebook is one directory. Choose folder synchronization or built-in Git, WebDAV, or Jianguoyun sync.
 
 -   :material-folder-multiple-outline:{ .lg .middle } __Simple notes management__
 
