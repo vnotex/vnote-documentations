@@ -16,9 +16,9 @@ Create a mind map the same way you create any note — through **New Note** — 
 
 The mind-map editor is a visual, node-based canvas: you add child and sibling nodes, connect and rearrange them, and build out branches to structure ideas radially. This makes mind maps well suited to brainstorming, planning, and outlining relationships that are awkward to express as a linear document.
 
-![Legacy screenshot of the earlier web-based mind-map editor](../assets/screenshots/mindmap.webp){ .screenshot loading=lazy }
+![Native m3 mind-map editor with a branching map and the selected node's properties](../assets/screenshots/mindmap.webp){ .screenshot loading=lazy }
 
-This screenshot shows the older editor, not the native m3 interface in VNote 4.9.1.
+VNote 4.9.1 on Windows with the English interface: the native m3 editor at 85% zoom, with the Tools panel floated as **Node Properties** for the selected **Plan** node. This illustration uses a separate sample map, not the demo notebook.
 
 The native editor includes node formatting, links, images, Find, an outline, and Undo/Redo. Folding a branch changes only the current editor's view, not the saved map or another open view; folding and expanding preserve node positions.
 

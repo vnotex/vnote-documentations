@@ -1,6 +1,6 @@
 # Gallery
 
-A tour of VNote's main window. Click an image to open it at full size, or follow the link on a card to read more. The Markdown edit, read, and side-by-side preview cards show the [demo notebook](getting-started/quick-start.md#try-the-demo-notebook) captured in VNote 4.9.1 on Windows with the English interface. The other screenshots are from earlier releases; menus and editor layouts may differ.
+A tour of VNote's main window. Click an image to open it at full size, or follow the link on a card to read more. The Markdown edit, read, and side-by-side preview cards show the [demo notebook](getting-started/quick-start.md#try-the-demo-notebook) captured in VNote 4.9.1 on Windows with the English interface. The mind-map card is also from VNote 4.9.1 on Windows, using a separate English-language sample map. The remaining screenshots are from earlier releases; menus and editor layouts may differ.
 
 <div class="grid cards" markdown>
 
@@ -74,13 +74,13 @@ A tour of VNote's main window. Click an image to open it at full size, or follow
 
     [:octicons-arrow-right-24: Text](editing/text.md)
 
--   [![A mind map open in the built-in editor](assets/screenshots/mindmap.webp){ .screenshot loading=lazy }](assets/screenshots/mindmap.webp)
+-   [![A mind map open in the native m3 editor with node properties visible](assets/screenshots/mindmap.webp){ .screenshot loading=lazy }](assets/screenshots/mindmap.webp)
 
     __Mind map editor__
 
     ---
 
-    The earlier web-based mind map editor, with a searchable node outline. VNote 4.9 uses a native editor; see the current guide for its controls and Tools dock.
+    The native m3 mind-map editor, with a branching map, zoom controls, and the selected node's properties in a floating Tools panel.
 
     [:octicons-arrow-right-24: Mind Maps](editing/mind-maps.md)
 

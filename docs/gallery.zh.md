@@ -1,6 +1,6 @@
 # 界面展示
 
-这里集中展示 VNote 主窗口的界面。点击图片可查看原图，或通过卡片上的链接了解更多。Markdown 编辑模式、阅读模式和并排预览卡片展示 Windows 上的 VNote 4.9.1，使用英文界面和[示例笔记本](getting-started/quick-start.md#try-the-demo-notebook)中的中文笔记。其余截图来自较早版本，菜单和编辑器布局可能有所不同。
+这里集中展示 VNote 主窗口的界面。点击图片可查看原图，或通过卡片上的链接了解更多。Markdown 编辑模式、阅读模式和并排预览卡片展示 Windows 上的 VNote 4.9.1，使用英文界面和[示例笔记本](getting-started/quick-start.md#try-the-demo-notebook)中的中文笔记。思维导图卡片同样展示 Windows 上的 VNote 4.9.1，使用单独的英文示例导图。其余截图来自较早版本，菜单和编辑器布局可能有所不同。
 
 <div class="grid cards" markdown>
 
@@ -74,13 +74,13 @@
 
     [:octicons-arrow-right-24: 文本](editing/text.md)
 
--   [![在内置编辑器中打开的思维导图](assets/screenshots/mindmap.webp){ .screenshot loading=lazy }](assets/screenshots/mindmap.webp)
+-   [![在原生 m3 编辑器中打开的思维导图及节点属性面板](assets/screenshots/mindmap.webp){ .screenshot loading=lazy }](assets/screenshots/mindmap.webp)
 
     __思维导图编辑器__
 
     ---
 
-    较早的网页式思维导图编辑器，带有可搜索的节点大纲。VNote 4.9 已改用原生编辑器，当前控件与工具停靠面板请参见使用指南。
+    原生 m3 思维导图编辑器，展示分支导图、缩放控件，以及在浮动工具面板中显示的所选节点属性。
 
     [:octicons-arrow-right-24: 思维导图](editing/mind-maps.md)
 
