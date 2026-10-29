@@ -10,8 +10,8 @@ VNote 是一款免费、开源、基于 Qt 的笔记应用，专注于 Markdown�
 
 ![VNote 主窗口](assets/screenshots/main.webp){ .screenshot }
 
-!!! info "适用于 VNote 4.9.1 的文档"
-    文档已更新至 [VNote 4.9.1](https://github.com/vnotex/vnote/releases/tag/v4.9.1)，涵盖[加密笔记](managing-notes/encrypted-notes.md)、[WebDAV 与坚果云同步](managing-notes/notebook-sync.md)、原生[思维导图编辑器](editing/mind-maps.md)、[Markdown 演示](editing/editor-basics.md)，以及[由用户主动触发的 Windows 更新](getting-started/installation.md)。
+!!! info "适用于 VNote 4.12.0 的文档"
+    文档涵盖 [VNote 4.10.0](https://github.com/vnotex/vnote/releases/tag/v4.10.0)、[4.11.0](https://github.com/vnotex/vnote/releases/tag/v4.11.0) 和 [4.12.0](https://github.com/vnotex/vnote/releases/tag/v4.12.0)：原生 [Typst 笔记](editing/typst.md)、[可编辑的链接预览](editing/editor-basics.md#link-previews)、更丰富的[思维导图与导出](editing/mind-maps.md)，以及更安全的[自定义任务](productivity/tasks.md)。升级前，请查看 [Windows 系统要求](getting-started/installation.md)和[加密笔记格式变化](managing-notes/encrypted-notes.md)。
 
 ## 为什么选择 VNote
 
@@ -67,7 +67,7 @@ VNote 是一款免费、开源、基于 Qt 的笔记应用，专注于 Markdown�
 
     ---
 
-    在 VNote 的各类编辑器中书写与排版——Markdown、数学公式、图表、片段、模板、思维导图和 Vi 模式。
+    在 VNote 的各类编辑器中书写与排版——Markdown、Typst、数学公式、图表、片段、模板、思维导图和 Vi 模式。
 
     [:octicons-arrow-right-24: 编辑](editing/index.md)
 

@@ -26,12 +26,16 @@
 
 `task` 命令会列出你定义的可运行[任务](../productivity/tasks.md)，因此无需打开任务停靠部件即可启动任务。列表中只有叶子任务，因为只有它们可以运行；分组中的任务显示为 `parent/child`。在命令之后输入内容会按标签筛选列表，且不区分大小写。没有任何任务时显示 **No tasks**；筛选后没有匹配项时显示 **No matching tasks**。
 
-默认别名（常见 `find` 查询的快捷方式）：
+默认别名（常见 `find` 查询的快捷方式）区分大小写：小写 `n`、`g` 和 `t` 搜索当前笔记本；大写 `N`、`G` 和 `T` 搜索所有笔记本。别名的大小写选择与控制搜索文本匹配的 `--case-sensitive` 选项相互独立。
 
 | 别名 | 描述                             | 展开为                                  |
 | ---- | -------------------------------- | --------------------------------------- |
 | `n`  | 在当前笔记本中按名称搜索文件     | `find --scope notebook --object name`   |
 | `g`  | 在当前笔记本中按内容搜索文件     | `find --scope notebook --object content`|
+| `t`  | 在当前笔记本中按标签搜索文件     | `find --scope notebook --object tag`    |
+| `N`  | 在所有笔记本中按名称搜索文件     | `find --scope all_notebook --object name` |
+| `G`  | 在所有笔记本中按内容搜索文件     | `find --scope all_notebook --object content` |
+| `T`  | 在所有笔记本中按标签搜索文件     | `find --scope all_notebook --object tag` |
 | `b`  | 在打开的缓冲区中按内容搜索文件   | `find --scope buffer --object content`  |
 | `f`  | 在当前文件夹中按名称搜索文件     | `find --scope folder --object name`     |
 
@@ -45,7 +49,7 @@
 
 ## 添加你自己的别名
 
-四个默认别名只覆盖了 `find` 能做的一小部分。你可以在配置文件的 `core.unitedEntry.alias` 之下定义自己的单字母（或短）别名（参见[设置](../customization/settings.md)）。每个别名是一个对象，包含 `name`（你要输入的内容）、`description`（显示在帮助列表中）和 `value`（它展开成的 `find` 命令）：
+默认别名只覆盖了 `find` 能做的一小部分。你可以在配置文件的 `core.unitedEntry.alias` 之下定义自己的单字母（或短）别名（参见[设置](../customization/settings.md)）。请使用未占用的名称，避免覆盖 `t` 等内置别名。每个别名是一个对象，包含 `name`（你要输入的内容）、`description`（显示在帮助列表中）和 `value`（它展开成的 `find` 命令）：
 
 ```json
 "core": {
@@ -77,7 +81,7 @@
                 "value": "find --scope notebook --object tag"
             },
             {
-                "name": "t",
+                "name": "o",
                 "description": "Search for files by name in open buffers",
                 "value": "find --scope buffer --object name"
             }
@@ -95,6 +99,8 @@
 
 - `n 02`——在当前笔记本中查找名称包含 `02` 的文件。
 - `g interface`——在当前笔记本中搜索内容包含 `interface` 的笔记。
+- `G interface`——在所有笔记本中搜索内容包含 `interface` 的笔记。
+- `t java` / `T java`——在当前笔记本 / 所有笔记本中查找带 `java` 标签的笔记。
 - `b task`——在当前打开的缓冲区中查找 `task`。
 - `find -b tag -s all_notebook java`——在所有笔记本中查找带 `java` 标签的笔记。
 

@@ -1,6 +1,6 @@
 # Gallery
 
-A tour of VNote's main window. Click an image to open it at full size, or follow the link on a card to read more. The Markdown edit, read, and side-by-side preview cards show the [demo notebook](getting-started/quick-start.md#try-the-demo-notebook) captured in VNote 4.9.1 on Windows with the English interface. The mind-map card is also from VNote 4.9.1 on Windows, using a separate English-language sample map. The remaining screenshots are from earlier releases; menus and editor layouts may differ.
+A tour of VNote's main window. Click an image to open it at full size, or follow the link on a card to read more. The Typst, editable link-preview, and mind-map cards show **VNote 4.12.0 on Windows**, using the English interface and separate synthetic samples. The Markdown edit, read, and side-by-side preview cards show the [demo notebook](getting-started/quick-start.md#try-the-demo-notebook) in VNote 4.9.1 on Windows with the English interface. The remaining screenshots are from earlier releases; menus and editor layouts may differ.
 
 <div class="grid cards" markdown>
 
@@ -44,6 +44,26 @@ A tour of VNote's main window. Click an image to open it at full size, or follow
 
     [:octicons-arrow-right-24: Live preview](editing/editor-basics.md#live-preview)
 
+-   [![A native Typst note with source, in-place math, and compiled PDF preview](assets/screenshots/typst.webp){ .screenshot loading=lazy }](assets/screenshots/typst.webp)
+
+    __Native Typst editor__
+
+    ---
+
+    Field Notes in the native editor: Typst source and an in-place equation on the left, with the compiled PDF and heading outline alongside.
+
+    [:octicons-arrow-right-24: Typst](editing/typst.md)
+
+-   [![A linked reference note being edited in an overlay above its source note](assets/screenshots/link-preview.webp){ .screenshot loading=lazy }](assets/screenshots/link-preview.webp)
+
+    __Editable link preview__
+
+    ---
+
+    Follow a notebook file link and edit the reference without leaving the source note. Open in Tab moves the preview into the source workspace without losing its draft or Undo history.
+
+    [:octicons-arrow-right-24: Link previews](editing/editor-basics.md#link-previews)
+
 -   [![The content area split into two editor groups](assets/screenshots/splits.webp){ .screenshot loading=lazy }](assets/screenshots/splits.webp)
 
     __Side-by-side splits__
@@ -80,7 +100,7 @@ A tour of VNote's main window. Click an image to open it at full size, or follow
 
     ---
 
-    The native m3 mind-map editor, with a branching map, zoom controls, and the selected node's properties in a floating Tools panel.
+    The native m3 mind-map editor with numbered branches, an independent tree, and the selected node's properties in the Tools dock.
 
     [:octicons-arrow-right-24: Mind Maps](editing/mind-maps.md)
 

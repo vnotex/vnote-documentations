@@ -1,10 +1,10 @@
 # 数学与图表
 
-VNote 能直接从你的 Markdown 渲染数学公式和多种图表，让技术笔记在编辑器中保持易读、在阅读模式中精美呈现。这一切都以纯文本形式写在围栏代码块中——没有任何内容被存为二进制图片。
+VNote 能直接从你的 Markdown 渲染数学公式和多种图表，让技术笔记在编辑器中保持易读、在阅读模式中精美呈现。源码始终是纯文本：公式使用美元符号分隔符，图表使用围栏块。
 
 ## 数学公式
 
-VNote 默认使用 **KaTeX** 排版 LaTeX 数学公式。KaTeX、字体及预览栅格化组件均已内置，因此阅读、编辑器预览和导出可离线使用。**设置 → Markdown 编辑器 → 数学公式渲染器（Math renderer）**可选择 **KaTeX** 或 **MathJax**。
+VNote 默认使用 **KaTeX** 排版 LaTeX 数学公式。KaTeX、字体及预览栅格化组件均已内置，因此阅读、编辑器预览和导出可离线使用。**设置 → Markdown 编辑器 → 数学公式渲染器（Math renderer）**可选择 **KaTeX**、**MathJax** 或 **Typst**。以下示例采用适用于 KaTeX/MathJax 的 LaTeX 语法。
 
 - **行内**公式放在一对美元符号之间：`$E = mc^2$`。
 - **块级**（独立显示）公式放在 `$$ … $$` 块中：
@@ -17,7 +17,35 @@ $$
 
 数学公式会在阅读模式以及编辑器的原位预览和并排预览中渲染（参见[编辑器基础](editor-basics.md)）。
 
-对于[加密笔记](../managing-notes/encrypted-notes.md)，受保护的阅读和并排预览始终使用内置 KaTeX；原位数学预览仍不可用。
+对于[加密笔记](../managing-notes/encrypted-notes.md)，经过授权的阅读和并排预览在选中 **Typst** 时使用 Typst，否则使用内置 **KaTeX**。**Typst 是受保护笔记唯一支持的原位数学公式渲染器**；这一例外不会解除受保护笔记的其他限制，也不会绕过解锁与授权。
+
+### Typst 数学公式 { #typst-math }
+
+在**数学公式渲染器**中选择 **Typst**，即可使用内置原生运行时。仍然使用 `$…$` 和 `$$…$$` 分隔符，但其中应编写 **Typst 数学语法**，而非 LaTeX。更换渲染器不会自动翻译已有公式。例如：
+
+```md
+行内公式：$frac(a, b)$
+
+$$
+integral_a^b f(x) dif x = F(b) - F(a)
+$$
+```
+
+Typst 数学公式支持原位与实时预览。普通 Markdown 笔记也支持自包含的 HTML/PDF 导出以及交叉复制；受保护笔记的导出与复制限制仍然适用。若需要完整排版文档，而非 Markdown 中的公式，请创建[原生 Typst 笔记](typst.md)。
+
+### Typst 围栏块 { #fenced-typst-blocks }
+
+`typst` 围栏独立于**数学公式渲染器**来渲染 Typst 标记——即使选择 KaTeX 或 MathJax 也可使用：
+
+````md
+```typst
+#set page(width: 8cm, height: 4cm, margin: 0.5cm)
+= A Typst block
+$ frac(a, b) $
+```
+````
+
+块会在预览、导出和交叉复制中保留作者指定的页面尺寸与多页输出。嵌入 Markdown 的块会去掉 Typst 默认页边距，以便与周围内容对齐；上例这样的显式页边距会保留。独立 `.typst` 文档的布局不受影响。
 
 ### 自定义 MathJax {#customizing-mathjax}
 
@@ -67,7 +95,7 @@ Graphviz 支持 `dot`/`graphviz`，也支持以引擎命名的围栏：`neato`�
 
 ## 依赖与设置
 
-- **KaTeX** 和 **Mermaid** 开箱即可本地渲染。MathJax 是否可用取决于所选脚本及其资源。
+- **KaTeX**、**Typst** 和 **Mermaid** 开箱即可本地渲染。MathJax 是否可用取决于所选脚本及其资源。
 - **PlantUML** 和 **Graphviz** 需要离线渲染时，请选择本地工具；若图表无法渲染，请在[设置](../customization/settings.md)中检查引擎选项与所需路径。
 
 由于图表和数学都是纯文本，它们在版本控制下能干净地对比差异，并与笔记一起导出——参见[导出](../productivity/export.md)。

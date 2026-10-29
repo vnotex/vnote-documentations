@@ -17,13 +17,14 @@ VNote 基于 Qt 6 构建，提供以下平台的安装包：
 
 | 安装包 | 说明 |
 |--------|------|
-| **Windows x64** | 常规 Windows 版本，基于 Qt 6.10.3 构建。需要 Windows 10 或更高版本。 |
-| **Windows 7（`win64-windows7`）** | 面向旧版 Windows 的独立版本，基于 Qt 5.15 构建。注意事项见下文。 |
+| **Windows x64** | v4.12.0 安装包使用 Qt 6.10.3。请使用受支持的 Windows 10 或 Windows 11 版本；运行时要求见下文。 |
 | **Linux x64** | AppImage 基于 Ubuntu 22.04 构建；兼容性取决于发行版及其系统库。 |
 | **macOS** | 面向 Intel 与 Apple Silicon 的通用（universal）版本。常规安装包需要 macOS 13 或更高版本。 |
 | **macOS 12（`-macos12`）** | 独立的通用安装包，目标系统为 macOS 12.1 或更高版本。 |
 
-除非需要 Windows 7/8 或 macOS 12 专用版本，否则请选择对应平台的常规安装包。[v4.9.1 发布页面](https://github.com/vnotex/vnote/releases/tag/v4.9.1)提供上述两种 macOS 安装包。
+除非需要 macOS 12 专用版本，否则请选择对应平台的常规安装包。[v4.12.0 发布页面](https://github.com/vnotex/vnote/releases/tag/v4.12.0)仍提供上述两种 macOS 安装包。
+
+VNote 4.11 及后续版本不再支持 Windows 7 和较旧的 Windows 10 版本。[Windows 构建配置](https://github.com/vnotex/vnote/blob/3d4c806c29de7a01416da5352d22bfe21bc6a128/.github/workflows/ci-win.yml)使用 Qt 6.10.3；[Qt 6.10 支持的平台](https://doc.qt.io/qt-6.10/supported-platforms.html#windows)列出的 x64 系统为 Windows 10 1809 或更高版本，以及 Windows 11。这是 Qt 的支持基线，而不是经过单独测试的 VNote 最低要求：[VNote 4.11 发布说明](https://github.com/vnotex/vnote/releases/tag/v4.11.0)未指定准确的 Windows 10 版本。目前不再提供 Windows 7/8 安装包。
 
 ## Windows
 
@@ -37,9 +38,6 @@ VNote 基于 Qt 6 构建，提供以下平台的安装包：
 scoop bucket add extras
 scoop install extras/vnote
 ```
-
-!!! warning "Windows 7 版本存在限制"
-    `win64-windows7` 安装包基于 Qt 5.15 构建，无法提供 Qt 6 版本的全部功能。由于 pdf.js 6 需要更新的网页引擎，内置的 [PDF 阅读器](../managing-notes/pdf-viewer.md)在该版本中会被禁用；VNote 会改用已配置的外部应用，未配置时则使用系统默认应用打开 PDF。该安装包自带 OpenSSL 1.1.1w；早期的 Windows 7 版本搜索时完全返回不到结果，网络操作也会以 “TLS initialization failed” 失败，这个 OpenSSL 修复了上述问题。请勿把随包附带的文件分开存放。
 
 ## macOS
 

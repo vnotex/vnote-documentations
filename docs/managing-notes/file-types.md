@@ -9,7 +9,9 @@ A VNote note is just a file on disk, and VNote recognizes a handful of built-in 
 | **Markdown** | `.md`, `.mkd`, `.rmd`, `.markdown` | Markdown editor | Yes |
 | **Text** | `.txt`, `.text`, `.log`, many source and configuration suffixes, and any other file detected as plain text | Text editor | Yes |
 | **Mind Map** | `.mmm` (preferred), `.emind` | Native mind-map editor | Yes |
+| **Typst** | `.typst` | [Native Typst editor and PDF preview](../editing/typst.md) | Yes |
 | **PDF** | `.pdf` | [Built-in PDF viewer](pdf-viewer.md) | No — view only |
+| **Image** | image suffixes configured in File Associations, such as `.png`, `.jpg`, and `.webp` | Read-only image viewer | No — view only |
 | **Others** | anything else | Text editor | Yes — no extension is added |
 
 Markdown is the core note type and gets VNote's full editing experience — see [Editing](../editing/index.md). Text and source files open in the [text editor](../editing/text.md), and mind maps are a distinct visual note type covered in [Mind Maps](../editing/mind-maps.md).
@@ -24,10 +26,10 @@ To open a given extension somewhere else, add an entry under **Settings → File
 
 ### Encrypted-note exception
 
-Bundled notebooks can protect the bodies of Markdown, text, and mind-map notes. These are not ordinary plaintext files for external programs: VNote unlocks them and uses their protected note type to choose the editor. Do not rename an encrypted file's extension to convert it or expect an external editor to read it. See [Encrypted Notes](encrypted-notes.md) for supported operations and protection limits.
+Bundled notebooks can protect the bodies of Markdown, text, and mind-map notes. Native Typst notes require an unencrypted file. Protected notes are not ordinary plaintext files for external programs: VNote unlocks them and uses their protected note type to choose the editor. Do not rename an encrypted file's extension to convert it or expect an external editor to read it. See [Encrypted Notes](encrypted-notes.md) for supported operations and protection limits.
 
 ## Creating notes
 
-When you choose **New Note**, the **Type** dropdown lets you create a **Markdown**, **Text**, **Mind Map**, or **Others** note — **Others** creates a file without adding any extension. PDF is the one type you cannot create: it is view-only, so you can open and read a `.pdf` that lives in a notebook, but you cannot create a new PDF note from within VNote. (VNote can still *export* your notes to PDF — see [Export](../productivity/export.md).)
+When you choose **New Note**, the **Type** dropdown lets you create a **Markdown**, **Text**, **Mind Map**, **Typst**, or **Others** note — **Others** creates a file without adding any extension. PDF and Image are view-only types: open existing files rather than creating new notes of those types. VNote can still *export* supported notes to PDF — see [Export](../productivity/export.md) and [Typst](../editing/typst.md).
 
 Because everything is just files, you can also drop files of any of these types into a notebook folder on disk, and VNote will open each one with the matching editor or viewer.

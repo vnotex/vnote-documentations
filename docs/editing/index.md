@@ -23,6 +23,10 @@ Features specific to the Markdown editor.
 
 - [Text](text.md)
 
+## Typst
+
+- [Typst](typst.md)
+
 ## Mind Maps
 
 - [Mind Maps](mind-maps.md)

@@ -17,6 +17,8 @@ VNote 以 **Markdown** 为核心设计——这是一种轻量、易用的书写
 
 在编辑模式下，右键点击 ATX 标题（以 `#` 开头的行）可以使用**复制链接（Copy Link）**，它会复制笔记路径与该标题的锚点——与阅读模式使用的锚点一致——可直接粘贴到另一篇笔记中作为链接。
 
+自动[源码标题编号](editor-basics.md#heading-numbering)仅适用于 ATX 标题。Setext 标题（文字下一行用 `===` 或 `---` 作下划线）不会被编辑器的源码编号功能编号。
+
 ## 强调
 
 ```md
@@ -88,6 +90,7 @@ __This text will be bold__
 
 - `=宽x高` 后缀用于设置渲染时的图片尺寸；省略其中一侧即可只设置一个维度。
 - VNote 的 **Base64** 插入功能生成的参考式图片链接受支持；参见[图片存储方式](images-and-image-host.md)。
+- 在 Markdown 编辑器中，用 `Ctrl+单击` 跳转链接；普通单击只移动光标。支持的本地文件可在可编辑的[链接预览](editor-basics.md#link-previews)中打开；右键菜单的**打开链接（Open Link）**则按普通方式打开。
 
 你也可以直接粘贴图片，VNote 会把文件保存到笔记本中并替你写好链接。粘贴、本地存储与图床参见[图片与图床](images-and-image-host.md)。
 
@@ -226,9 +229,11 @@ alert-dark
 
 这与[片段](snippets.md)配合得很好：片段可以一键把选中文本包裹进这类标签。
 
+**保护 Markdown 免受 XSS 攻击（Protect Markdown from XSS）**会过滤不安全的 HTML 与 URL；受保护笔记始终强制过滤。参见[设置](../customization/settings.md#markdown-safety-and-math)。
+
 ## 数学与图表
 
-VNote 支持 LaTeX 数学公式（默认使用 KaTeX，也可选择 MathJax），以及通过围栏代码块编写的 Mermaid、PlantUML（`puml`）、Graphviz（`dot`）、Flowchart.js（`flow`/`flowchart`）和 WaveDrom（`wavedrom`）图表。详见[数学与图表](math-and-diagrams.md)。
+VNote 在美元符号分隔符内渲染数学公式：KaTeX（默认）和 MathJax 使用 LaTeX 语法，选择 **Typst** 后则使用 Typst 语法。`typst` 围栏标记独立于数学公式设置渲染。图表围栏包括 Mermaid、PlantUML（`puml`）、Graphviz（`dot`）、Flowchart.js（`flow`/`flowchart`）和 WaveDrom（`wavedrom`）。示例参见[数学与图表](math-and-diagrams.md)；原生 `.typst` 文档参见 [Typst](typst.md)。
 
 ## 换行和段落
 
@@ -238,4 +243,6 @@ VNote 支持 LaTeX 数学公式（默认使用 KaTeX，也可选择 MathJax）�
 
 ## 渲染与扩展
 
-阅读模式将你的 Markdown 渲染为最终形式，也是[导出](../productivity/export.md)的基础。究竟启用哪些扩展——以及诸如表格风格或数学分隔符等细节——可在[设置](../customization/settings.md)中调整。如果某个元素没有按预期渲染，请检查那里的相关选项。
+VNote 4.12 在阅读模式、实时预览和 WebEngine 导出中使用 **cmark** 原生渲染 Markdown，复用当前编辑器的解析树，同时保留维基链接、任务列表、警告框和目录。[设置](../customization/settings.md)中仍可调整渲染选项；输出方式参见[导出](../productivity/export.md)。
+
+4.12 移除了表情短代码和文本表情的自动展开：`:smile:` 或 `:-)` 等文本会保持原样。直接写入的 Unicode 字符不受影响。

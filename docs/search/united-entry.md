@@ -26,12 +26,16 @@ Built-in commands:
 
 The `task` command lists the runnable [tasks](../productivity/tasks.md) you have defined, so you can start one without opening the Tasks dock. Only leaf tasks are listed, because only they can be run; a task inside a group is shown as `parent/child`. Typing after the command filters the list by label, ignoring case. With nothing to show it says **No tasks**, and when a filter excludes everything, **No matching tasks**.
 
-Default aliases (shortcuts for common `find` queries):
+Default aliases (shortcuts for common `find` queries) are case-sensitive: lowercase `n`, `g`, and `t` search the current notebook; uppercase `N`, `G`, and `T` search all notebooks. This alias selection is separate from `--case-sensitive`, which controls matching the search text.
 
 | Alias | Description                                    | Expands to                              |
 | ----- | ---------------------------------------------- | --------------------------------------- |
 | `n`   | Search files by name in the current notebook   | `find --scope notebook --object name`   |
 | `g`   | Search files by content in the current notebook| `find --scope notebook --object content`|
+| `t`   | Search files by tag in the current notebook    | `find --scope notebook --object tag`    |
+| `N`   | Search files by name in all notebooks          | `find --scope all_notebook --object name` |
+| `G`   | Search files by content in all notebooks       | `find --scope all_notebook --object content` |
+| `T`   | Search files by tag in all notebooks           | `find --scope all_notebook --object tag` |
 | `b`   | Search files by content in open buffers        | `find --scope buffer --object content`  |
 | `f`   | Search files by name in the current folder     | `find --scope folder --object name`     |
 
@@ -45,7 +49,7 @@ You can also call `find` directly with options for full control:
 
 ## Adding your own aliases
 
-The four default aliases cover only a slice of what `find` can do. You can define your own single-letter (or short) aliases in the configuration file under `core.unitedEntry.alias` (see [Settings](../customization/settings.md)). Each alias is an object with a `name` (what you type), a `description` (shown in the help list), and a `value` (the `find` command it expands to):
+The default aliases cover only a slice of what `find` can do. You can define your own single-letter (or short) aliases in the configuration file under `core.unitedEntry.alias` (see [Settings](../customization/settings.md)). Choose unused names rather than overriding built-ins such as `t`. Each alias is an object with a `name` (what you type), a `description` (shown in the help list), and a `value` (the `find` command it expands to):
 
 ```json
 "core": {
@@ -77,7 +81,7 @@ The four default aliases cover only a slice of what `find` can do. You can defin
                 "value": "find --scope notebook --object tag"
             },
             {
-                "name": "t",
+                "name": "o",
                 "description": "Search for files by name in open buffers",
                 "value": "find --scope buffer --object name"
             }
@@ -95,6 +99,8 @@ Mix and match any `--scope` with any `--object` (`name`, `content`, `tag`, `path
 
 - `n 02` — find files whose name contains `02` in the current notebook.
 - `g interface` — search the current notebook for notes whose content contains `interface`.
+- `G interface` — search all notebooks for content containing `interface`.
+- `t java` / `T java` — find notes tagged `java` in the current notebook / all notebooks.
 - `b task` — find `task` among the currently open buffers.
 - `find -b tag -s all_notebook java` — find notes tagged `java` across all notebooks.
 

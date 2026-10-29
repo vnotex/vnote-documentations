@@ -42,6 +42,3 @@ Comments are stored per file. A bundled notebook keeps `comments.json` in that f
 ## Limitations
 
 The PDF itself remains read-only; filling forms and changing document content still require a dedicated PDF application. To turn your own notes into a PDF, see [Export](../productivity/export.md).
-
-!!! warning "The built-in viewer requires Qt 6.9 or newer"
-    Current regular Windows, Linux, and macOS packages meet this requirement. The `win64-windows7` package uses Qt 5.15, so VNote does not create a built-in PDF tab there; it opens the configured external PDF application, or the system default when none is configured. You can choose one under **Settings → File Associations → External Programs**.

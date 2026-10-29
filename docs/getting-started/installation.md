@@ -17,13 +17,14 @@ VNote is built with Qt 6 and published for these platforms:
 
 | Package | Notes |
 |---------|-------|
-| **Windows x64** | The regular Windows build, made with Qt 6.10.3. Requires Windows 10 or newer. |
-| **Windows 7 (`win64-windows7`)** | A separate build against Qt 5.15 for older Windows versions. See the caveats below. |
+| **Windows x64** | The v4.12.0 package uses Qt 6.10.3. Use a supported Windows 10 or Windows 11 release; see the runtime requirements below. |
 | **Linux x64** | AppImage built on Ubuntu 22.04; compatibility depends on the distribution and its system libraries. |
 | **macOS** | Universal build for Intel and Apple Silicon. The regular package requires macOS 13 or newer. |
 | **macOS 12 (`-macos12`)** | Separate universal package targeting macOS 12.1 or newer. |
 
-Pick the regular package for your platform unless you need the Windows 7/8 or macOS 12 variant. The [v4.9.1 release](https://github.com/vnotex/vnote/releases/tag/v4.9.1) includes both macOS variants.
+Pick the regular package for your platform unless you need the macOS 12 variant. The [v4.12.0 release](https://github.com/vnotex/vnote/releases/tag/v4.12.0) retains both macOS variants.
+
+VNote 4.11 and later no longer support Windows 7 or older Windows 10 releases. The [Windows build configuration](https://github.com/vnotex/vnote/blob/3d4c806c29de7a01416da5352d22bfe21bc6a128/.github/workflows/ci-win.yml) uses Qt 6.10.3; [Qt 6.10's supported platforms](https://doc.qt.io/qt-6.10/supported-platforms.html#windows) list Windows 10 version 1809 or later and Windows 11 for x64. This is Qt's baseline, not a separately tested VNote minimum: the [VNote 4.11 release notes](https://github.com/vnotex/vnote/releases/tag/v4.11.0) do not name an exact Windows 10 version. There is no current Windows 7/8 package.
 
 ## Windows
 
@@ -37,9 +38,6 @@ If you use [Scoop](https://scoop.sh/), VNote is available in the `extras` bucket
 scoop bucket add extras
 scoop install extras/vnote
 ```
-
-!!! warning "The Windows 7 build has limitations"
-    The `win64-windows7` package is built against Qt 5.15 and cannot offer everything the Qt 6 build does. The built-in [PDF viewer](../managing-notes/pdf-viewer.md) is disabled there because pdf.js 6 requires a newer web engine; VNote opens PDFs with the configured external application or the system default instead. This package ships its own OpenSSL 1.1.1w; earlier Windows 7 builds returned no search results at all and failed network operations with "TLS initialization failed", which that OpenSSL fixes. Keep the files that come with the package together.
 
 ## macOS
 

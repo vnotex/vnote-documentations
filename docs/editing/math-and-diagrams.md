@@ -1,10 +1,10 @@
 # Math & Diagrams
 
-VNote renders mathematical formulas and several kinds of diagrams directly from your Markdown, so technical notes stay readable in the editor and beautiful in read mode. Everything is written as plain text in fenced blocks — nothing is stored as a binary image.
+VNote renders mathematical formulas and several kinds of diagrams directly from your Markdown, so technical notes stay readable in the editor and beautiful in read mode. The source remains plain text: formulas use dollar delimiters and diagrams use fenced blocks.
 
 ## Math formulas
 
-VNote uses **KaTeX** by default to typeset LaTeX math. KaTeX, its fonts, and the preview rasterizer are bundled, so reading, editor previews, and exports work offline. **Settings → Markdown Editor → Math renderer** lets you choose **KaTeX** or **MathJax**.
+VNote uses **KaTeX** by default to typeset LaTeX math. KaTeX, its fonts, and the preview rasterizer are bundled, so reading, editor previews, and exports work offline. **Settings → Markdown Editor → Math renderer** lets you choose **KaTeX**, **MathJax**, or **Typst**. The following examples use LaTeX syntax for KaTeX/MathJax.
 
 - **Inline** math goes between single dollar signs: `$E = mc^2$`.
 - **Block** (display) math goes in a `$$ … $$` block:
@@ -17,7 +17,35 @@ $$
 
 Math renders in read mode and in the editor's in-place and side-by-side previews (see [Editor Basics](editor-basics.md)).
 
-For [encrypted notes](../managing-notes/encrypted-notes.md), protected read and side-by-side previews always use bundled KaTeX; in-place math previews remain unavailable.
+For [encrypted notes](../managing-notes/encrypted-notes.md), authorized read and side-by-side previews use **Typst** when selected, otherwise bundled **KaTeX**. **Typst is the only supported in-place math renderer for protected notes**; this exception does not remove other protected-note restrictions or bypass unlocking and authorization.
+
+### Typst math
+
+Select **Typst** under **Math renderer** to use the bundled native runtime. Keep the same `$…$` and `$$…$$` delimiters, but write **Typst math syntax**, not LaTeX. Changing the renderer does not translate existing formulas. For example:
+
+```md
+Inline: $frac(a, b)$
+
+$$
+integral_a^b f(x) dif x = F(b) - F(a)
+$$
+```
+
+Typst math supports in-place and live previews. Ordinary Markdown notes also support self-contained HTML/PDF exports and Cross Copy; protected-note export and copy restrictions still apply. For a complete typeset document rather than math inside Markdown, create a [native Typst note](typst.md).
+
+### Fenced Typst blocks
+
+A `typst` fence renders Typst markup independently of **Math renderer** — it works even when KaTeX or MathJax is selected:
+
+````md
+```typst
+#set page(width: 8cm, height: 4cm, margin: 0.5cm)
+= A Typst block
+$ frac(a, b) $
+```
+````
+
+Blocks preserve authored page sizes and multi-page output in previews, exports, and Cross Copy. Embedded Markdown blocks omit Typst's default page margin to align with surrounding content; explicit margins such as the one above are preserved. Standalone `.typst` document layouts are unchanged.
 
 ### Customizing MathJax {#customizing-mathjax}
 
@@ -67,7 +95,7 @@ Graphviz accepts `dot`/`graphviz` and engine-named fences: `neato`, `twopi`, `ci
 
 ## Requirements and settings
 
-- **KaTeX** and **Mermaid** render locally out of the box. MathJax availability depends on the selected script and its resources.
+- **KaTeX**, **Typst**, and **Mermaid** render locally out of the box. MathJax availability depends on the selected script and its resources.
 - For **PlantUML** and **Graphviz**, choose local tools when you need offline rendering; check the engine options and required paths in [Settings](../customization/settings.md) if a diagram fails.
 
 Because diagrams and math are plain text, they diff cleanly under version control and export together with your note — see [Export](../productivity/export.md).

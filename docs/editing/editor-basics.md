@@ -2,11 +2,11 @@
 
 VNote's editor is where you spend most of your time, so it is built to make Markdown feel natural: you keep track of your content while you write, and see a beautiful rendering when you read. This page covers the editing modes, the outline, tabs and splits, and the everyday actions that make up a writing session.
 
-Tabs, splits, the outline, and note navigation apply to every editor, but features such as edit/read mode, live preview, and Cross Copy or Parse to Markdown are specific to the Markdown editor.
+Tabs, splits, and note navigation are shared across editors. The Markdown modes and previews described below have a separate counterpart in [native Typst notes](typst.md); Cross Copy and Parse to Markdown are Markdown-specific helpers.
 
 ## Edit mode and read mode
 
-Every note opens in one of two modes:
+A Markdown note opens in one of two modes:
 
 - **Edit mode** shows your Markdown source with rich **syntax highlighting**. Headings, emphasis, links, code, and other elements are styled in place, so the text stays readable without a separate preview. This is VNote's answer to the usual "edit vs. preview" split — see [Why VNote](../getting-started/why-vnote.md).
 - **Read mode** renders the note to its final, formatted form for comfortable reading and sharing.
@@ -47,7 +47,7 @@ Drag a heading in the outline to move its whole section, including subsections; 
 There are two distinct numbering options under **Markdown Editor**:
 
 - **Read → Auto Section Number** is on by default. It displays numbers for headings in documents that are not already numbered, without rewriting the source; the outline also supports automatic numbering.
-- **Edit → Auto Section Number** is off by default. Enabling it writes and maintains numbers in Markdown heading source, replacing existing numeric prefixes where necessary. Empty headings do not participate in source-numbering counters.
+- **Edit → Auto Section Number** is off by default. Enabling it writes and maintains numbers in **ATX headings** (`# Heading`), replacing existing numeric prefixes where necessary. It does not number Setext headings (underlined with `===` or `---`). Empty headings do not participate in source-numbering counters.
 
 Both modes and the outline share **Settings → Editor → Section Number Pattern** and **Detect Heading 1 for Section Number**. The latter is on by default: a sole leading level-1 heading is treated as the document title and excluded; turn it off to number from the first heading.
 
@@ -67,6 +67,8 @@ A view does not have to stay inside the main window:
 
 A detached window carries a **Stay on Top** pin (`F10`) so you can keep it above other windows while you work elsewhere — useful for a reference note or a [PDF](../managing-notes/pdf-viewer.md).
 
+Closing a detached window **closes its tabs**; it no longer reattaches them to the main window. Normal save confirmation still applies. Detaching a tab activates the new window and focuses its editor.
+
 ## The Home tab
 
 VNote starts on the [Dashboard](../getting-started/dashboard.md) Home tab. Opening a file in the main area closes it when it is the only tab there, so you are not left with a stale placeholder; opening a file in a detached window leaves it alone. Home comes back as soon as the main area is empty again. There is no setting to configure.
@@ -81,9 +83,27 @@ A note can change on disk — a sync, another editor, a script. VNote detects th
 - **Splits** — divide the content area into side-by-side views to compare two notes, or to reference one while editing another.
 - **Jump around** — use the outline, [Search](../search/index.md), [United Entry](../search/united-entry.md), and [History](../managing-notes/quick-access-history.md) to move quickly, especially in large notebooks.
 
+**Settings → Note Management → Always open notes in new tabs** controls ordinary note opening. Disable it to reuse the current tab, or hold `Ctrl` when activating a note to request a new tab. Compatible editors retain their zoom/layout preferences on replacement, but the new document has its own editing history; unsaved changes and comments still require confirmation. Detached and link-preview opens do not replace the main tab.
+
+Hidden Markdown web views are released after **5 minutes** by default. **Settings → Markdown Editor → Read → Unload inactive web view after** accepts **0–1440 min**, with **0 / Never** disabling unloading. Returning reloads the current preview without losing unsaved source or Undo history.
+
 ![The content area split into side-by-side views](../assets/screenshots/splits.webp){ .screenshot loading=lazy }
 
 Use **Save All** in a tab’s context menu to save all modified notes. **Outline** and **Find And Replace** remain on the view toolbar, while secondary actions live in the three-dot **Menu**. Navigation mode can reach Markdown content across visible splits in both edit and read modes.
+
+## Link previews { #link-previews }
+
+In the Markdown editor, **Ctrl+click** follows a link; an ordinary click only positions the cursor. With **Settings → Editor → Preview links in an overlay** enabled, supported local file links whose targets resolve to an **open notebook** open over the current note rather than taking you away from it. A Markdown link to a file outside open notebooks can instead open through the system application, subject to the local-file warning; a standalone sibling file is not automatically a VNote preview. The overlay uses the file's normal built-in editor or viewer: Markdown, text, Typst, and mind maps can be edited when writable, while PDF and image files remain read-only. External web pages are not embedded as editable notes; file associations and protected-note authorization still apply. Protected Markdown links can open only indexed notebook notes.
+
+Use **Open Link** in the link's context menu to bypass preview and open normally. Click the source-note backdrop outside the overlay, or **Close Preview**, to dismiss it; unsaved edits still receive normal close confirmation.
+
+The overlay's **Open in Tab** button moves its preview tabs into the source note's workspace (including a detached source workspace). It keeps the existing editors, drafts, and Undo history rather than reopening the files. If a duplicate tab must be replaced, VNote honors **Save**, **Discard**, and **Cancel**; cancellation does not silently discard the preview.
+
+![A local Markdown link opened in an editable preview over its source note](../assets/screenshots/link-preview.webp){ .screenshot loading=lazy }
+
+VNote 4.12 on Windows, English interface, with synthetic sample notes. The demo-notebook screenshots above remain from VNote 4.9.1.
+
+Markdown, Typst, and mind maps share external-link warnings and the remembered **Never Ask** choice. This does not disable separate local-file warnings or bypass protected-note unlocking, authorization, and locking safeguards. See [Settings](../customization/settings.md#markdown-safety-and-math).
 
 ## Copying and pasting
 
@@ -102,6 +122,7 @@ The editor supports the usual essentials — undo/redo, find and replace within 
 - [Markdown Syntax](markdown-syntax.md) for the formatting VNote understands.
 - [Images & Image Host](images-and-image-host.md) for pasting and managing images.
 - [Math & Diagrams](math-and-diagrams.md) for formulas and diagrams.
+- [Typst](typst.md) for native typeset documents and PDF previews.
 - [Snippets](snippets.md) and [Templates](templates.md) to avoid repetitive typing.
 - [Vi Mode](vi-mode.md) for modal, keyboard-driven editing.
 

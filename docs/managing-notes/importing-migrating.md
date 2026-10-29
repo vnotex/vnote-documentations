@@ -33,6 +33,9 @@ Open an existing bundled notebook by pointing VNote at its root, keeping its con
 
 This is how you pick up a notebook that was created on another machine or restored from a backup. A raw notebook has no configuration in its folder, so you pick one up the same way you created it: **New Notebook** with **Type → Raw notebook**, pointed at the directory.
 
+!!! warning "Check encrypted-note version compatibility"
+    VNote 4.10 introduced self-contained v2 encrypted notes and backups; older VNote versions cannot read them. Use VNote 4.10 or later on the destination device, and read the [encrypted-note migration and recovery guidance](encrypted-notes.md) before upgrading or restoring. Self-contained keys do not replace the complete-notebook, complete shared-folder, or cross-notebook transfer workflows described here.
+
 ## Import files and folders into a notebook
 
 You can pull external content into an existing notebook without leaving VNote. Select the target notebook or folder in the Notebooks panel, then use the **New** menu in the toolbar:

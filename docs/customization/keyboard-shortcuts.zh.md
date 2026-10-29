@@ -45,7 +45,7 @@ VNote 的部分快捷键是组合序列，写作以逗号分隔的两部分。�
 
 ## 视图演示与全局快速笔记
 
-**PresentationMode** 默认为 `F9`，属于 `editor.core.shortcuts`，不在上面的应用级操作表中。它会演示当前的 [Markdown](../editing/editor-basics.md)、[文本](../editing/text.md)、[思维导图](../editing/mind-maps.md)或 [PDF](../managing-notes/pdf-viewer.md) 视图，按 `Escape` 退出。它与主窗口的 `FullScreen` 操作（`F11`）不同。
+**PresentationMode** 默认为 `F9`，属于 `editor.core.shortcuts`，不在上面的应用级操作表中。它会演示当前的 [Markdown](../editing/editor-basics.md)、[文本](../editing/text.md)、[Typst](../editing/typst.md)、[思维导图](../editing/mind-maps.md)或 [PDF](../managing-notes/pdf-viewer.md) 视图，按 `Escape` 退出。它与主窗口的 `FullScreen` 操作（`F11`）不同。
 
 **NewQuickNote** 使用 `core.shortcuts.NewQuickNote`（默认为 `Ctrl+Alt+Q`），VNote 运行期间会将其注册为全局热键，能否使用取决于操作系统支持及快捷键冲突情况。即使主窗口隐藏，它也能打开[快速笔记](../productivity/quick-note.md)方案选择器。默认开启的**允许 Ctrl+Alt 快捷键**设置可在关闭并重启后停用它及其他 `Ctrl+Alt` 绑定；参见[设置](settings.md#general-settings)。
 

@@ -45,7 +45,7 @@ Actions listed as unbound have no default; give them one in `core.shortcuts` as 
 
 ## View presentation and global Quick Note
 
-**PresentationMode** defaults to `F9` and belongs to `editor.core.shortcuts`, not the application-level table above. It presents the active [Markdown](../editing/editor-basics.md), [text](../editing/text.md), [mind-map](../editing/mind-maps.md), or [PDF](../managing-notes/pdf-viewer.md) view; `Escape` exits. It is distinct from the main-window `FullScreen` action (`F11`).
+**PresentationMode** defaults to `F9` and belongs to `editor.core.shortcuts`, not the application-level table above. It presents the active [Markdown](../editing/editor-basics.md), [text](../editing/text.md), [Typst](../editing/typst.md), [mind-map](../editing/mind-maps.md), or [PDF](../managing-notes/pdf-viewer.md) view; `Escape` exits. It is distinct from the main-window `FullScreen` action (`F11`).
 
 **NewQuickNote** uses `core.shortcuts.NewQuickNote` (default `Ctrl+Alt+Q`) and is registered as a global hotkey while VNote is running, subject to operating-system availability and shortcut conflicts. It opens the [Quick Note](../productivity/quick-note.md) scheme picker even when the main window is hidden. The default-on **Allow Ctrl+Alt shortcuts** setting can disable this and other `Ctrl+Alt` bindings after a restart; see [Settings](settings.md#general-settings).
 

@@ -19,9 +19,12 @@
 
 VNote 会在应用内处理克隆、提交、拉取和推送。请先创建远端仓库；新建笔记本时，应先在 Git 托管服务上创建一个空仓库。填写：
 
-- **远端 URL（Remote URL）**——HTTPS Git 地址（例如 `https://github.com/user/repo.git`），或 `file://` URL，例如 `file:///path/to/repo.git`。
+- **远端 URL（Remote URL）**——HTTPS Git 地址（推荐，例如 `https://github.com/user/repo.git`）、`http://` Git 地址，或 `file://` URL，例如 `file:///path/to/repo.git`。
 - **Git 用户名（Git user name）**——PAT 所有者的登录名，不一定是仓库所有者的用户名。Gitee 要求填写，GitHub 可选。仅更改此用户名会保留本地 Git 历史。
 - **个人访问令牌（Personal Access Token）**——有权访问该仓库的令牌。使用 GitHub 经典 PAT 访问私有仓库时，需要 `repo` 权限范围。
+
+!!! warning "HTTP Git 同步以明文传输"
+    VNote 4.12 支持 HTTP Git 远端，但 HTTP 会以明文传输凭据和笔记本数据。请优先使用 HTTPS。笔记正文加密不会保护传输中的 PAT、可见元数据、独立资源或其他未加密文件。
 
 ### WebDAV 与 Nextcloud
 

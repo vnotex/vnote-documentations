@@ -10,8 +10,8 @@ VNote is a free and open source, Qt-based note-taking application that focuses o
 
 ![The VNote main window](assets/screenshots/main.webp){ .screenshot }
 
-!!! info "Documentation for VNote 4.9.1"
-    Updated through [VNote 4.9.1](https://github.com/vnotex/vnote/releases/tag/v4.9.1), including [encrypted notes](managing-notes/encrypted-notes.md), [WebDAV and Jianguoyun sync](managing-notes/notebook-sync.md), the native [mind map editor](editing/mind-maps.md), [Markdown presentations](editing/editor-basics.md), and [opt-in Windows updates](getting-started/installation.md).
+!!! info "Documentation for VNote 4.12.0"
+    Updated for [VNote 4.10.0](https://github.com/vnotex/vnote/releases/tag/v4.10.0), [4.11.0](https://github.com/vnotex/vnote/releases/tag/v4.11.0), and [4.12.0](https://github.com/vnotex/vnote/releases/tag/v4.12.0): native [Typst notes](editing/typst.md), [editable link previews](editing/editor-basics.md#link-previews), richer [mind maps and exports](editing/mind-maps.md), and safer [custom tasks](productivity/tasks.md). Before upgrading, check the [Windows requirements](getting-started/installation.md#requirements) and [encrypted-note format changes](managing-notes/encrypted-notes.md).
 
 ## Why VNote
 
@@ -67,7 +67,7 @@ VNote is a free and open source, Qt-based note-taking application that focuses o
 
     ---
 
-    Write and format across VNote's editors — Markdown, math, diagrams, snippets, templates, mind maps, and Vi mode.
+    Write and format across VNote's editors — Markdown, Typst, math, diagrams, snippets, templates, mind maps, and Vi mode.
 
     [:octicons-arrow-right-24: Editing](editing/index.md)
 

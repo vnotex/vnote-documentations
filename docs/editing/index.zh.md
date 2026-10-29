@@ -23,6 +23,10 @@ Markdown 编辑器特有的功能。
 
 - [文本](text.md)
 
+## Typst
+
+- [Typst](typst.md)
+
 ## 思维导图
 
 - [思维导图](mind-maps.md)

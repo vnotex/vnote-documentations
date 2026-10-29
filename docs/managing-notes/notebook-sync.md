@@ -19,9 +19,12 @@ For a new **bundled notebook**, choose **Sync method** in **New Notebook**, then
 
 VNote handles cloning, committing, fetching, and pushing without leaving the application. Create the remote repository first; for a new notebook, start with an empty repository on your Git host. Enter:
 
-- **Remote URL** — an HTTPS Git URL (for example `https://github.com/user/repo.git`) or a `file://` URL such as `file:///path/to/repo.git`.
+- **Remote URL** — an HTTPS Git URL (recommended, for example `https://github.com/user/repo.git`), an `http://` Git URL, or a `file://` URL such as `file:///path/to/repo.git`.
 - **Git user name** — the login of the PAT owner, not necessarily the repository owner. Gitee requires it; GitHub accepts it as optional. Changing only this username preserves local Git history.
 - **Personal Access Token** — a token allowed to access the repository. For a classic GitHub PAT, private repositories require the `repo` scope.
+
+!!! warning "HTTP Git sync sends plaintext"
+    VNote 4.12 supports HTTP Git remotes, but HTTP sends credentials and notebook data in plaintext. Prefer HTTPS. Encrypting note bodies does not protect your PAT, visible metadata, separate assets, or other unencrypted files in transit.
 
 ### WebDAV and Nextcloud
 

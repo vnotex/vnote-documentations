@@ -8,7 +8,7 @@ When you create a note, the **New Note** dialog lets you choose a template. The 
 
 The dialog resolves the selection for you: it reuses the template you last picked for that file type in this session, otherwise the default configured for the file type, otherwise **None**. As soon as you choose a template by hand, VNote stops switching the selection under you.
 
-Default templates per file type live under `newNoteDefaultTemplates` in `vnotex.json`, a plain map of file type to template name, seeded as `{"Markdown": "title.md"}`. See [Settings](../customization/settings.md) for where that file is.
+Default templates per file type live under `newNoteDefaultTemplates` in `vnotex.json`, a plain map of file type to template name. A fresh configuration uses `{"Markdown": "title.md", "MindMap": "title.mmm", "Typst": "title.typst"}`. Existing mappings, including empty choices, are preserved on upgrade; select a new template yourself if needed. See [Settings](../customization/settings.md) for where that file is.
 
 ## Built-in templates
 
@@ -19,6 +19,16 @@ VNote ships a `title.md` template — a first-level heading built from the note 
 
 @@
 ```
+
+For [Typst](typst.md), `title.typst` uses the same filename-without-extension snippet and cursor marker:
+
+```typst
+= %no%
+
+@@
+```
+
+For [mind maps](mind-maps.md), `title.mmm` supplies a native map whose central topic is `%no%`, replaced with the note name without its extension.
 
 !!! warning "Built-in templates are overwritten"
     The templates VNote ships are rewritten on every version bump. If you want to adapt one, **save it under a different name** — otherwise your changes disappear at the next update.

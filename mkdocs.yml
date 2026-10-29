@@ -106,6 +106,7 @@ plugins:
             Templates: 模板
             Text: 文本
             Mind Maps: 思维导图
+            Typst: Typst
             Vi Mode: Vi 模式
             Markdown: Markdown
             Search: 搜索
@@ -155,6 +156,7 @@ nav:
           - Math & Diagrams: editing/math-and-diagrams.md
           - Images & Image Host: editing/images-and-image-host.md
       - Text: editing/text.md
+      - Typst: editing/typst.md
       - Mind Maps: editing/mind-maps.md
   - Search:
       - search/index.md

@@ -1,6 +1,6 @@
 # 界面展示
 
-这里集中展示 VNote 主窗口的界面。点击图片可查看原图，或通过卡片上的链接了解更多。Markdown 编辑模式、阅读模式和并排预览卡片展示 Windows 上的 VNote 4.9.1，使用英文界面和[示例笔记本](getting-started/quick-start.md#try-the-demo-notebook)中的中文笔记。思维导图卡片同样展示 Windows 上的 VNote 4.9.1，使用单独的英文示例导图。其余截图来自较早版本，菜单和编辑器布局可能有所不同。
+这里集中展示 VNote 主窗口的界面。点击图片可查看原图，或通过卡片上的链接了解更多。Typst、可编辑链接预览和思维导图卡片展示 **Windows 上采用英文界面的 VNote 4.12.0**，使用单独创建的演示内容。Markdown 编辑模式、阅读模式和并排预览卡片仍展示 Windows 上的 VNote 4.9.1，使用英文界面和[示例笔记本](getting-started/quick-start.md#try-the-demo-notebook)中的中文笔记。其余截图来自较早版本，菜单和编辑器布局可能有所不同。
 
 <div class="grid cards" markdown>
 
@@ -44,6 +44,26 @@
 
     [:octicons-arrow-right-24: 实时预览](editing/editor-basics.md)
 
+-   [![原生 Typst 笔记的源码、原位数学预览与编译后的 PDF 预览](assets/screenshots/typst.webp){ .screenshot loading=lazy }](assets/screenshots/typst.webp)
+
+    __原生 Typst 编辑器__
+
+    ---
+
+    原生编辑器中的 Field Notes：左侧是 Typst 源码及原位公式，旁边显示编译后的 PDF 和标题大纲。
+
+    [:octicons-arrow-right-24: Typst](editing/typst.md)
+
+-   [![在源笔记上方的浮层中编辑被链接的参考笔记](assets/screenshots/link-preview.webp){ .screenshot loading=lazy }](assets/screenshots/link-preview.webp)
+
+    __可编辑的链接预览__
+
+    ---
+
+    跟随笔记本内的文件链接，在不离开源笔记的情况下编辑参考内容。Open in Tab 会把预览移入源工作区，同时保留草稿和撤销历史。
+
+    [:octicons-arrow-right-24: 链接预览](editing/editor-basics.md#link-previews)
+
 -   [![内容区被拆分为两个编辑器分组](assets/screenshots/splits.webp){ .screenshot loading=lazy }](assets/screenshots/splits.webp)
 
     __并排分屏__
@@ -80,7 +100,7 @@
 
     ---
 
-    原生 m3 思维导图编辑器，展示分支导图、缩放控件，以及在浮动工具面板中显示的所选节点属性。
+    原生 m3 思维导图编辑器，展示带编号的分支、独立树，以及在工具停靠面板中显示的所选节点属性。
 
     [:octicons-arrow-right-24: 思维导图](editing/mind-maps.md)
 

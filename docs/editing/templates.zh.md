@@ -8,7 +8,7 @@
 
 对话框会替你解析选择项：优先沿用本次会话中你为该文件类型上次选择的模板，其次是为该文件类型配置的默认模板，最后才是**无（None）**。一旦你手动选择了模板，VNote 就不再自动改动这个选择。
 
-各文件类型的默认模板保存在 `vnotex.json` 的 `newNoteDefaultTemplates` 中，它是一个从文件类型到模板名的普通映射，初始值为 `{"Markdown": "title.md"}`。该文件的位置参见[设置](../customization/settings.md)。
+各文件类型的默认模板保存在 `vnotex.json` 的 `newNoteDefaultTemplates` 中，它是一个从文件类型到模板名的普通映射。全新配置使用 `{"Markdown": "title.md", "MindMap": "title.mmm", "Typst": "title.typst"}`。升级时会保留已有映射（包括空选项）；如需新模板，请自行选择。该文件的位置参见[设置](../customization/settings.md)。
 
 ## 内置模板
 
@@ -19,6 +19,16 @@ VNote 自带一个 `title.md` 模板——由笔记名生成的一级标题，�
 
 @@
 ```
+
+[Typst](typst.md) 的 `title.typst` 使用相同的不含扩展名的文件名片段与光标标记：
+
+```typst
+= %no%
+
+@@
+```
+
+[思维导图](mind-maps.md) 的 `title.mmm` 提供原生导图，其中心主题为 `%no%`，创建时会替换为不含扩展名的笔记名。
 
 !!! warning "内置模板会被覆盖"
     VNote 自带的模板会在每次版本升级时被重写。若想改造其中某个模板，请**换一个名字另存**——否则你的修改会在下次更新时消失。

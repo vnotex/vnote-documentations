@@ -21,13 +21,19 @@ You can also insert an image from a file, or drag and drop one into the editor. 
 ![alt text](vx_assets/example.png)
 ```
 
+## Viewing images
+
+Open an image file directly to view it in a **read-only tab**; image file associations are configurable in **Settings**. This is separate from inserting an image into a note.
+
+In Markdown, [Typst](typst.md), and [mind maps](mind-maps.md), **View Image** opens an overlay with zoom, pan, and reset-to-fit controls. Read-only maps can use it too. Close the overlay to return to the note; locking a protected note also closes its protected image previews.
+
 ## Image size
 
 Images are inserted at their natural size, but you can give them an explicit one. The **Insert Image** dialog has optional **Width (px)** and **Height (px)** fields; they are empty by default, and the image's natural size is shown as the placeholder, so filling in just one of them is enough.
 
 For an image that is already in the note, right-click it in edit mode; image actions now appear directly in the context menu:
 
-- **View Image** opens the image on its own.
+- **View Image** opens a zoomable image overlay.
 - **Copy Image** copies a local image to the clipboard; for an online image the entry is **Copy In-Place Preview**, which copies what the in-place preview shows.
 - **Copy Image Address** copies the link target.
 - **Resize Image** opens the width/height dialog with a **Scale (%)** slider. `100%` is the current size; moving the slider scales both dimensions proportionally. Manually changing dimensions establishes a new baseline. If dimensions are unavailable, enter both width and height to enable scaling; VNote does not fetch a remote image merely to resize it.
@@ -38,6 +44,8 @@ VNote rewrites the link with as little churn as possible:
 - Clearing the size of a Markdown link written with the `=WxH` suffix returns it to plain Markdown.
 - An existing HTML `<img>` is edited in place. Entering `0` removes that dimension, and VNote converts the tag back to Markdown only when the result is a clean round trip.
 - Hand-written attributes such as `class`, `style` and `data-*` are preserved.
+
+Mind-map image context menus also offer **View Image**, **Copy Image**, **Copy Image Address**, and **Resize Image**. Resizing a node image participates in the map's Undo/Redo history; it does not rewrite Markdown source.
 
 ## Legacy image folders
 

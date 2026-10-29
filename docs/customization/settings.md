@@ -16,6 +16,20 @@ Under **Settings → General**, you can control startup, naming, and shortcut po
 - **Start VNote on system startup** is available on Windows. Enable it to launch the current VNote executable automatically when you sign in to your Windows account. Saving the setting reports an error if the per-user startup entry cannot be updated.
 - **Allow Ctrl+Alt shortcuts** is on by default. Disable it to avoid conflicts with `AltGr` on some keyboard layouts, then restart VNote. It suppresses configured shortcuts containing `Ctrl+Alt`, including global hotkeys, without deleting your custom bindings.
 
+## Tabs and previews
+
+- **Settings → Note Management → Always open notes in new tabs** controls ordinary note opening. Disable it to reuse the current tab; hold `Ctrl` while activating a note to request a new tab. Replacement still asks about unsaved changes. See [Editor Basics](../editing/editor-basics.md#tabs-splits-and-navigation).
+- **Settings → Editor → Preview links in an overlay** opens supported local file links over the source note. For Markdown links, the target must resolve to an open notebook; outside-notebook files may open through the system application instead. The link context menu's **Open Link** bypasses the overlay. See [link previews](../editing/editor-basics.md#link-previews).
+- **Settings → Markdown Editor → Read → Unload inactive web view after** releases a hidden tab's Markdown web view after the configured number of minutes (default **5**). The range is **0–1440 min**; **0** is displayed as **Never**. Returning rebuilds the preview from the current Markdown without losing unsaved text or Undo history.
+
+## Markdown safety and math
+
+**Settings → Markdown Editor → Read → Protect Markdown from XSS** blocks unsafe HTML and URLs in Markdown readers, live previews, and exports. Keep it enabled; disable it only for trusted notes. Filtering is always enforced for [encrypted notes](../managing-notes/encrypted-notes.md), even if you turn this option off.
+
+External-link warnings and their **Never Ask** preference are shared across Markdown, [Typst](../editing/typst.md), and mind maps. The preference is remembered; it does not disable independent local-file warnings or protected-note authorization and locking safeguards.
+
+**Settings → Markdown Editor → Math renderer** selects **KaTeX** (default), **MathJax**, or **Typst**. Typst uses its own syntax inside the existing dollar delimiters; fenced `typst` blocks are independent of this choice. See [Math & Diagrams](../editing/math-and-diagrams.md) for examples and protected-note restrictions.
+
 ## Layers of configuration
 
 VNote's configuration is layered, applied in order:
@@ -54,7 +68,7 @@ When a `config` folder exists next to the executable at startup, VNote reads and
 
 - [Themes & Styles](themes-and-styles.md) — change the look of the interface, editor, and read mode.
 - [Keyboard Shortcuts](keyboard-shortcuts.md) — remap actions, including [United Entry](../search/united-entry.md).
-- [Mind Maps](../editing/mind-maps.md) — native editor settings and when to reopen a map.
+- [Mind Maps](../editing/mind-maps.md) — native editor settings, including node-properties placement that applies immediately without reopening the map.
 - [Notebooks, Folders & Notes](../managing-notes/notebooks-folders-notes.md) — notebook-specific recycle bin location and retention settings.
 - [Encrypted Notes](../managing-notes/encrypted-notes.md) — protection settings and **Settings → Lock All**.
 - If VNote crashes after a version update, deleting `vnotex.json` from the user configuration folder is a common fix — see the [FAQ](../help/faq.md).
