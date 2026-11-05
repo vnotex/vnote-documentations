@@ -2,7 +2,7 @@
 
 **一个舒适的笔记平台。**
 
-VNote 是一款免费、开源、基于 Qt 的笔记应用，专注于 Markdown。它不仅是一个编辑器，更将出色的编辑体验与强大的笔记管理融为一体，并且支持 **Linux**、**Windows** 和 **macOS**。
+VNote 是一款免费、开源的笔记应用，致力于让记录、整理和探索笔记变得简单而愉快。
 
 [开始使用](getting-started/index.md){ .md-button .md-button--primary }
 [从 Gitee 下载 VNote](https://gitee.com/vnotex/vnote/releases){ .md-button }
@@ -13,35 +13,61 @@ VNote 是一款免费、开源、基于 Qt 的笔记应用，专注于 Markdown�
 !!! info "适用于 VNote 4.12.0 的文档"
     文档涵盖 [VNote 4.10.0](https://github.com/vnotex/vnote/releases/tag/v4.10.0)、[4.11.0](https://github.com/vnotex/vnote/releases/tag/v4.11.0) 和 [4.12.0](https://github.com/vnotex/vnote/releases/tag/v4.12.0)：原生 [Typst 笔记](editing/typst.md)、[可编辑的链接预览](editing/editor-basics.md#link-previews)、更丰富的[思维导图与导出](editing/mind-maps.md)，以及更安全的[自定义任务](productivity/tasks.md)。升级前，请查看 [Windows 系统要求](getting-started/installation.md)和[加密笔记格式变化](managing-notes/encrypted-notes.md)。
 
+## 什么是 VNote？
+
+无论是记录生活、构建个人知识库、整理学习笔记、撰写文档，还是梳理灵感与想法，VNote 都能为你提供一个舒适、统一的工作空间。
+
+VNote 尤其擅长 **Markdown**，将强大的编辑体验与实用的笔记管理功能结合在一起。不过，VNote 并不只是 Markdown 编辑器：你还可以在同一个应用中使用**思维导图**、**Typst 文档**、**纯文本文件**等多种内容形式。
+
 ## 为什么选择 VNote
 
 <div class="grid cards" markdown>
 
--   :material-lock-outline:{ .lg .middle } __数据自主掌控__
+-   :material-pencil-outline:{ .lg .middle } __舒适地写作__
 
     ---
 
-    笔记以文件形式保存在本地磁盘上，并可选择加密笔记正文。一个笔记本对应一个目录。可选择文件夹同步，或使用内置的 Git、WebDAV、坚果云同步。
+    无论是随手记下一个想法，还是撰写一篇长文，舒适的编辑体验都能让你把注意力放在内容本身。
 
--   :material-folder-multiple-outline:{ .lg .middle } __直观的笔记管理__
-
-    ---
-
-    独立的笔记本、无限层级的文件夹和开放的笔记。通过标签、快速访问和历史记录进行组织，还能直接浏览和编辑外部文件。
-
--   :material-language-markdown:{ .lg .middle } __舒适的 Markdown 体验__
+-   :material-folder-multiple-outline:{ .lg .middle } __井井有条地管理笔记__
 
     ---
 
-    原地预览与双边实时预览、语法高亮、交互式大纲、高效的图片管理，以及数学公式和图表（PlantUML、Graphviz、Mermaid 等）。
+    通过笔记本和文件夹整理笔记。即使笔记越来越多，也能快速找到需要的内容。
 
--   :material-tune:{ .lg .middle } __为进阶用户打造__
+-   :material-language-markdown:{ .lg .middle } __轻松使用 Markdown__
 
     ---
 
-    Vi 模式、丰富的快捷键、多标签页与窗口分割、模糊查找和跳转，并可通过主题、样式和软件行为进行深度定制。
+    自然地编写和预览 Markdown。无论你刚刚接触 Markdown，还是已经每天都在使用它，都能轻松上手。
+
+-   :material-sitemap:{ .lg .middle } __用思维导图整理想法__
+
+    ---
+
+    直接创建和编辑思维导图，梳理想法之间的联系，让思路与知识结构一目了然。
+
+-   :material-file-document-outline:{ .lg .middle } __不止于笔记__
+
+    ---
+
+    编辑纯文本文件，通过实时 PDF 预览撰写 Typst 文档，还可以直接阅读 PDF，无需频繁在多个应用之间切换。
+
+-   :material-lock-outline:{ .lg .middle } __文件始终掌握在自己手中__
+
+    ---
+
+    内容保存在本地文件中，你可以使用熟悉的工具备份、移动和管理笔记本。
 
 </div>
+
+## 你的笔记，由你掌控
+
+VNote 围绕本地文件构建，支持 Markdown、纯文本和 Typst 等开放格式，为你提供灵活的工作空间，让笔记始终由你掌控。
+
+你可以从几篇 Markdown 笔记开始，逐渐建立自己的知识库；也可以用思维导图梳理想法，或者仅仅把 VNote 当作一个舒适、愉快的写作空间。
+
+**VNote，为你的笔记、想法与知识提供一个长久的家。**
 
 ## 浏览文档
 

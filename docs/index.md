@@ -2,7 +2,7 @@
 
 **A pleasant note-taking platform.**
 
-VNote is a free and open source, Qt-based note-taking application that focuses on Markdown. More than just an editor, VNote pairs an excellent editing experience with powerful notes management — and it runs on **Linux**, **Windows**, and **macOS**.
+VNote is a free, open-source note-taking app that makes writing, organizing, and exploring your notes simple and enjoyable.
 
 [Get Started](getting-started/index.md){ .md-button .md-button--primary }
 [Download VNote](https://github.com/vnotex/vnote/releases/latest){ .md-button }
@@ -13,35 +13,61 @@ VNote is a free and open source, Qt-based note-taking application that focuses o
 !!! info "Documentation for VNote 4.12.0"
     Updated for [VNote 4.10.0](https://github.com/vnotex/vnote/releases/tag/v4.10.0), [4.11.0](https://github.com/vnotex/vnote/releases/tag/v4.11.0), and [4.12.0](https://github.com/vnotex/vnote/releases/tag/v4.12.0): native [Typst notes](editing/typst.md), [editable link previews](editing/editor-basics.md#link-previews), richer [mind maps and exports](editing/mind-maps.md), and safer [custom tasks](productivity/tasks.md). Before upgrading, check the [Windows requirements](getting-started/installation.md#requirements) and [encrypted-note format changes](managing-notes/encrypted-notes.md).
 
+## What is VNote?
+
+Whether you're keeping a personal journal, building a knowledge base, taking study notes, writing documentation, or organizing ideas, VNote gives you a comfortable place to keep your work together.
+
+VNote is especially well suited to **Markdown**, combining a powerful editor with practical note-management features. But it goes beyond Markdown: you can also work with **mind maps**, **Typst documents**, **plain text files**, and more, all within the same app.
+
 ## Why VNote
 
 <div class="grid cards" markdown>
 
--   :material-lock-outline:{ .lg .middle } __Own your data__
+-   :material-pencil-outline:{ .lg .middle } __Write comfortably__
 
     ---
 
-    Your notes live as files on your local disk, with optional note-body encryption. One notebook is one directory. Choose folder synchronization or built-in Git, WebDAV, or Jianguoyun sync.
+    A comfortable editing experience helps you concentrate on your content, whether you're jotting down a thought or writing something longer.
 
--   :material-folder-multiple-outline:{ .lg .middle } __Simple notes management__
-
-    ---
-
-    Self-contained notebooks, infinite levels of folders, and plain notes. Organize with tags, quick access, and history; explore and edit external files directly.
-
--   :material-language-markdown:{ .lg .middle } __Pleasant Markdown experience__
+-   :material-folder-multiple-outline:{ .lg .middle } __Keep your notes organized__
 
     ---
 
-    In-place and side-by-side live preview, syntax highlighting, an interactive outline, effective image management, math, and diagrams (PlantUML, Graphviz, Mermaid, and more).
+    Organize notes into notebooks and folders, and quickly find what you need as your collection grows.
 
--   :material-tune:{ .lg .middle } __Made for power users__
+-   :material-language-markdown:{ .lg .middle } __Use Markdown without the friction__
 
     ---
 
-    Vi mode, versatile shortcuts, tabs and window splits, fuzzy search and jump, plus deep customization through themes, styles, and behaviors.
+    Write and preview Markdown naturally, whether you're new to Markdown or already use it every day.
+
+-   :material-sitemap:{ .lg .middle } __Turn ideas into mind maps__
+
+    ---
+
+    Create and edit mind maps to explore connections and give your ideas a clear visual structure.
+
+-   :material-file-document-outline:{ .lg .middle } __Work with more than notes__
+
+    ---
+
+    Edit plain-text files, write Typst documents with live PDF preview, and read PDFs without switching between apps.
+
+-   :material-lock-outline:{ .lg .middle } __Keep your files in your hands__
+
+    ---
+
+    Keep your work in local files, with notebooks you can back up, move, and manage using familiar tools.
 
 </div>
+
+## Your notes, your way
+
+VNote gives you a flexible workspace built around local files, with support for open formats such as Markdown, plain text, and Typst. Your notes stay under your control.
+
+Start with a few Markdown notes, build a personal knowledge base, sketch an idea as a mind map, or simply use VNote as a pleasant place to write.
+
+**VNote is a home for your notes, ideas, and knowledge.**
 
 ## Explore the documentation
 
