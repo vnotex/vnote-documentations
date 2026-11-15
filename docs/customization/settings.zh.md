@@ -19,23 +19,33 @@ VNote 的大部分行为都可以调整，既可以通过**设置**标签页，�
 ## 标签页与预览 { #tabs-and-previews }
 
 - **设置 → 笔记管理 → 总是在新标签页中打开笔记（Always open notes in new tabs）**控制普通笔记的打开方式。关闭后会复用当前标签页；激活笔记时按住 `Ctrl` 可请求新标签页。替换前仍会询问如何处理未保存的修改。参见[编辑器基础](../editing/editor-basics.md#tabs-splits-and-navigation)。
-- **设置 → 编辑器 → 在浮层中预览链接（Preview links in an overlay）**会在源笔记上方打开受支持的本地文件链接。对于 Markdown 链接，目标必须可解析到已打开的笔记本；笔记本外的文件可能改由系统应用打开。链接右键菜单的**打开链接（Open Link）**可绕过浮层。参见[链接预览](../editing/editor-basics.md#link-previews)。
+- **设置 → 编辑器 → 在浮层中预览链接（Preview links in an overlay）**会在源笔记上方打开受支持的本地文件链接。对于 Markdown 链接，目标必须可解析到已打开的笔记本；笔记本外的文件可能改由系统应用打开。链接右键菜单的**打开链接（Open Link）**可绕过浮层，并始终在新标签页中打开，不受普通新标签页偏好影响。参见[链接预览](../editing/editor-basics.md#link-previews)。
 - **设置 → Markdown 编辑器 → 阅读 → 卸载不活跃网页视图的等待时间（Unload inactive web view after）**会在标签页隐藏指定分钟数后释放 Markdown 网页视图，默认 **5** 分钟。范围为 **0–1440 min**，**0** 显示为**从不（Never）**。返回标签页时会从当前 Markdown 重建预览，不丢失未保存的文本或撤销历史。
+
+## Markdown 编辑体验 { #markdown-editing-experience }
+
+Markdown 视图的工具栏菜单提供**标记隐藏（Markers Concealment）**预设：**无（None）**、**温和（Passive）**、**适中（Moderate）**和**强烈（Aggressive）**，替代旧版分别控制标记与长链接隐藏的开关。VNote 4.14.4 还提供三种编辑体验，从较早版本升级时会再次显示选择提示；在确认新选择之前，已保存的预设保持不变。各模式的区别及后续调整方式参见[标记隐藏](../editing/editor-basics.md#markers-concealment)。
 
 ## Markdown 安全与数学公式 { #markdown-safety-and-math }
 
 **设置 → Markdown 编辑器 → 阅读 → 保护 Markdown 免受 XSS 攻击（Protect Markdown from XSS）**会阻止 Markdown 阅读器、实时预览和导出中的不安全 HTML 与 URL。请保持启用，仅在笔记完全可信时才关闭。[加密笔记](../managing-notes/encrypted-notes.md)始终强制过滤，不受此开关影响。
 
-Markdown、[Typst](../editing/typst.md) 和思维导图共用外部链接警告及其**不再询问（Never Ask）**偏好，并会记住该选择。它不会关闭独立的本地文件警告，也不会绕过受保护笔记的授权与锁定保护。
+Markdown、[Typst](../editing/typst.md) 和思维导图共用外部链接警告及其已记住的**不再询问（Never Ask）**偏好。本地文件及自定义协议警告也提供**不再询问**，已保存的选择会在相应警告路径之间共享。仅在信任目标时才关闭警告；这些选择不会绕过受保护笔记的授权或锁定保护。
 
 **设置 → Markdown 编辑器 → 数学公式渲染器（Math renderer）**可选择 **KaTeX**（默认）、**MathJax** 或 **Typst**。Typst 在原有美元符号分隔符内使用自己的语法；`typst` 围栏块不受该选择影响。示例与受保护笔记的限制参见[数学与图表](../editing/math-and-diagrams.md)。
+
+## 文件关联与 HTTP API { #file-associations-and-http-api }
+
+在 Windows 上，**设置 → 文件关联**可为已应用的内置后缀注册当前用户的**使用 VNote 阅读（Read in VNote）**和**使用 VNote 编辑（Edit in VNote）**右键菜单，无需管理员权限。阅读使用独立窗口，编辑使用主窗口。参见[文件类型](../managing-notes/file-types.md)。
+
+**设置 → HTTP API**管理可选的回环监听器及按笔记本授权的客户端令牌。只有监听设置保存在本机 `session.json` 的 `httpApi` 下；`vnotex.json` 中的 HTTP API 设置会被忽略，不会迁移。令牌校验数据保存在独立的受保护注册表文件中，不在上述两个偏好文件内。请通过设置签发和撤销令牌，不需要时保持监听器关闭。权限、存储及网络安全说明参见 [HTTP API 指南](../productivity/http-api.md)。
 
 ## 配置的层级
 
 VNote 的配置是分层的，按顺序应用：
 
 - **默认配置**——应用内置的默认值。它们内建于程序之中，磁盘上没有可供复制的文件。若要自定义某个值，在你的*用户配置*文件中设置它，它会覆盖默认值。
-- **用户配置**——你在用户配置文件夹中的主文件 `vnotex.json` 里的覆盖设置。这里的任何内容都优先于默认值。
+- **用户配置**——你在用户配置文件夹中的主文件 `vnotex.json` 里的覆盖设置。受支持的主配置键优先于其默认值；HTTP API 监听器等仅限本机的设置单独管理。
 - **会话配置**——会话状态，例如笔记本列表和主窗口的几何布局。它是 `session.json` 文件。VNote 在运行期间会持续写入它，并在关闭时刷新落盘，因此手动编辑前请先关闭 VNote。
 
 ## 配置文件夹里有什么

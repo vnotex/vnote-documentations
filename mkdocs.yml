@@ -115,6 +115,7 @@ plugins:
             Productivity: 效率
             Quick Note: 快速笔记
             Tasks: 任务
+            HTTP API: HTTP 接口
             Export: 导出
             Customization: 自定义
             Settings: 设置
@@ -166,6 +167,7 @@ nav:
       - productivity/index.md
       - Quick Note: productivity/quick-note.md
       - Tasks: productivity/tasks.md
+      - HTTP API: productivity/http-api.md
       - Export: productivity/export.md
   - Customization:
       - customization/index.md

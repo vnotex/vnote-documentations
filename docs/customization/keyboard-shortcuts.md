@@ -47,7 +47,17 @@ Actions listed as unbound have no default; give them one in `core.shortcuts` as 
 
 **PresentationMode** defaults to `F9` and belongs to `editor.core.shortcuts`, not the application-level table above. It presents the active [Markdown](../editing/editor-basics.md), [text](../editing/text.md), [Typst](../editing/typst.md), [mind-map](../editing/mind-maps.md), or [PDF](../managing-notes/pdf-viewer.md) view; `Escape` exits. It is distinct from the main-window `FullScreen` action (`F11`).
 
-**NewQuickNote** uses `core.shortcuts.NewQuickNote` (default `Ctrl+Alt+Q`) and is registered as a global hotkey while VNote is running, subject to operating-system availability and shortcut conflicts. It opens the [Quick Note](../productivity/quick-note.md) scheme picker even when the main window is hidden. The default-on **Allow Ctrl+Alt shortcuts** setting can disable this and other `Ctrl+Alt` bindings after a restart; see [Settings](settings.md#general-settings).
+**NewQuickNote** uses `core.shortcuts.NewQuickNote` (default `Ctrl+Alt+Q`) and is registered as a global hotkey while VNote is running, subject to operating-system availability and shortcut conflicts. It creates a [Quick Note](../productivity/quick-note.md) directly when only one scheme is available, skipping the scheme picker; with multiple schemes it opens the picker. This also works when the main window is hidden. The default-on **Allow Ctrl+Alt shortcuts** setting can disable this and other `Ctrl+Alt` bindings after a restart; see [Settings](settings.md#general-settings).
+
+## Mind Map and task-list shortcuts { #mind-map-and-task-list-shortcuts }
+
+**MindMap**, under `editor.core.shortcuts.MindMap`, defaults to `Ctrl+G, F`. It invokes the shared view-window **Mind Map** action; for document outlines, see [Outline mind maps](../editing/mind-maps.md#outline-mind-maps). Existing profiles inherit the 4.14.4 default unless the binding was explicitly customized or disabled.
+
+In Markdown, `Ctrl+8` inserts an unchecked task-list item and `Ctrl+9` inserts a checked one. These defaults replaced the unordered/ordered-list bindings in 4.13.
+
+## Text-field shortcuts { #text-field-shortcuts }
+
+In editable plain-text fields, `Ctrl+W` deletes selected text or the previous word, and `Ctrl+U` deletes selected text or everything back to the start of the current paragraph. In a single-line field, `Ctrl+U` deletes back to the field's start. These shortcuts act on the focused input field, not on the note tab, and do not modify read-only fields.
 
 ## Where shortcuts are defined
 
@@ -64,7 +74,8 @@ Shortcuts live in the main configuration file `vnotex.json`, in two tables: appl
     "core": {
         "shortcuts": {
             "ApplySnippet": "Ctrl+G, I",
-            "PresentationMode": "F9"
+            "PresentationMode": "F9",
+            "MindMap": "Ctrl+G, F"
         }
     }
 }

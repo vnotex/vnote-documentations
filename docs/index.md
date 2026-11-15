@@ -10,8 +10,20 @@ VNote is a free, open-source note-taking app that makes writing, organizing, and
 
 ![The VNote main window](assets/screenshots/main.webp){ .screenshot }
 
-!!! info "Documentation for VNote 4.12.0"
-    Updated for [VNote 4.10.0](https://github.com/vnotex/vnote/releases/tag/v4.10.0), [4.11.0](https://github.com/vnotex/vnote/releases/tag/v4.11.0), and [4.12.0](https://github.com/vnotex/vnote/releases/tag/v4.12.0): native [Typst notes](editing/typst.md), [editable link previews](editing/editor-basics.md#link-previews), richer [mind maps and exports](editing/mind-maps.md), and safer [custom tasks](productivity/tasks.md). Before upgrading, check the [Windows requirements](getting-started/installation.md#requirements) and [encrypted-note format changes](managing-notes/encrypted-notes.md).
+!!! info "Documentation for VNote 4.14.4"
+    Updated for the latest stable release, [VNote 4.14.4](https://github.com/vnotex/vnote/releases/tag/v4.14.4), and recent stable versions since 4.12.0. Before upgrading, check the [platform requirements](getting-started/installation.md#requirements), [notebook task trust](productivity/tasks.md), and [encrypted-note format changes](managing-notes/encrypted-notes.md). Continuous builds may differ from this guide.
+
+## Recent releases
+
+| Stable release | Highlights and guides |
+| --- | --- |
+| [4.14.4](https://github.com/vnotex/vnote/releases/tag/v4.14.4) · 2026-11-12 | Four [Markers Concealment presets](editing/editor-basics.md#markers-concealment), three Markdown editing experiences, `Ctrl+G, F` for [outline mind maps](editing/mind-maps.md#outline-mind-maps), and direct [Quick Note](productivity/quick-note.md) creation when only one scheme is available. |
+| [4.14.2](https://github.com/vnotex/vnote/releases/tag/v4.14.2) · 2026-11-10 | Local trust for [notebook tasks](productivity/tasks.md), Windows [Read/Edit context menus](managing-notes/file-types.md), authenticated [delta updates](getting-started/installation.md#explicit-windows-updates), and [Attach to Main Window](editing/editor-basics.md#detached-windows). |
+| [4.14.1](https://github.com/vnotex/vnote/releases/tag/v4.14.1) · 2026-11-08 | Edit Markdown and safely mapped Typst headings through [outline mind maps](editing/mind-maps.md#outline-mind-maps), with source-linked saving and Undo/Redo. |
+| [4.14.0](https://github.com/vnotex/vnote/releases/tag/v4.14.0) · 2026-11-05 | Opt-in, notebook-scoped [HTTP API](productivity/http-api.md), formula-preserving [HTML-to-Markdown paste](editing/editor-basics.md#rich-text-and-html-paste), and [United Entry](search/united-entry.md) filename search with explicit `>` commands. |
+| [4.13.0](https://github.com/vnotex/vnote/releases/tag/v4.13.0) · 2026-11-02 | Source-bound outline and node-note previews, native [Typst HTML/PDF export](editing/typst.md#pdf-output-and-printing), [source-aware exports](productivity/export.md), and shared [export styling](customization/themes-and-styles.md#applying-export-styles). |
+
+The 4.14.3 release was aborted; its changes are included in 4.14.4. The guides describe the final 4.14.4 behavior, not superseded intermediate settings. Screenshot captions identify older captures where applicable.
 
 ## What is VNote?
 

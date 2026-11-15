@@ -8,7 +8,7 @@ Prefer to explore an existing notebook first? The [documentation repository](htt
 
 1. Clone the repository, or choose **Code → Download ZIP** on GitHub and extract it.
 2. Copy `demo-notebook/` to a writable location before experimenting; edits in VNote change the files on disk.
-3. In VNote's **Notebooks** panel, open the three-dot menu and choose **Open Folder As Raw Notebook**, then select the copied `demo-notebook` folder, not the repository root.
+3. In VNote's **Notebooks** panel title bar, choose **Open Folder As Raw Notebook**, then select the copied `demo-notebook` folder, not the repository root. This action is no longer in the old three-dot menu.
 4. Open `Welcome.md` (or `Welcome.zh.md` for Chinese), then follow its links to **Markdown Tour** and **Projects/Release Plan**.
 
 This opens the folder in place as a **raw notebook**; it does not copy or migrate its files. Do not use **Open Notebook**, which expects a bundled notebook. The `.zh.md` files are Chinese examples alongside the English notes, not language packs. For tags, attachments, the recycle bin, encryption, or built-in sync, use a bundled notebook instead; see [Importing & Migrating](../managing-notes/importing-migrating.md#when-a-raw-notebook-is-the-better-fit).
@@ -19,7 +19,9 @@ This opens the folder in place as a **raw notebook**; it does not copy or migrat
 
 ## 1. Create a notebook
 
-VNote organizes notes into **notebooks**. A notebook is simply a directory on your disk, so the first step is to choose where your notes will live.
+VNote organizes notes into **notebooks**. A notebook is simply a directory on your disk. First-run setup uses `vnote_notebook` under your Documents folder (`Documents/vnote_notebook`); it reopens an existing default notebook rather than replacing its contents if opening fails. Existing notebook folders and saved paths are not migrated. The starter notes include `all-in-one.md`, pinned to Quick Access when that list is empty; the bundled Chinese welcome note is `Welcome_zh_CN.md`. These defaults were introduced in [4.13.0](https://github.com/vnotex/vnote/releases/tag/v4.13.0).
+
+Use the first-run notebook, or create an additional notebook where you want your notes to live:
 
 1. Open VNote. On the left, open the notebook selector and choose **New Notebook**.
 2. Pick an **empty** directory as the *Notebook Root Folder*. With the default **Bundled notebook** type, everything in this notebook — notes, images, and configuration — is stored here.

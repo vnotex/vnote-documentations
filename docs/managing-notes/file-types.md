@@ -12,7 +12,7 @@ A VNote note is just a file on disk, and VNote recognizes a handful of built-in 
 | **Typst** | `.typst` | [Native Typst editor and PDF preview](../editing/typst.md) | Yes |
 | **PDF** | `.pdf` | [Built-in PDF viewer](pdf-viewer.md) | No — view only |
 | **Image** | image suffixes configured in File Associations, such as `.png`, `.jpg`, and `.webp` | Read-only image viewer | No — view only |
-| **Others** | anything else | Text editor | Yes — no extension is added |
+| **Others** | anything else | System application | Yes — no extension is added |
 
 Markdown is the core note type and gets VNote's full editing experience — see [Editing](../editing/index.md). Text and source files open in the [text editor](../editing/text.md), and mind maps are a distinct visual note type covered in [Mind Maps](../editing/mind-maps.md).
 
@@ -20,9 +20,11 @@ Markdown is the core note type and gets VNote's full editing experience — see 
 
 ## How the type is chosen
 
-For ordinary, unencrypted files, VNote matches the extension against the table above. A file whose extension is not listed but whose contents are plain text is treated as a **Text** file, so you can open and edit it directly. Anything left over falls under **Others**, which also opens in the [text editor](../editing/text.md) — VNote does not hand it to another application on its own.
+For ordinary, unencrypted files, VNote matches the extension against the table above. A file whose extension is not listed but whose contents are plain text is treated as a **Text** file, so you can open and edit it directly. Inferred text and image types retain their built-in editors or viewers. Anything left over falls under **Others** and opens with the system application, not the text editor. When restoring a previous session, VNote skips unsupported tabs instead of launching external applications. This behavior changed in [4.14.0](https://github.com/vnotex/vnote/releases/tag/v4.14.0).
 
 To open a given extension somewhere else, add an entry under **Settings → File Associations → External Programs**. You can point a suffix at a specific command or at your system's default application, and from then on VNote hands those files over instead of opening them itself. The same settings page is where you edit the suffix list of each built-in type; existing custom mind-map suffixes are retained.
+
+On Windows, the same page also manages per-user **Read in VNote** and **Edit in VNote** context-menu entries for applied built-in suffixes. See [Windows context menus](../getting-started/installation.md#windows-context-menus).
 
 ### Encrypted-note exception
 
@@ -32,4 +34,4 @@ Bundled notebooks can protect the bodies of Markdown, text, and mind-map notes. 
 
 When you choose **New Note**, the **Type** dropdown lets you create a **Markdown**, **Text**, **Mind Map**, **Typst**, or **Others** note — **Others** creates a file without adding any extension. PDF and Image are view-only types: open existing files rather than creating new notes of those types. VNote can still *export* supported notes to PDF — see [Export](../productivity/export.md) and [Typst](../editing/typst.md).
 
-Because everything is just files, you can also drop files of any of these types into a notebook folder on disk, and VNote will open each one with the matching editor or viewer.
+Because everything is just files, you can also drop files of any of these types into a notebook folder on disk, and VNote opens supported types in the matching editor or viewer and hands **Others** to the system application.

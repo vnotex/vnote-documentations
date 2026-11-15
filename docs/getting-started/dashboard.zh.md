@@ -59,9 +59,9 @@ VNote 的窗口分为三部分：两侧的停靠部件、中间的内容区，�
 
 纯文字的**视图**菜单包含窗口、布局控制以及**窗口列表**。纯文字的**设置**菜单包含**设置**、**主题**、**打开配置文件夹**，以及 **Markdown 指南（Markdown Guide）**、**快捷键帮助（Shortcuts Help）**等帮助入口。其中的**全部锁定（Lock All）**操作参见[加密笔记](../managing-notes/encrypted-notes.md)。
 
-## 以命令驱动的导航
+## 键盘优先的导航 { #keyboard-first-navigation }
 
-除了点击，VNote 更是为键盘而生。按下[统一入口](../search/united-entry.md)快捷键，即可用简短命令搜索并跳转到任意位置；并可借助[键盘快捷键](../customization/keyboard-shortcuts.md)——包括完整的 [Vi 模式](../editing/vi-mode.md)——让双手不离主键位地工作。
+除了点击，VNote 更是为键盘而生。按下[统一入口](../search/united-entry.md)快捷键，输入普通文本即可跨所有已打开的笔记本搜索文件名，或使用 `>history`、`>task` 等带显式 `>` 前缀的命令；并可借助[键盘快捷键](../customization/keyboard-shortcuts.md)——包括完整的 [Vi 模式](../editing/vi-mode.md)——让双手不离主键位地工作。
 
 ## 下一步
 

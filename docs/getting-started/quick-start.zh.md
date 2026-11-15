@@ -8,10 +8,10 @@
 
 1. 克隆仓库，或在 GitHub 上选择 **Code → Download ZIP** 并解压。
 2. 尝试编辑之前，将 `demo-notebook/` 复制到可写位置；VNote 中的编辑会修改磁盘上的文件。
-3. 在 VNote 的**笔记本**面板中打开三点菜单，选择**打开文件夹为原生笔记本（Open Folder As Raw Notebook）**，然后选中复制后的 `demo-notebook` 文件夹，而非仓库根目录。
+3. 在 VNote 的**笔记本**面板标题栏选择**打开文件夹为原生笔记本（Open Folder As Raw Notebook）**，然后选中复制后的 `demo-notebook` 文件夹，而非仓库根目录。此操作不再位于原先的三点菜单中。
 4. 打开 `Welcome.zh.md`（英文示例为 `Welcome.md`），然后通过链接访问 **Markdown 导览**和 **Projects** 文件夹中的**发布计划**。
 
-此操作将文件夹作为**原始笔记本**就地打开，不会复制或迁移文件。不要使用**打开笔记本（Open Notebook）**，该操作需要捆绑笔记本。`.zh.md` 文件是与英文笔记并列的中文示例，而非语言包。如需标签、附件、回收站、加密或内置同步，请改用捆绑笔记本；参见[导入与迁移](../managing-notes/importing-migrating.md)。
+此操作将文件夹作为**原始笔记本**就地打开，不会复制或迁移文件。不要使用**打开笔记本（Open Notebook）**，该操作需要捆绑笔记本。`.zh.md` 文件是与英文笔记并列的中文示例，而非语言包。如需标签、附件、回收站、加密或内置同步，请改用捆绑笔记本；参见[导入与迁移](../managing-notes/importing-migrating.md#when-a-raw-notebook-is-the-better-fit)。
 
 ![在 VNote 中打开的示例笔记本：阅读模式下的中文欢迎页和左侧笔记树](../assets/screenshots/demo-read.webp){ .screenshot loading=lazy }
 
@@ -19,7 +19,9 @@
 
 ## 1. 创建笔记本
 
-VNote 将笔记组织为**笔记本**。一个笔记本就是磁盘上的一个目录，因此第一步是选择笔记的存放位置。
+VNote 将笔记组织为**笔记本**。一个笔记本就是磁盘上的一个目录。首次运行时使用“文档”目录下的 `vnote_notebook`（`Documents/vnote_notebook`）；若默认笔记本已存在，会尝试重新打开，失败时不会替换其内容。已有笔记本文件夹和已保存路径不会迁移。初始笔记包括 `all-in-one.md`，快速访问列表为空时会将其固定到列表；内置中文欢迎笔记名为 `Welcome_zh_CN.md`。这些默认行为始于 [4.13.0](https://github.com/vnotex/vnote/releases/tag/v4.13.0)。
+
+可以直接使用首次运行时的笔记本，也可以在所需位置另建一个：
 
 1. 打开 VNote。在左侧打开笔记本选择器并选择**新建笔记本**。
 2. 选择一个**空**目录作为*笔记本根文件夹*。在默认的**捆绑笔记本（Bundled notebook）**类型下，这个笔记本中的一切——笔记、图片和配置——都存放在这里。

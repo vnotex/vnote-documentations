@@ -19,6 +19,12 @@ $$
 
 对于[加密笔记](../managing-notes/encrypted-notes.md)，经过授权的阅读和并排预览在选中 **Typst** 时使用 Typst，否则使用内置 **KaTeX**。**Typst 是受保护笔记唯一支持的原位数学公式渲染器**；这一例外不会解除受保护笔记的其他限制，也不会绕过解锁与授权。
 
+### 粘贴公式 { #pasting-formulas }
+
+复制含有 KaTeX 或 MathML 公式的富 HTML 内容，然后使用 Markdown 编辑器右键菜单中的**解析为 Markdown 并粘贴（Parse to Markdown and Paste）**（`Ctrl+G, Ctrl+P`）。VNote 优先使用 TeX 注解；若浏览器或剪贴板移除了注解，则从受支持的 MathML 恢复可编辑的公式源码。它会保留行内/独立公式及带标签的下花括号，不重复插入渲染文本。4.14.x 的改进还涵盖命名函数、极限、正体标识符、受支持的间距、以 TeX 命令结尾的公式及标识符字体变体。
+
+这不是任意图片的公式识别功能，也不保证所有 MathML 结构都能转换。请检查生成的源码和预览，并为恢复的 TeX 使用 LaTeX 渲染器（KaTeX/MathJax）：选择 Typst 不会自动翻译它。参见 [HTML 粘贴](editor-basics.md#rich-text-and-html-paste)及 [4.14.0](https://github.com/vnotex/vnote/releases/tag/v4.14.0)、[4.14.2](https://github.com/vnotex/vnote/releases/tag/v4.14.2)、[4.14.4 版本说明](https://github.com/vnotex/vnote/releases/tag/v4.14.4)。
+
 ### Typst 数学公式 { #typst-math }
 
 在**数学公式渲染器**中选择 **Typst**，即可使用内置原生运行时。仍然使用 `$…$` 和 `$$…$$` 分隔符，但其中应编写 **Typst 数学语法**，而非 LaTeX。更换渲染器不会自动翻译已有公式。例如：

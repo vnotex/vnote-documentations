@@ -23,6 +23,19 @@ If VNote is already running, a second invocation does not start a new process: t
 | `--quiet` | Suppress non-critical console logs. |
 | `--watch-themes` | Watch the theme folder for changes and reload themes as you edit them. Useful when authoring a [theme](../customization/themes-and-styles.md). |
 | `--detached-view` | Open the given files in a detached view split. |
+| `--read-mode` | Explicitly open the given files in read mode. |
+| `--edit-mode` | Explicitly open the given files in edit mode. |
+
+## Read and edit modes { #read-and-edit-modes }
+
+`--read-mode` and `--edit-mode` are mutually exclusive: using both is an error. Explicit modes survive startup and forwarding to an already-running instance. They select an opening mode, not permission to edit a read-only or protected file. See the [v4.14.4 option parser](https://github.com/vnotex/vnote/blob/v4.14.4/src/commandlineoptions.cpp).
+
+```bash
+vnote --read-mode --detached-view notes/todo.md
+vnote --edit-mode notes/todo.md
+```
+
+The first command reads in a detached window; the second edits in the main window. The [Windows context-menu actions](installation.md#windows-context-menus) use the same modes.
 
 ## Detached view
 

@@ -6,7 +6,7 @@ Not every note is Markdown. VNote's **text editor** opens plain text and source 
 
 ## Which files open in the text editor
 
-The **Text** file type covers `.txt`, `.text`, and `.log`, plus a long list of source and configuration suffixes — C and C++, Python, Rust, Go, Java, shell scripts, HTML and CSS, JavaScript and TypeScript, JSON, YAML, TOML, INI, SQL, and many more. A file whose suffix is not on the list still opens here when the system reports its contents as plain text, and whatever is left falls under **Others**, which opens in this editor too. See [File Types](../managing-notes/file-types.md).
+The **Text** file type covers `.txt`, `.text`, and `.log`, plus a long list of source and configuration suffixes — C and C++, Python, Rust, Go, Java, shell scripts, HTML and CSS, JavaScript and TypeScript, JSON, YAML, TOML, INI, SQL, and many more. A file whose suffix is not on the list still opens here when the system reports its contents as plain text, and whatever is left falls under **Others**, which opens with the system application instead of the text editor. Inferred text/image viewers are retained; unsupported tabs are skipped during session restoration without launching external applications. See [File Types](../managing-notes/file-types.md).
 
 The suffix list is not fixed: under **Settings → File Associations**, each built-in type has a `;`-separated list of suffixes you can edit.
 
@@ -44,6 +44,8 @@ The common editing actions work here as well — find and replace, word count, p
 ## Find and replace
 
 In-note **Find And Replace** supports matches spanning multiple lines. In regular-expression mode, `\n` matches a line break and `(?s)` lets `.` match line breaks. The replacement field’s tooltip explains `\1`, `\2` for captured groups, `\n` for a newline, `\t` for a tab, and `\\` for a literal backslash. These are in-note regex replacement rules; [search-panel replacement across notes](../search/search-panel.md#replacing-across-notes) always uses literal replacement text.
+
+In editable plain-text input fields, `Ctrl+W` deletes the selection or the previous word; `Ctrl+U` deletes the selection or the text back to the start of the current paragraph (the start of the field for a single-line input). These are field-editing shortcuts, not a request to close a note tab. See [Keyboard Shortcuts](../customization/keyboard-shortcuts.md#text-field-shortcuts).
 
 ## Line endings and navigation
 

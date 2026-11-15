@@ -23,6 +23,19 @@ vnote [选项] [路径...]
 | `--quiet` | 抑制非关键的控制台日志。 |
 | `--watch-themes` | 监视主题文件夹的变化，在你编辑主题时自动重新加载。制作[主题](../customization/themes-and-styles.md)时很有用。 |
 | `--detached-view` | 在分离的视图分屏中打开指定文件。 |
+| `--read-mode` | 显式以阅读模式打开指定文件。 |
+| `--edit-mode` | 显式以编辑模式打开指定文件。 |
+
+## 阅读与编辑模式 { #read-and-edit-modes }
+
+`--read-mode` 与 `--edit-mode` 互斥，同时使用会报错。显式指定的模式会在启动及转发到正在运行的实例时保留。这些选项只选择打开模式，不会授予修改只读或受保护文件的权限。参见 [v4.14.4 选项解析器](https://github.com/vnotex/vnote/blob/v4.14.4/src/commandlineoptions.cpp)。
+
+```bash
+vnote --read-mode --detached-view notes/todo.md
+vnote --edit-mode notes/todo.md
+```
+
+第一条命令在独立窗口中阅读，第二条在主窗口中编辑。[Windows 右键菜单操作](installation.md#windows-context-menus)使用相同模式。
 
 ## 分离视图
 

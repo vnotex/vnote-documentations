@@ -11,9 +11,9 @@ The recommended way is to import your files into a **bundled notebook**, so that
 
 You can also copy files straight into the Notebook Root Folder from outside VNote. They then appear as [external files](notebooks-folders-notes.md#the-index-and-external-files) that you adopt with **Import to Index** — or that VNote adopts for you the first time you open one, as long as **Import External Files on Open** is enabled. For a deep directory tree, **Import Folder** is less work, because adopting external folders happens one level at a time.
 
-### When a raw notebook is the better fit
+### When a raw notebook is the better fit { #when-a-raw-notebook-is-the-better-fit }
 
-For a hands-on example, [open the demo notebook](../getting-started/quick-start.md#try-the-demo-notebook) from this documentation repository. The Notebooks panel menu also offers **Open Folder As Raw Notebook**: select `demo-notebook/` to browse it in place, without copying files. This is not **Import Folder** or **Open Notebook**; the latter opens a bundled notebook.
+For a hands-on example, [open the demo notebook](../getting-started/quick-start.md#try-the-demo-notebook) from this documentation repository. Since [4.13.0](https://github.com/vnotex/vnote/releases/tag/v4.13.0), **Open Folder As Raw Notebook** is in the Notebooks panel **title bar**, rather than the old three-dot menu: select `demo-notebook/` to browse it in place, without copying files. This is not **Import Folder** or **Open Notebook**; the latter opens a bundled notebook.
 
 Choose **Type → Raw notebook** and point VNote at your directory when the folder should be adopted as it stands:
 
@@ -32,6 +32,8 @@ Open an existing bundled notebook by pointing VNote at its root, keeping its con
 2. VNote reads the notebook's configuration files and restores it — its folders, notes, and settings reappear as before.
 
 This is how you pick up a notebook that was created on another machine or restored from a backup. A raw notebook has no configuration in its folder, so you pick one up the same way you created it: **New Notebook** with **Type → Raw notebook**, pointed at the directory.
+
+Opening or restoring an existing notebook does not automatically trust its notebook-scoped tasks. Review their definitions before approving [notebook task trust](../productivity/tasks.md#notebook-task-trust) on this machine; approval survives restarts but is forgotten on explicit notebook close.
 
 !!! warning "Check encrypted-note version compatibility"
     VNote 4.10 introduced self-contained v2 encrypted notes and backups; older VNote versions cannot read them. Use VNote 4.10 or later on the destination device, and read the [encrypted-note migration and recovery guidance](encrypted-notes.md) before upgrading or restoring. Self-contained keys do not replace the complete-notebook, complete shared-folder, or cross-notebook transfer workflows described here.

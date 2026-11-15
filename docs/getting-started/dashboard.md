@@ -59,9 +59,9 @@ The top of the window provides quick access to common actions — new note, impo
 
 The text-only **View** menu contains window/layout controls and **Windows List**. The text-only **Settings** menu contains **Settings**, **Themes**, **Open Configuration Folder**, and help entries such as **Markdown Guide** and **Shortcuts Help**. Its **Lock All** action is described in [Encrypted Notes](../managing-notes/encrypted-notes.md).
 
-## Command-driven navigation
+## Keyboard-first navigation
 
-Beyond clicking, VNote is built for the keyboard. Press the [United Entry](../search/united-entry.md) shortcut to search and jump anywhere with short commands, and use [Keyboard Shortcuts](../customization/keyboard-shortcuts.md) — including full [Vi mode](../editing/vi-mode.md) — to work without leaving the home row.
+Beyond clicking, VNote is built for the keyboard. Press the [United Entry](../search/united-entry.md) shortcut and type plain text to search filenames across all open notebooks, or use explicit `>` commands such as `>history` and `>task`, and use [Keyboard Shortcuts](../customization/keyboard-shortcuts.md) — including full [Vi mode](../editing/vi-mode.md) — to work without leaving the home row.
 
 ## Next steps
 

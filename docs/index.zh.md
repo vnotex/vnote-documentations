@@ -10,8 +10,20 @@ VNote 是一款免费、开源的笔记应用，致力于让记录、整理和�
 
 ![VNote 主窗口](assets/screenshots/main.webp){ .screenshot }
 
-!!! info "适用于 VNote 4.12.0 的文档"
-    文档涵盖 [VNote 4.10.0](https://github.com/vnotex/vnote/releases/tag/v4.10.0)、[4.11.0](https://github.com/vnotex/vnote/releases/tag/v4.11.0) 和 [4.12.0](https://github.com/vnotex/vnote/releases/tag/v4.12.0)：原生 [Typst 笔记](editing/typst.md)、[可编辑的链接预览](editing/editor-basics.md#link-previews)、更丰富的[思维导图与导出](editing/mind-maps.md)，以及更安全的[自定义任务](productivity/tasks.md)。升级前，请查看 [Windows 系统要求](getting-started/installation.md)和[加密笔记格式变化](managing-notes/encrypted-notes.md)。
+!!! info "适用于 VNote 4.14.4 的文档"
+    文档已更新至最新稳定版 [VNote 4.14.4](https://github.com/vnotex/vnote/releases/tag/v4.14.4)，并涵盖 4.12.0 之后的近期稳定版本。升级前，请查看[平台要求](getting-started/installation.md#requirements)、[笔记本任务信任](productivity/tasks.md)及[加密笔记格式变化](managing-notes/encrypted-notes.md)。持续构建的行为可能与本指南不同。
+
+## 近期版本 { #recent-releases }
+
+| 稳定版本 | 主要变化与使用指南 |
+| --- | --- |
+| [4.14.4](https://github.com/vnotex/vnote/releases/tag/v4.14.4) · 2026-11-12 | 四种[标记隐藏预设](editing/editor-basics.md#markers-concealment)、三种 Markdown 编辑体验、用于[大纲思维导图](editing/mind-maps.md#outline-mind-maps)的 `Ctrl+G, F` 快捷键，以及仅有一个方案时直接创建[快速笔记](productivity/quick-note.md)。 |
+| [4.14.2](https://github.com/vnotex/vnote/releases/tag/v4.14.2) · 2026-11-10 | [笔记本任务](productivity/tasks.md)的本机信任授权、Windows [阅读/编辑右键菜单](managing-notes/file-types.md)、经过认证的[增量更新](getting-started/installation.md#explicit-windows-updates)，以及[附加到主窗口](editing/editor-basics.md#detached-windows)。 |
+| [4.14.1](https://github.com/vnotex/vnote/releases/tag/v4.14.1) · 2026-11-08 | 通过[大纲思维导图](editing/mind-maps.md#outline-mind-maps)编辑 Markdown 及具有可靠源映射的 Typst 标题，保存与撤销/重做均与源文档联动。 |
+| [4.14.0](https://github.com/vnotex/vnote/releases/tag/v4.14.0) · 2026-11-05 | 按笔记本授权、需主动启用的 [HTTP API](productivity/http-api.md)、保留公式的 [HTML 转 Markdown 粘贴](editing/editor-basics.md#rich-text-and-html-paste)，以及[统一入口](search/united-entry.md)的文件名搜索与显式 `>` 命令。 |
+| [4.13.0](https://github.com/vnotex/vnote/releases/tag/v4.13.0) · 2026-11-02 | 与源文档绑定的大纲及节点备注预览、原生 [Typst HTML/PDF 导出](editing/typst.md#pdf-output-and-printing)、[按源类型导出](productivity/export.md)，以及共享[导出样式](customization/themes-and-styles.md#applying-export-styles)。 |
+
+4.14.3 已取消发布，其改动包含在 4.14.4 中。指南描述的是 4.14.4 的最终行为，而非已被替代的过渡设置；较早版本的截图会在说明中标明。
 
 ## 什么是 VNote？
 

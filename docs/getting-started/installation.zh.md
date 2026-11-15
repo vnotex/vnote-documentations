@@ -9,28 +9,27 @@ VNote 提供 **Linux**、**Windows** 和 **macOS** 版本。它免费且开源�
 - [GitHub Releases](https://github.com/vnotex/vnote/releases)
 - [Gitee Releases](https://gitee.com/vnotex/vnote/releases)
 
-日常使用推荐**稳定版**。如果你想在正式发布前体验最新功能，可以尝试 `master` 分支的最新持续构建，但需要承担一定的稳定性风险。
+日常使用推荐最新稳定版 [**v4.14.4**](https://github.com/vnotex/vnote/releases/tag/v4.14.4)。如果你想在正式发布前体验最新功能，可以尝试 `master` 分支的最新持续构建，但需要承担一定的稳定性风险。
 
-## 系统要求
+## 系统要求 { #requirements }
 
 VNote 基于 Qt 6 构建，提供以下平台的安装包：
 
 | 安装包 | 说明 |
 |--------|------|
-| **Windows x64** | v4.12.0 安装包使用 Qt 6.10.3。请使用受支持的 Windows 10 或 Windows 11 版本；运行时要求见下文。 |
+| **Windows x64** | v4.14.4 安装包使用 Qt 6.10.3。请使用受支持的 Windows 10 或 Windows 11 版本；运行时要求见下文。 |
 | **Linux x64** | AppImage 基于 Ubuntu 22.04 构建；兼容性取决于发行版及其系统库。 |
 | **macOS** | 面向 Intel 与 Apple Silicon 的通用（universal）版本。常规安装包需要 macOS 13 或更高版本。 |
 | **macOS 12（`-macos12`）** | 独立的通用安装包，目标系统为 macOS 12.1 或更高版本。 |
 
-除非需要 macOS 12 专用版本，否则请选择对应平台的常规安装包。[v4.12.0 发布页面](https://github.com/vnotex/vnote/releases/tag/v4.12.0)仍提供上述两种 macOS 安装包。
+除非需要 macOS 12 专用版本，否则请选择对应平台的常规安装包。[v4.14.4 发布页面](https://github.com/vnotex/vnote/releases/tag/v4.14.4)提供上述两种 macOS 安装包；该版本的 [macOS](https://github.com/vnotex/vnote/blob/v4.14.4/.github/workflows/ci-macos.yml) 和 [Linux](https://github.com/vnotex/vnote/blob/v4.14.4/.github/workflows/ci-linux.yml) 构建配置指定了上表所述目标。
 
-VNote 4.11 及后续版本不再支持 Windows 7 和较旧的 Windows 10 版本。[Windows 构建配置](https://github.com/vnotex/vnote/blob/3d4c806c29de7a01416da5352d22bfe21bc6a128/.github/workflows/ci-win.yml)使用 Qt 6.10.3；[Qt 6.10 支持的平台](https://doc.qt.io/qt-6.10/supported-platforms.html#windows)列出的 x64 系统为 Windows 10 1809 或更高版本，以及 Windows 11。这是 Qt 的支持基线，而不是经过单独测试的 VNote 最低要求：[VNote 4.11 发布说明](https://github.com/vnotex/vnote/releases/tag/v4.11.0)未指定准确的 Windows 10 版本。目前不再提供 Windows 7/8 安装包。
+VNote 4.11 及后续版本不再支持 Windows 7 和较旧的 Windows 10 版本。[Windows 构建配置](https://github.com/vnotex/vnote/blob/v4.14.4/.github/workflows/ci-win.yml)使用 Qt 6.10.3；[Qt 6.10 支持的平台](https://doc.qt.io/qt-6.10/supported-platforms.html#windows)列出的 x64 系统为 Windows 10 1809 或更高版本，以及 Windows 11。这是 Qt 的支持基线，而不是经过单独测试的 VNote 最低要求：[VNote 4.11 发布说明](https://github.com/vnotex/vnote/releases/tag/v4.11.0)未指定准确的 Windows 10 版本。目前不再提供 Windows 7/8 安装包。
 
 ## Windows
 
-1. 从发布页面下载 Windows 安装包（`.zip` 压缩包或安装程序）。
-2. 如果下载的是压缩包，将其解压到任意位置，然后运行 `VNote.exe`。正常使用时安装目录无需可写，因此可以放在 `C:\Program Files`；但受保护的安装目录需要手动更新。
-3. 如果下载的是安装程序，运行它并按提示操作。
+1. 从稳定版发布页面下载 `VNote-4.14.4-win64.zip`。`.delta.zip` 和清单、签名文件供更新器使用，不是独立安装包。
+2. 解压压缩包，然后运行 `VNote.exe`。正常使用时安装目录无需可写，因此可以放在 `C:\Program Files`；但受保护的安装目录需要手动更新。
 
 如果你使用 [Scoop](https://scoop.sh/)，VNote 已收录在 `extras` bucket 中：
 
@@ -38,6 +37,10 @@ VNote 4.11 及后续版本不再支持 Windows 7 和较旧的 Windows 10 版本�
 scoop bucket add extras
 scoop install extras/vnote
 ```
+
+### Windows 右键菜单 { #windows-context-menus }
+
+在**设置 → 文件关联 → 系统右键菜单（System Context Menu）**中，选择**添加到右键菜单（Add to Context Menu）**，为已应用的内置文件后缀注册**使用 VNote 阅读（Read in VNote）**和**使用 VNote 编辑（Edit in VNote）**。修改后缀后，先应用设置，再次添加以同步已注册的扩展名。阅读操作在独立窗口中使用阅读模式，编辑操作在主窗口中使用编辑模式；转发到正在运行的实例时也会保留指定模式。注册仅对当前用户生效，无需管理员权限；**从右键菜单移除（Remove from Context Menu）**可撤销注册，旧版面向所有文件的菜单项也会被清理。参见 [4.14.2 发布说明](https://github.com/vnotex/vnote/releases/tag/v4.14.2)及对应的[命令行选项](command-line.md#read-and-edit-modes)。
 
 ## macOS
 
@@ -72,9 +75,11 @@ VNote 以 **AppImage** 形式提供，基于 Ubuntu 22.04 构建：
 
 **更新源**：同样位于**设置 → 常规**，用于选择向 GitHub 还是 Gitee 查询。新安装默认使用 **Gitee**；已有配置则保持原有设置不变。
 
-### 主动执行 Windows 更新
+### 主动执行 Windows 更新 { #explicit-windows-updates }
 
-在 Windows 启动更新通知中点击**立即更新（Update Now）**，即可启动外部更新器。它会在 VNote 保持运行时下载完整更新包并验证签名，然后请求 VNote 保存并关闭。只有关闭请求获准后，才会安装并重新启动；取消关闭或保存提示也会取消这次交接。
+在 Windows 启动更新通知中点击**立即更新（Update Now）**，即可启动外部更新器。符合条件时，它会在 VNote 保持运行期间下载经过签名认证的增量包，重建并验证完整目标文件，然后才请求 VNote 保存并关闭；否则使用签名完整安装包。只有关闭请求获准后，才会安装并重新启动；取消关闭或保存提示也会取消这次交接。
+
+只有增量包不可用、已安装文件无法提供所需复用数据等安全情形才允许回退到完整安装包。签名、完整性、不安全路径及其他安全校验失败会终止更新，而不是绕过验证；取消操作和一般网络错误也不会触发静默回退。参见 [v4.14.4 更新器](https://github.com/vnotex/vnote/blob/v4.14.4/scripts/update-vnote.ps1)。
 
 更新器会保留便携式 `config` 数据及不属于应用安装包的文件，并保留旧安装的恢复备份。对于受保护或不可写的安装目录，它会提示通过**查看发布（Check Release）**手动更新，而不会请求提权。macOS 和 Linux 仍需手动更新。
 

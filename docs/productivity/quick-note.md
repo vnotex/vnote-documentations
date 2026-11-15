@@ -4,13 +4,15 @@
 
 ## Creating a quick note
 
-Press the global `Ctrl+Alt+Q` shortcut, use **Quick Note** in the system-tray menu, choose **New → Quick Note** in the toolbar, or double-click the empty area of the tab bar. Select a **scheme** in the picker; VNote then creates and opens the note.
+Press the global `Ctrl+Alt+Q` shortcut, use **Quick Note** in the system-tray menu, choose **New → Quick Note** in the toolbar, or double-click the empty area of the tab bar. With one available **scheme**, VNote creates and opens the note directly; with multiple schemes, choose one in the picker. This single-scheme shortcut applies to all these entry points in [4.14.4](https://github.com/vnotex/vnote/releases/tag/v4.14.4).
 
 The global shortcut works even when the main window is hidden or minimized, provided VNote is running and the operating system registered the hotkey successfully. It uses `core.shortcuts.NewQuickNote`; conflicts with other applications or the [Ctrl+Alt shortcut policy](../customization/settings.md#general-settings) can prevent it from working. The tray and toolbar provide alternative entry points.
 
 ## Quick note schemes
 
-Schemes are configured under **Settings → Quick Access → Quick Note**. If no scheme exists, VNote asks you to set one up first. Newly created schemes default to `my_notebook` under your Documents folder, like the first-run notebook; existing scheme folders are not changed.
+Schemes are configured under **Settings → Quick Access → Quick Note**. The built-in **Quick Note in Current Notebook** scheme uses the current notebook's `Quick Notes` folder and the name `quick_note_%da%.md`. Manually added schemes instead default to `vnote_notebook` under your Documents folder (`Documents/vnote_notebook`), like the first-run notebook. Existing folders and saved paths are not moved. See the [4.13.0 defaults](https://github.com/vnotex/vnote/releases/tag/v4.13.0).
+
+When upgrading from a version below **4.14.2**, including 4.14.1, an empty saved scheme list is seeded with the default scheme. Custom schemes remain unchanged, and an explicitly emptied list from 4.14.2 or later stays empty. If no scheme is available, VNote asks you to configure one first. See the [4.14.2 migration rules](https://github.com/vnotex/vnote/releases/tag/v4.14.2).
 
 - **Scheme** — the list of schemes, with **New** and **Delete** buttons. Each scheme is an independent set of the fields below.
 - **Folder** — where the note is created. An absolute path may point to another open notebook or to an external folder; external notes open at their actual filesystem path. Leave it **empty** to use the folder currently explored in the notebook explorer, which follows you around as you work. [Snippet](../editing/snippets.md) variables are supported, so `journal/%yyyy%/%MM%` files each note under the current year and month, creating the folders as needed. See [date and time placeholders](../editing/snippets.md#date-and-time-placeholders).

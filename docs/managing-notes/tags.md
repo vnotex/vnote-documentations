@@ -29,13 +29,17 @@ The **Tags** dock widget lists all tags in the current notebook. Select a tag to
 
 ![The Tags dock widget listing every tag in the notebook](../assets/screenshots/tags.webp){ .screenshot loading=lazy }
 
+## Change the tag hierarchy { #change-the-tag-hierarchy }
+
+In the **Tags** tree of a writable bundled notebook, drag a tag onto another tag to make it a child of that tag. This changes the parent hierarchy, not the notes' folder locations. Moves stay within the same notebook, and a tag cannot be moved under itself or one of its descendants. Hierarchy drag-and-drop was added in [4.13.0](https://github.com/vnotex/vnote/releases/tag/v4.13.0).
+
 ## Find notes by tag with United Entry
 
-[United Entry](../search/united-entry.md) can search by tag, so you can jump to tagged notes from the keyboard without opening the dock. Use the `find` command with the tag object and a scope:
+[United Entry](../search/united-entry.md) can search by tag, so you can jump to tagged notes from the keyboard without opening the dock. Use the `>find` command with the tag object and a scope; the `>` prefix is required:
 
-- `find -b tag -s notebook` — search by tag in the current notebook.
-- `find -b tag -s folder` — search by tag in the current folder.
-- `find -b tag -s all_notebook` — search by tag across all notebooks.
+- `>find -b tag -s notebook` — search by tag in the current notebook.
+- `>find -b tag -s folder` — search by tag in the current folder.
+- `>find -b tag -s all_notebook` — search by tag across all notebooks.
 
 Type the command, then the tag keyword, to filter instantly.
 

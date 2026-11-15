@@ -90,7 +90,7 @@ __This text will be bold__
 
 - `=宽x高` 后缀用于设置渲染时的图片尺寸；省略其中一侧即可只设置一个维度。
 - VNote 的 **Base64** 插入功能生成的参考式图片链接受支持；参见[图片存储方式](images-and-image-host.md)。
-- 在 Markdown 编辑器中，用 `Ctrl+单击` 跳转链接；普通单击只移动光标。支持的本地文件可在可编辑的[链接预览](editor-basics.md#link-previews)中打开；右键菜单的**打开链接（Open Link）**则按普通方式打开。
+- 在 Markdown 编辑器中，用 `Ctrl+单击` 跳转链接；普通单击只移动光标。支持的本地文件可在可编辑的[链接预览](editor-basics.md#link-previews)中打开；右键菜单的**打开链接（Open Link）**则绕过预览，在应用内打开目标时始终使用新标签页，不受新标签页偏好影响。
 
 你也可以直接粘贴图片，VNote 会把文件保存到笔记本中并替你写好链接。粘贴、本地存储与图床参见[图片与图床](images-and-image-host.md)。
 
@@ -98,7 +98,7 @@ __This text will be bold__
 ![替代文本](vx_assets/example.png)
 ```
 
-**设置 → Markdown 编辑器**中的**隐藏较长的链接目标（Conceal long link destinations）**默认开启。它在编辑模式下缩短图片、链接和参考定义中过长目标的显示，不改动 Markdown 源码。悬停可查看完整目标，关闭该选项则始终完整显示。
+链接和标记的显示由 Markdown 工具栏的**菜单（Menu）→ 标记隐藏（Markers Concealment）**预设控制，不再使用独立的长链接开关。**温和（Passive）**显示语法，同时缩短较长的链接、图片和引用网址；**适中（Moderate）**与**强烈（Aggressive）**还会隐藏支持的标记和链接语法。选择**无（None）**可显示全部源码。光标移入时的行为及编辑体验选择框参见[标记隐藏](editor-basics.md#markers-concealment)。
 
 ## 块引用
 
@@ -141,6 +141,8 @@ def hello():
 - `lang` 可选；如果不指定，VNote 不会尝试高亮代码。支持的语言列表参见 [Prism](https://prismjs.com/#supported-languages)。
 - 总是在一个代码块前面添加一个空行是一个不错的实践。
 
+在**阅读模式**中，右键点击代码块，在**导出（Export）**下方选择**折叠（Collapse）**或**展开（Expand）**来控制显示。这与编辑模式中的源码折叠相互独立，不会改写代码。从网页导入代码时，[解析为 Markdown 并粘贴](editor-basics.md#rich-text-and-html-paste)会保留受支持的 HTML 代码块、缩进、语言提示和内嵌围栏。
+
 ## 行内代码
 
 ```md
@@ -163,6 +165,8 @@ Here is a ~~text~~ with strikethrough.
 ```
 
 复选框是可交互的：在**阅读模式**下或编辑模式的原位预览中点击它，VNote 会切换其状态并改写对应的源码行，同时把笔记标记为已修改。只要编辑器的文档处于活动状态，这就是一次可撤销的编辑，按 `Ctrl+Z` 即可还原。只读笔记会拒绝切换并提示该笔记为只读。此功能无需配置——参见[编辑器基础](editor-basics.md)。
+
+默认快捷键为 `Ctrl+8`（未完成任务列表项）和 `Ctrl+9`（已完成任务列表项）。从 4.13 起，这两个按键用于任务列表，不再用于无序/有序列表；参见[键盘快捷键](../customization/keyboard-shortcuts.md)。
 
 ## 脚注
 

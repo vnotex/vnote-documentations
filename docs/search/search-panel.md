@@ -1,6 +1,6 @@
 # Search Panel
 
-The **Search** dock widget is VNote's full search interface. Where [United Entry](united-entry.md) is a fast, command-driven jump box, the search panel gives you the full set of options for finding notes by name or by content across your notebooks.
+The **Search** dock widget is VNote's full search interface. Where [United Entry](united-entry.md) offers quick filename search with plain text and commands with an explicit `>` prefix, the search panel gives you the full set of options for finding notes by name or by content across your notebooks.
 
 ## Opening search
 
@@ -53,6 +53,6 @@ Cancelling stops the batch but does not roll back notes already saved. Cancel, `
 ## Search panel vs. United Entry
 
 - Use the **search panel** when you want options — scope, match type, regex — and a browsable list of results.
-- Use [United Entry](united-entry.md) when you know what you want and prefer to type a short command and jump, without leaving the keyboard.
+- Use [United Entry](united-entry.md) when you know what you want and prefer to type a filename and jump, without leaving the keyboard. Use `>` for commands and scoped queries, such as `>g interface` for content search in the current notebook.
 
 Both use the same underlying search service.

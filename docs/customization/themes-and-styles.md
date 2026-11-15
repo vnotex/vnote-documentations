@@ -14,6 +14,12 @@ The built-in light themes include **Pink Shock**, **Lucius**, **Dreamy**, and **
 
 The **Native** theme follows system text colors for content, including mind maps. Switching themes refreshes Markdown code-block and math syntax colors in already-open notes without reopening them or discarding drafts, selection, or Undo/Redo history. Encrypted Markdown previews also follow the bundled theme styles; see [Encrypted Notes](../managing-notes/encrypted-notes.md) for their restrictions.
 
+In VNote 4.14.4, bundled themes other than **Native** use smaller tree indentation and horizontal spacing while preserving row height. Returning to Native restores the trees' original spacing. Tasks, search results, Settings, and United Entry now use expansion/collapse animations consistent with Notebooks, Tags, and Outline.
+
+### Notebook item colors { #notebook-item-colors }
+
+To color a note or folder in notebook navigation, use its context menu **Mark → Text** or **Mark → Background**. These menus replace the old Mark dialog and each offer 12 color swatches. **Auto** clears only the selected text or background override; it does not reset the other color. These are notebook-item colors, not formatting for topics on a mind-map canvas.
+
 ### LaTeX Light and LaTeX Dark
 
 Two of the built-in themes, **LaTeX Light** and **LaTeX Dark**, aim for a paper-and-ink look: serif body text with a capped line measure, headings distinguished by weight rather than size alone, booktabs-style tables with no vertical rules or zebra stripes, and boxed blockquotes. They cover the Markdown viewer, the editor and export, so a note looks the same on screen and on paper.
@@ -96,7 +102,7 @@ vnotex--NotebookNodeExplorer QTreeView { font-size: 14pt; }
 
 ## Customizing icons
 
-Put icon files in a theme's `icons` folder to override VNote's icons. For the full list of icon file names, see the [icons in the VNote source](https://github.com/vnotex/vnote/tree/master/src/data/core/icons).
+Put icon files in a theme's `icons` folder to override VNote's icons. For the full list of icon file names, see the [icons in the VNote source](https://github.com/vnotex/vnote/tree/v4.14.4/src/data/core/icons).
 
 A typical theme directory:
 
@@ -119,6 +125,10 @@ Some commonly replaced icons:
 - **Top menu bar:** `new_note.svg`, `quick_access_menu.svg`, `united_entry.svg`, `expand.svg`, `settings.svg`, `task_dock.svg`, `split_menu.svg`, `search.svg`, `menu.svg`.
 - **Left navigation bar:** `navigation_dock.svg`, `history_dock.svg`, `tag_dock.svg`, `search_dock.svg`, `snippet_dock.svg`.
 
-## Applying export styles
+## Applying export styles { #applying-export-styles }
 
-Because read mode uses these styles, they also drive [export](../productivity/export.md) — you can select a different rendering style for exported output in the export dialog.
+Markdown read-mode rendering and syntax styles also drive [export](../productivity/export.md); select different styles in the export dialog or use **Follow Theme** to choose the active theme's styles. Available controls depend on the source type: native Typst and mind-map output do not use the Markdown rendering-style controls.
+
+Since [VNote 4.13](https://github.com/vnotex/vnote/releases/tag/v4.13.0), a separate shared `web/css/export.css` lives under your **user configuration** folder, not inside an individual theme. In the export dialog's HTML options, **Apply custom styles** enables it and **Edit** opens the file. **Save the stylesheet before exporting**; VNote reads the saved file. Existing user styles are preserved across upgrades.
+
+This stylesheet applies to exported HTML and HTML inputs used for PDF or Custom conversion. It does **not** style native Typst PDF, source copies, or custom commands that receive original source files. Specify native Typst PDF page layout and typography in the Typst source instead. The **Apply custom styles** choice is shared across these HTML-based routes; select it in HTML options before switching targets if needed.

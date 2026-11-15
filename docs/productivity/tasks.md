@@ -16,6 +16,10 @@ VNote loads tasks from the application's data folder and the current bundled not
 
 Each task is defined by a `*.json` entry file; subfolders are scanned recursively. See [Settings](../customization/settings.md) for the application data location. Keep custom tasks in their own files rather than editing a shipped task that an upgrade can replace.
 
+### Notebook task trust { #notebook-task-trust }
+
+Since [4.14.2](https://github.com/vnotex/vnote/releases/tag/v4.14.2), notebook tasks require approval to trust the notebook **on this machine before any task variables are evaluated or the task runs**. Review the notebook's task definitions before approving: task variables can themselves execute shell commands. Approval persists across VNote restarts but is forgotten when you explicitly close the notebook. Only newly created local notebooks are automatically trusted; opening an existing, copied, restored, or remotely obtained notebook does not automatically grant trust. This applies to notebook-scoped tasks, not to the application-data task folder.
+
 ## A simple task
 
 In the Tasks panel, click **Open Task Folder**. Create a folder named `hello`, and inside it a file `hello.json`:
@@ -28,7 +32,7 @@ In the Tasks panel, click **Open Task Folder**. Create a folder named `hello`, a
 }
 ```
 
-Click **Reload** in the Tasks panel and a `hello` task appears. Double-click it or choose **Run** from its context menu; output appears in **Console**. These shell examples use the default PowerShell on Windows or Bash on Linux/macOS. You can also create an editable starter file with **New Task**, or run tasks from [United Entry](../search/united-entry.md) with the `task` command.
+Click **Reload** in the Tasks panel and a `hello` task appears. Double-click it or choose **Run** from its context menu; output appears in **Console**. These shell examples use the default PowerShell on Windows or Bash on Linux/macOS. You can also create an editable starter file with **New Task**, or run tasks from [United Entry](../search/united-entry.md) with the `>task` command.
 
 ### Customize the menu item
 
@@ -45,6 +49,8 @@ Click **Reload** in the Tasks panel and a `hello` task appears. Double-click it 
 Save the icon file (`tasks-solid.svg`) next to the JSON entry file.
 
 ### Sub-tasks
+
+In the Tasks tree, double-click a container such as **Git**, or select it and press `Enter`, to expand or collapse it. This still works when filtering hides its children; activating a container does not run its children. Leaf-task execution is unchanged. See [4.14.4](https://github.com/vnotex/vnote/releases/tag/v4.14.4).
 
 Tasks can nest to any depth. Sub-tasks inherit the version, type, command, arguments, and execution options, but not the label, inputs, or child tasks. Declare a prompt's `inputs` on the sub-task that uses it.
 
@@ -202,4 +208,4 @@ With Git installed and the saved current note inside a Git working tree, this pr
 
 Here the working directory expands a VNote variable, while `LC_ALL` is a literal environment value. The `--` separates Git options from the file path. This task does not commit or modify files.
 
-The built-in [Git task](https://github.com/vnotex/vnote/blob/3d4c806c29de7a01416da5352d22bfe21bc6a128/src/data/extra/tasks/git/git.json) is another reference: its commit command is static, and the prompted commit message is passed through `args`, with a separate static PowerShell command for Windows.
+The built-in [Git task](https://github.com/vnotex/vnote/blob/v4.14.4/src/data/extra/tasks/git/git.json) is another reference: its commit command is static, and the prompted commit message is passed through `args`, with a separate static PowerShell command for Windows.

@@ -19,7 +19,22 @@ Markdown 笔记以两种模式之一打开：
 
 ![阅读模式下的欢迎页，显示渲染后的标题和示例笔记间链接](../assets/screenshots/demo-read.webp){ .screenshot loading=lazy }
 
-## 实时预览
+## 标记隐藏 { #markers-concealment }
+
+在 Markdown 编辑器右上角的三点**菜单（Menu）→ 标记隐藏（Markers Concealment）**中选择一个会被保存的预设。这只改变源码的显示方式，不改动内容：
+
+| 预设 | 编辑行为 |
+|------|----------|
+| **无（None）** | 显示全部 Markdown 源码。 |
+| **温和（Passive）** | 显示 Markdown 语法，同时缩短较长的链接、图片和引用网址。 |
+| **适中（Moderate）** | 隐藏支持的 Markdown 标记和链接语法，光标移入时显示，并缩短较长的图片和引用网址。 |
+| **强烈（Aggressive）** | 编辑时持续隐藏支持的格式标记，光标移动会跳过这些标记；链接语法在光标移入前隐藏，并缩短较长的图片和引用网址。 |
+
+默认使用**强烈**。这些预设取代了旧版独立的标记隐藏与长链接隐藏开关；4.14.2 引入预设时没有迁移旧设置。若希望显示源码中的每个字符，请选择**无**。
+
+**选择 Markdown 编辑体验（Choose Markdown Editing Experience）**对话框提供三种选择：**隐藏 Markdown 标记（Conceal Markdown markers）**对应**强烈**；**左右两种方式看起来都不错（Both the left and the right look correct）**对应**适中**；**显示 Markdown 标记（Show Markdown markers）**对应**温和**，而不是**无**。从低于 4.14.4 的版本升级时会再次显示选择框，但在确认选择前保留已保存的预设。以后可以随时通过工具栏菜单更改。参见 [4.14.4 版本说明](https://github.com/vnotex/vnote/releases/tag/v4.14.4)及[该版本的选择框与预设实现](https://github.com/vnotex/vnote/blob/v4.14.4/src/widgets/markdownviewwindow2.cpp)。
+
+## 实时预览 { #live-preview }
 
 在编辑模式下，VNote 无需切到阅读模式即可预览富元素：
 
@@ -42,6 +57,8 @@ Markdown 笔记以两种模式之一打开：
 
 在大纲中拖动标题可移动整个小节（包括子小节），VNote 会调整标题级别以保持层级关系。**设置 → Markdown 编辑器 → 阅读 → 标题折叠（Heading folding）**控制阅读模式和导出 HTML 中的标题折叠，默认开启；它与编辑器中的源码折叠相互独立。
 
+使用视图工具栏的**思维导图（Mind Map）**操作（`Ctrl+G, F`）打开与源文档绑定的大纲预览，而不是独立的思维导图文件。标题导航、受支持的 Markdown/Typst 主题编辑、与源文档联动的保存和撤销，以及源文档独立更改后需重新打开预览的说明，参见[大纲思维导图](mind-maps.md#outline-mind-maps)。
+
 ## 标题编号 { #heading-numbering }
 
 自动编号分为两种，设置位于 **Markdown 编辑器**中：
@@ -53,11 +70,11 @@ Markdown 笔记以两种模式之一打开：
 
 当前笔记视图的三点**菜单（Menu）**提供默认开启的**允许自动章节编号（Allow Auto Section Number）**，用于临时关闭该窗口的阅读、编辑及大纲自动编号，不改动已保存的全局设置。关闭时，仅还原当前编辑会话中由自动编号改动的源码前缀，不会清除所有手写编号；这些源码变动仍需保存。若提示无法还原，请让该笔记成为当前可编辑视图，再开启并关闭此选项重试。
 
-## 演示模式
+## 演示模式 { #presentation-mode }
 
 按 `F9` 将 Markdown 以幻灯片形式演示，按 `Escape` 退出。幻灯片使用内置的 reveal.js，可离线运行；笔记中的远程图片等资源仍需要网络。二级、三级标题划分幻灯片，三级标题幻灯片保留其父二级标题。使用左右方向键或空格翻页；内容过长时可在当前幻灯片内滚动，也可用上下方向键、`PageUp` 和 `PageDown` 滚动。演示不会改写笔记源码。
 
-## 分离窗口
+## 分离窗口 { #detached-windows }
 
 视图不必一直留在主窗口中：
 
@@ -65,7 +82,7 @@ Markdown 笔记以两种模式之一打开：
 - 笔记本浏览器右键菜单中的**以分离方式打开（Open as Detached）**可直接在分离窗口中打开笔记。
 - [命令行](../getting-started/command-line.md)选项 `--detached-view` 可从终端或脚本达成同样效果。
 
-分离窗口带有**置顶（Stay on Top）**图钉（`F10`），可让它始终显示在其他窗口之上，方便你在别处工作时参考笔记或 [PDF](../managing-notes/pdf-viewer.md)。
+分离窗口带有**置顶（Stay on Top）**图钉（`F10`），可让它始终显示在其他窗口之上，方便你在别处工作时参考笔记或 [PDF](../managing-notes/pdf-viewer.md)。图钉旁的**附加到主窗口（Attach to Main Window）**会把其中所有标签页移到选中的主窗口分屏，同时保留未保存的编辑和撤销历史。将鼠标悬停在标签栏上可显示视图分屏角落的控件；标签位置保持不变，已打开的菜单仍可操作，控件隐藏时分离窗口快捷键也仍然有效。
 
 关闭分离窗口会**关闭其中的标签页**，不再把它们放回主窗口。正常的保存确认仍然适用。分离标签页后，新窗口会激活，焦点会移到其编辑器。
 
@@ -95,7 +112,7 @@ VNote 启动时停留在[仪表盘](../getting-started/dashboard.md)主页标签
 
 在 Markdown 编辑器中，**Ctrl+单击**会跳转链接；普通单击只移动光标。启用**设置 → 编辑器 → 在浮层中预览链接（Preview links in an overlay）**后，目标可解析到**已打开笔记本**的受支持本地文件链接会在当前笔记上方打开，不必离开源笔记。Markdown 链接若指向已打开笔记本之外的文件，则可能在本地文件警告确认后交给系统应用打开；独立文件旁的同级文件不会自动成为 VNote 预览。浮层使用该文件通常对应的内置编辑器或查看器：可写的 Markdown、文本、Typst 和思维导图可以编辑，PDF 与图片仍然只读。外部网页不会作为可编辑笔记嵌入；文件关联和受保护笔记的授权规则仍然适用。受保护 Markdown 中的链接仅能打开已索引的笔记本笔记。
 
-链接右键菜单中的**打开链接（Open Link）**会绕过预览，按普通方式打开。点击浮层外的源笔记背景，或使用**关闭预览（Close Preview）**，即可关闭浮层；未保存的编辑仍会触发正常的关闭确认。
+链接右键菜单中的**打开链接（Open Link）**会绕过预览：在 VNote 内打开的链接始终使用新标签页，不受**总是在新标签页中打开笔记**设置影响。Markdown、Typst 和思维导图共用这一右键菜单行为；外部目标仍由系统应用打开。点击浮层外的源笔记背景，或使用**关闭预览（Close Preview）**，即可关闭浮层；未保存的编辑仍会触发正常的关闭确认。
 
 浮层中的**在标签页中打开（Open in Tab）**按钮会把预览标签页移入源笔记所在的工作区（也支持分离的源工作区）。它保留现有编辑器、草稿和撤销历史，而非重新打开文件。如需替换重复标签页，VNote 会遵循**保存（Save）**、**丢弃（Discard）**和**取消（Cancel）**的选择；取消不会默默丢弃预览。
 
@@ -103,15 +120,17 @@ VNote 启动时停留在[仪表盘](../getting-started/dashboard.md)主页标签
 
 Windows 上的 VNote 4.12，英文界面，使用合成示例笔记。上方示例笔记本截图仍来自 VNote 4.9.1。
 
-Markdown、Typst 和思维导图共用外部链接警告，并会记住**不再询问（Never Ask）**的选择。这不会关闭独立的本地文件警告，也不会绕过受保护笔记的解锁、授权和锁定保护。参见[设置](../customization/settings.md#markdown-safety-and-math)。
+Markdown、Typst 和思维导图的各个链接打开路径共用已记住的警告选择。本地文件警告与自定义协议/外部链接警告各自提供**不再询问（Never Ask）**，并分别保存偏好：关闭一种不会关闭另一种。这些选择不会绕过受保护笔记的解锁、授权、锁定或其他受保护内容的安全限制。参见[设置](../customization/settings.md#markdown-safety-and-math)。
 
-## 复制与粘贴
+## 复制与粘贴 { #rich-text-and-html-paste }
 
 除了普通的复制和粘贴，Markdown 编辑器还提供若干用于在 VNote 内外搬运内容的辅助功能：
 
 - **从剪切板插入（Insert From Clipboard）**——粘贴一个 URL 时，VNote 不会直接插入裸文本，而是询问你希望以何种方式插入。**插入为链接**会把它包装成 Markdown 链接，**插入为文本**则原样粘贴；当该 URL 指向图片、本地文件，或可作为附件添加到笔记的文件时，还会出现更多选项。
 - **交叉复制（Cross Copy）**——在**阅读模式**下，选中已渲染的内容，从右键菜单中使用**交叉复制**，即可将其作为针对特定目标应用优化过的富文本复制。VNote 会按目标改写底层 HTML——可选项包括**无背景**、**Evernote**、**OneNote**、**Microsoft Word**、**微信公众号编辑器**和**原始 HTML**——从而在粘贴到该应用时保留格式。
 - **解析为 Markdown 并粘贴（Parse to Markdown and Paste）**——当剪贴板中含有 HTML（例如从网页复制的内容）时，从编辑器的右键菜单中使用**解析为 Markdown 并粘贴**（默认 `Ctrl+G, Ctrl+P`），即可把该 HTML 转换为 Markdown 并插入。如果在[设置](../customization/settings.md)中启用了**在“解析为 Markdown 并粘贴”时将图片抓取到本地**，粘贴内容中的远程图片会被下载到笔记的附件中，并改写其链接。
+
+HTML 转 Markdown 粘贴会保留预格式化及带类名提示的代码块，包括缩进、语言提示和内嵌围栏，不复制代码块控件，也不吞掉周围正文（4.13）。公式粘贴优先使用 KaTeX/MathML HTML 中注解的 TeX，缺少注解时从受支持的 MathML 恢复公式，并保留行内/独立显示方式，不重复插入渲染文本（4.14.x）。后续修复进一步完善了命名函数、极限、正体标识符、间距、末尾 TeX 命令及标识符字体变体的恢复。公式粘贴方法参见[数学与图表](math-and-diagrams.md#pasting-formulas)。
 
 ![「从剪切板插入」弹窗，可选择插入为链接或插入为文本](../assets/screenshots/link-insert.webp){ .screenshot loading=lazy }
 

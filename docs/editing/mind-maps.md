@@ -4,7 +4,7 @@ Beyond Markdown, VNote supports **mind maps** as a first-class note type. A mind
 
 ## Mind maps are their own note type
 
-In VNote a mind map is **not** a rendering of a Markdown document; it is a distinct file type opened in the native **m3 mind-map editor**. The preferred built-in extension is now `.mmm`; `.emind` remains supported, and existing custom suffix settings are preserved. Mind maps sit alongside Markdown notes in the same notebook, folder tree, and navigation panel.
+A **standalone mind-map note** is a distinct file type opened in the native **m3 mind-map editor**. It is separate from the source-bound [outline mind-map previews](#outline-mind-maps) introduced in VNote 4.13. The preferred built-in extension is now `.mmm`; `.emind` remains supported, and existing custom suffix settings are preserved. Mind maps sit alongside Markdown notes in the same notebook, folder tree, and navigation panel.
 
 Because a mind map is a real note, everything you know about [managing notes](../managing-notes/notebooks-folders-notes.md) applies: it lives inside the Notebook Root Folder, travels with the notebook when you copy or [sync](../managing-notes/notebook-sync.md) it, and can be organized in folders.
 
@@ -25,6 +25,7 @@ The native editor includes node formatting, links, images, Find, an outline, and
 ### Building and navigating branches
 
 - Add child and sibling nodes, or create an **independent tree** on the empty canvas. Use the **Layout** menu to change the arrangement; VNote remembers the default layout for new maps.
+- Reorder branches in the **Outline** panel or toolbar outline popup as well as on the canvas; hierarchy and Undo history are preserved.
 - Duplicate an entire branch, or use node **Copy** and **Paste** to reuse it. Pasted nodes receive fresh IDs while retaining properties and internal links, and the operation can be undone in one step.
 - Right-click a node for **Expand All** or **Collapse All** to show or hide its descendants recursively, including in read-only maps. Hover over a branch to reveal its expand/collapse control.
 - Double-click a topic or blank node space to edit it, including an empty topic. Images and expand/collapse controls keep their own actions.
@@ -36,11 +37,15 @@ Insert images or hyperlinks through the toolbar, node context menu, clipboard, o
 
 Right-click a node image to view it in a zoomable overlay, copy the image or its source address, or resize it with Undo support. See [Images & Image Host](images-and-image-host.md#viewing-images).
 
-External-link warnings share the persistent **Never Ask** preference with Markdown and Typst. This does not disable separate local-file warnings or bypass protected-note authorization.
+The URL context menu offers **Open Link** above **Copy Link**, even in read-only maps. **Open Link** requests a new tab regardless of the normal new-tab preference; targets handled by another application still use that application. Local-file and custom-protocol warnings support a persistent **Never Ask** choice shared with Markdown and Typst. Only disable warnings for destinations you trust; this does not bypass protected-note authorization.
 
 ### Node properties and the Tools dock
 
 By default, node properties appear in the **Tools** dock, whose title and contents follow the active view. To keep them inside the editor instead, turn off **Settings → Editor → Mind Map Editor → Separate node properties panel**. Applying the setting moves the panel immediately without reopening the map or losing edits. Detached windows always keep properties embedded, without changing the main-window preference. Collapsing the embedded panel is separate from showing or hiding the Tools dock through **View → Windows List**.
+
+### Node notes
+
+Open a node's note preview to edit its content as plain text. The preview remains bound to that node, uses normal autosave, and cannot be promoted to an independent tab. Closing it restores focus to the source map. Read-only sources remain read-only.
 
 ### Zoom and presentation
 
@@ -63,13 +68,24 @@ Apply settings to update open maps without reloading them, including node-proper
 
 ## Printing and exporting
 
-Choose **Print** from the toolbar's three-dot **Menu** to fit the current canvas layout onto one page, including text, images, links, and active inline edits. Right-click empty canvas and choose **Export** for **Markdown**, **HTML**, or **PDF** output. HTML and PDF can include readable articles for node content as well as the visual map; see [Export](../productivity/export.md#mind-map-exports).
+Choose **Print** from the toolbar's three-dot **Menu** to fit the current canvas layout onto one page, including text, images, links, and active inline edits. Right-click empty canvas and choose **Export** for native **MindMap** source, **Markdown**, **HTML**, or **PDF** output. HTML and PDF can include readable articles for node content as well as the visual map; see [Export](../productivity/export.md#mind-map-exports).
 
 **Current buffer** export includes unsaved editor changes. **Current note** and batch exports read saved files, so save first when you want those scopes to include your latest edits. Encrypted maps cannot be exported or printed, even when unlocked.
 
-## Mind maps vs. Markdown outlines
+## Outline mind maps { #outline-mind-maps }
 
-- Reach for a **mind map** when you want a free-form, visual tree of ideas that you manipulate directly.
-- Reach for a **Markdown note** with headings and nested lists when you want linear, text-first content; its structure still drives the interactive [outline](editor-basics.md) and can be exported. See [Markdown Syntax](markdown-syntax.md).
+Choose **Mind Map** on a document's view toolbar, or press `Ctrl+G, F` (VNote 4.14.4), to open a source-bound visual preview of its outline. The shortcut is configurable as `editor.core.shortcuts.MindMap`. This does not create an `.mmm` note or convert the document. A sole leading level-one heading becomes the central topic; branches use automatic colors, and the preview focuses on the current heading. Click a mapped node to navigate to its source heading while keeping the preview open and focused.
 
-The two are complementary note types — pick whichever fits how you want to capture the material.
+Since VNote 4.14.1, writable Markdown and safely mapped Typst outlines support basic source editing through this preview:
+
+- Rename a topic to edit its source heading, add child or sibling headings, or move sections. Moves require confirmation and retain section content and hierarchy.
+- Accepted edits apply directly to the source and follow its **Auto Save**, **Backup File**, or **None** policy. The preview is not a separate saved copy; closing it does not discard edits already applied to the source.
+- **Undo/Redo** is paired with the source changes. If a topic draft cannot be applied, closing the preview offers **Discard** or **Cancel** for that draft only.
+- Read-only sources, PDF outlines, and headings without safe source mappings remain navigation-only. Generated maps are limited to basic topic and structure edits, not the full free-form features of standalone maps.
+- After editing the source independently, reopen the preview to rebuild its mappings before further navigation or edits.
+
+The **Outline** panel and popup also support reordering ordinary mind-map branches and safely mapped Typst sections, preserving content and undo history. Choose a standalone mind map for a freely arranged visual note; choose a Markdown or Typst note with an outline preview when the text document should remain the source of truth.
+
+
+
+See the official [4.13.0](https://github.com/vnotex/vnote/releases/tag/v4.13.0), [4.14.1](https://github.com/vnotex/vnote/releases/tag/v4.14.1), and [4.14.4](https://github.com/vnotex/vnote/releases/tag/v4.14.4) release notes for these additions.

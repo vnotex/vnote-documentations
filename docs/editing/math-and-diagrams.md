@@ -19,6 +19,12 @@ Math renders in read mode and in the editor's in-place and side-by-side previews
 
 For [encrypted notes](../managing-notes/encrypted-notes.md), authorized read and side-by-side previews use **Typst** when selected, otherwise bundled **KaTeX**. **Typst is the only supported in-place math renderer for protected notes**; this exception does not remove other protected-note restrictions or bypass unlocking and authorization.
 
+### Pasting formulas { #pasting-formulas }
+
+Copy rich HTML containing KaTeX or MathML formulas, then use **Parse to Markdown and Paste** (`Ctrl+G, Ctrl+P`) in the Markdown editor's context menu. VNote prefers TeX annotations; if the browser or clipboard strips them, it recovers supported MathML into editable formula source. It preserves inline versus display math and labeled underbraces without inserting duplicate rendered text. The 4.14.x improvements also cover named functions, limits, upright identifiers, supported spacing, formulas ending in TeX commands, and identifier font variants.
+
+This is not arbitrary image-to-formula recognition or a guarantee that every MathML construct converts. Check the resulting source and preview, and use a LaTeX renderer (KaTeX/MathJax) for recovered TeX: choosing Typst does not translate it. See [HTML paste](editor-basics.md#rich-text-and-html-paste), the [4.14.0](https://github.com/vnotex/vnote/releases/tag/v4.14.0), [4.14.2](https://github.com/vnotex/vnote/releases/tag/v4.14.2), and [4.14.4 release notes](https://github.com/vnotex/vnote/releases/tag/v4.14.4).
+
 ### Typst math
 
 Select **Typst** under **Math renderer** to use the bundled native runtime. Keep the same `$…$` and `$$…$$` delimiters, but write **Typst math syntax**, not LaTeX. Changing the renderer does not translate existing formulas. For example:

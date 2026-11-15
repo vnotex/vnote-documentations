@@ -19,23 +19,33 @@ Under **Settings → General**, you can control startup, naming, and shortcut po
 ## Tabs and previews
 
 - **Settings → Note Management → Always open notes in new tabs** controls ordinary note opening. Disable it to reuse the current tab; hold `Ctrl` while activating a note to request a new tab. Replacement still asks about unsaved changes. See [Editor Basics](../editing/editor-basics.md#tabs-splits-and-navigation).
-- **Settings → Editor → Preview links in an overlay** opens supported local file links over the source note. For Markdown links, the target must resolve to an open notebook; outside-notebook files may open through the system application instead. The link context menu's **Open Link** bypasses the overlay. See [link previews](../editing/editor-basics.md#link-previews).
+- **Settings → Editor → Preview links in an overlay** opens supported local file links over the source note. For Markdown links, the target must resolve to an open notebook; outside-notebook files may open through the system application instead. The link context menu's **Open Link** bypasses the overlay and opens in a new tab regardless of the ordinary new-tab preference. See [link previews](../editing/editor-basics.md#link-previews).
 - **Settings → Markdown Editor → Read → Unload inactive web view after** releases a hidden tab's Markdown web view after the configured number of minutes (default **5**). The range is **0–1440 min**; **0** is displayed as **Never**. Returning rebuilds the preview from the current Markdown without losing unsaved text or Undo history.
+
+## Markdown editing experience
+
+The Markdown view's toolbar menu offers **Markers Concealment** presets: **None**, **Passive**, **Moderate**, and **Aggressive**. They replace the older separate marker/long-link concealment toggles. VNote 4.14.4 also offers three editing experiences and shows the chooser again when upgrading from earlier versions; your saved preset remains unchanged until you accept a choice. See [Markers Concealment](../editing/editor-basics.md#markers-concealment) for the differences and how to change the experience later.
 
 ## Markdown safety and math
 
 **Settings → Markdown Editor → Read → Protect Markdown from XSS** blocks unsafe HTML and URLs in Markdown readers, live previews, and exports. Keep it enabled; disable it only for trusted notes. Filtering is always enforced for [encrypted notes](../managing-notes/encrypted-notes.md), even if you turn this option off.
 
-External-link warnings and their **Never Ask** preference are shared across Markdown, [Typst](../editing/typst.md), and mind maps. The preference is remembered; it does not disable independent local-file warnings or protected-note authorization and locking safeguards.
+External-link warnings and their remembered **Never Ask** preference are shared across Markdown, [Typst](../editing/typst.md), and mind maps. Local-file and custom-protocol warnings also offer **Never Ask**, with the saved choice shared across their warning paths. Only suppress a warning when you trust the target; these choices do not bypass protected-note authorization or locking safeguards.
 
 **Settings → Markdown Editor → Math renderer** selects **KaTeX** (default), **MathJax**, or **Typst**. Typst uses its own syntax inside the existing dollar delimiters; fenced `typst` blocks are independent of this choice. See [Math & Diagrams](../editing/math-and-diagrams.md) for examples and protected-note restrictions.
+
+## File associations and HTTP API
+
+On Windows, **Settings → File Associations** can register per-user **Read in VNote** and **Edit in VNote** context-menu actions for the applied built-in suffixes without administrator privileges. Reading opens a detached window; editing opens the main window. See [File Types](../managing-notes/file-types.md).
+
+**Settings → HTTP API** manages the optional loopback listener and notebook-scoped client tokens. Only listener settings live under `httpApi` in local `session.json`; HTTP API settings in `vnotex.json` are ignored, not migrated. Token verifiers live in a separate protected registry, not in either preferences file. Use Settings to issue and revoke tokens, and keep the listener off unless needed. Follow the [HTTP API guide](../productivity/http-api.md) for permissions, storage, and network safety.
 
 ## Layers of configuration
 
 VNote's configuration is layered, applied in order:
 
 - **Default configuration** — the application's built-in defaults. These live inside the program itself; there is no annotated file on disk to copy from. To customize a value, set it in your *user configuration* file, where it overrides the default.
-- **User configuration** — your overrides in the main `vnotex.json` file, in the user configuration folder. Anything here takes precedence over the defaults.
+- **User configuration** — your overrides in the main `vnotex.json` file, in the user configuration folder. Supported main-configuration keys here take precedence over their defaults; local-only settings such as the HTTP API listener are separate.
 - **Session configuration** — session state such as the notebook list and the main window's geometry. This is the `session.json` file. VNote writes it continuously while running and flushes it on close, so close VNote before editing it by hand.
 
 ## What's in the configuration folder

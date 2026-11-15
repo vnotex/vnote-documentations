@@ -19,6 +19,21 @@ The examples below use the [demo notebook](../getting-started/quick-start.md#try
 
 ![Welcome in read mode, with rendered headings and links between demo notes](../assets/screenshots/demo-read.webp){ .screenshot loading=lazy }
 
+## Markers Concealment { #markers-concealment }
+
+In the Markdown editor's top-right three-dot **Menu → Markers Concealment**, choose one saved preset. This changes only the source's appearance, not its contents:
+
+| Preset | Editing behavior |
+|--------|------------------|
+| **None** | Show all Markdown source. |
+| **Passive** | Show Markdown syntax while shortening long link, image, and reference URLs. |
+| **Moderate** | Hide supported Markdown markers and link syntax, reveal them when the cursor enters, and shorten long image and reference URLs. |
+| **Aggressive** | Keep supported formatting markers hidden while editing, with cursor movement skipping them; hide link syntax until cursor entry, and shorten long image and reference URLs. |
+
+**Aggressive** is the default. These presets replace the old separate marker/long-link concealment switches; those old settings were not migrated when presets arrived in 4.14.2. Use **None** if you want every source character visible.
+
+The **Choose Markdown Editing Experience** dialog offers three choices: **Conceal Markdown markers** selects **Aggressive**; **Both the left and the right look correct** selects **Moderate**; **Show Markdown markers** selects **Passive**, not **None**. The chooser appears again when upgrading from a version below 4.14.4, but your saved preset remains unchanged until you accept a choice. You can change it later in the toolbar menu. See the [4.14.4 release notes](https://github.com/vnotex/vnote/releases/tag/v4.14.4) and [tagged chooser and preset implementation](https://github.com/vnotex/vnote/blob/v4.14.4/src/widgets/markdownviewwindow2.cpp).
+
 ## Live preview
 
 While in edit mode, VNote can preview rich elements without sending you to read mode:
@@ -42,6 +57,8 @@ The **Outline** dock widget shows the heading structure of the current note. It 
 
 Drag a heading in the outline to move its whole section, including subsections; VNote adjusts heading levels to preserve the hierarchy. **Settings → Markdown Editor → Read → Heading folding**, enabled by default, controls foldable headings in read mode and exported HTML. It is separate from source folding in the editor.
 
+Use the view toolbar's **Mind Map** action (`Ctrl+G, F`) to open a source-bound outline preview, not a standalone mind-map file. For heading navigation, supported Markdown/Typst topic edits, source-linked saving and Undo, and the need to reopen after independent source changes, see [Outline mind maps](mind-maps.md#outline-mind-maps).
+
 ## Heading numbering
 
 There are two distinct numbering options under **Markdown Editor**:
@@ -57,7 +74,7 @@ The note view's three-dot **Menu** includes **Allow Auto Section Number**, on by
 
 Press `F9` to present Markdown as slides and `Escape` to leave. The bundled reveal.js slide engine works offline; remote resources in your note, such as online images, still need a connection. Level-2 and level-3 headings start slides, and a level-3 slide retains its parent level-2 heading. Use Left/Right or Space to move between slides; oversized content scrolls within its slide, including with Up/Down, `PageUp`, and `PageDown`. Presentation does not rewrite the note source.
 
-## Detached windows
+## Detached windows { #detached-windows }
 
 A view does not have to stay inside the main window:
 
@@ -65,7 +82,7 @@ A view does not have to stay inside the main window:
 - **Open as Detached** in the notebook explorer context menu opens a note directly in a detached window.
 - The `--detached-view` [command line](../getting-started/command-line.md) option does the same from a terminal or a script.
 
-A detached window carries a **Stay on Top** pin (`F10`) so you can keep it above other windows while you work elsewhere — useful for a reference note or a [PDF](../managing-notes/pdf-viewer.md).
+A detached window carries a **Stay on Top** pin (`F10`) so you can keep it above other windows while you work elsewhere — useful for a reference note or a [PDF](../managing-notes/pdf-viewer.md). **Attach to Main Window**, beside the pin, moves all its tabs into the selected main-window split while preserving unsaved edits and Undo history. Hover over the tab strip to reveal the view-split corner controls; the tabs stay in place, open menus remain usable, and detached-window shortcuts still work while the controls are hidden.
 
 Closing a detached window **closes its tabs**; it no longer reattaches them to the main window. Normal save confirmation still applies. Detaching a tab activates the new window and focuses its editor.
 
@@ -95,7 +112,7 @@ Use **Save All** in a tab’s context menu to save all modified notes. **Outline
 
 In the Markdown editor, **Ctrl+click** follows a link; an ordinary click only positions the cursor. With **Settings → Editor → Preview links in an overlay** enabled, supported local file links whose targets resolve to an **open notebook** open over the current note rather than taking you away from it. A Markdown link to a file outside open notebooks can instead open through the system application, subject to the local-file warning; a standalone sibling file is not automatically a VNote preview. The overlay uses the file's normal built-in editor or viewer: Markdown, text, Typst, and mind maps can be edited when writable, while PDF and image files remain read-only. External web pages are not embedded as editable notes; file associations and protected-note authorization still apply. Protected Markdown links can open only indexed notebook notes.
 
-Use **Open Link** in the link's context menu to bypass preview and open normally. Click the source-note backdrop outside the overlay, or **Close Preview**, to dismiss it; unsaved edits still receive normal close confirmation.
+Use **Open Link** in the link's context menu to bypass preview: links opened inside VNote always use a new tab, regardless of **Always open notes in new tabs**. Markdown, Typst, and mind maps share this context-menu behavior; external targets still use the system application. Click the source-note backdrop outside the overlay, or **Close Preview**, to dismiss it; unsaved edits still receive normal close confirmation.
 
 The overlay's **Open in Tab** button moves its preview tabs into the source note's workspace (including a detached source workspace). It keeps the existing editors, drafts, and Undo history rather than reopening the files. If a duplicate tab must be replaced, VNote honors **Save**, **Discard**, and **Cancel**; cancellation does not silently discard the preview.
 
@@ -103,15 +120,17 @@ The overlay's **Open in Tab** button moves its preview tabs into the source note
 
 VNote 4.12 on Windows, English interface, with synthetic sample notes. The demo-notebook screenshots above remain from VNote 4.9.1.
 
-Markdown, Typst, and mind maps share external-link warnings and the remembered **Never Ask** choice. This does not disable separate local-file warnings or bypass protected-note unlocking, authorization, and locking safeguards. See [Settings](../customization/settings.md#markdown-safety-and-math).
+Markdown, Typst, and mind maps share remembered warning choices across their link-opening paths. Local-file warnings and custom-protocol/external-link warnings each offer **Never Ask** and retain separate preferences: opting out of one does not disable the other. These choices do not bypass protected-note unlocking, authorization, locking, or other protected-content safeguards. See [Settings](../customization/settings.md#markdown-safety-and-math).
 
-## Copying and pasting
+## Copying and pasting { #rich-text-and-html-paste }
 
 Beyond plain copy and paste, the Markdown editor has several helpers for moving content in and out of VNote:
 
 - **Insert From Clipboard** — paste a URL and VNote asks how you want it inserted instead of dropping in the bare text. **Insert As Link** wraps it in a Markdown link and **Insert As Text** pastes it verbatim; further choices appear when the URL points at an image, at a local file, or at a file you can attach to the note.
 - **Cross Copy** — in **read mode**, select the rendered content and use **Cross Copy** from the context menu to copy it as rich text tuned for a specific target application. VNote rewrites the underlying HTML per target — options include **No Background**, **Evernote**, **OneNote**, **Microsoft Word**, **WeChat Public Account Editor**, and **Raw HTML** — so the formatting survives when you paste into that app.
 - **Parse to Markdown and Paste** — when the clipboard contains HTML (for example content copied from a web page), use **Parse to Markdown and Paste** from the editor's context menu (default `Ctrl+G, Ctrl+P`) to convert that HTML to Markdown and insert it. If **Fetch images to local in Parse To Markdown And Paste** is enabled in [Settings](../customization/settings.md), remote images in the pasted content are downloaded into the note's assets and their links rewritten.
+
+HTML-to-Markdown paste preserves preformatted and class-hinted code blocks, including indentation, language hints, and embedded fences, without copying code-block controls or swallowing surrounding prose (4.13). Formula paste prefers annotated TeX in KaTeX/MathML HTML, falls back to supported MathML when annotations are missing, and preserves inline/display placement without duplicate rendered text (4.14.x). Later fixes improve named functions, limits, upright identifiers, spacing, trailing TeX commands, and identifier font variants. See [Math & Diagrams](math-and-diagrams.md#pasting-formulas) for the formula workflow.
 
 ![The Insert From Clipboard popup, offering Insert As Link or Insert As Text](../assets/screenshots/link-insert.webp){ .screenshot loading=lazy }
 

@@ -1,45 +1,47 @@
 # United Entry
 
-**United Entry** is VNote's command-driven quick search. Instead of opening a panel and setting options, you activate a single box, type a short **entry command** followed by your **search criteria**, and jump straight to a folder, note, or file — all from the keyboard.
+**United Entry** is VNote's keyboard-first quick search. Type ordinary text to search **file names across all open notebooks**. To use a command or alias instead, start with an explicit **`>`** prefix — for example, `>history` or `>g interface`. Without `>`, even words such as `task` or `find` are filename queries. This input model was introduced in [4.14.0](https://github.com/vnotex/vnote/releases/tag/v4.14.0).
 
 ## Activation
 
 By default, press `Ctrl+G, G` to activate United Entry. You can change this by editing `"UnitedEntry": "Ctrl+G, G"` in the configuration file (see [Settings](../customization/settings.md)) to whatever shortcut you prefer.
 
-Once open, typing an entry command filters the box to that command's mode. Adding a **space** after the command triggers a second, detailed help display for that command.
+Empty input shows the available commands. Type `>` followed by a command name to enter command mode; adding a **space** after the command shows its detailed help.
+
+**Settings → United Entry → Expand All** controls automatic expansion of result groups. It is enabled by default for new configurations, while saved choices are retained. The preference moved to this dedicated settings page in [4.14.1](https://github.com/vnotex/vnote/releases/tag/v4.14.1).
 
 ![United Entry, with an entry command typed in](../assets/screenshots/united-entry.webp){ .screenshot loading=lazy }
 
 ## Entry commands
 
-United Entry ships with five built-in commands plus a few short aliases for common searches. Combine a command with a keyword to run the query.
+United Entry ships with five built-in commands plus a few short aliases for common searches. Prefix every command or alias with `>` and combine it with a keyword to run the query.
 
 Built-in commands:
 
 | Command    | Description                             |
 | ---------- | --------------------------------------- |
-| `find`     | Search for files in notebooks           |
-| `help`     | Help information about United Entry      |
-| `history`  | Recently opened files                   |
-| `windows`  | Open windows across workspaces          |
-| `task`     | Run a task                              |
+| `>find`     | Search for files in notebooks           |
+| `>help`     | Help information about United Entry      |
+| `>history`  | Recently opened files                   |
+| `>windows`  | Open windows across workspaces          |
+| `>task`     | Run a task                              |
 
-The `task` command lists the runnable [tasks](../productivity/tasks.md) you have defined, so you can start one without opening the Tasks dock. Only leaf tasks are listed, because only they can be run; a task inside a group is shown as `parent/child`. Typing after the command filters the list by label, ignoring case. With nothing to show it says **No tasks**, and when a filter excludes everything, **No matching tasks**.
+The `>task` command lists the runnable [tasks](../productivity/tasks.md) you have defined, so you can start one without opening the Tasks dock. Only leaf tasks are listed, because only they can be run; a task inside a group is shown as `parent/child`. Typing after the command filters the list by label, ignoring case. With nothing to show it says **No tasks**, and when a filter excludes everything, **No matching tasks**. Notebook-scoped tasks still require [local notebook trust](../productivity/tasks.md#notebook-task-trust) before variable evaluation or execution.
 
-Default aliases (shortcuts for common `find` queries) are case-sensitive: lowercase `n`, `g`, and `t` search the current notebook; uppercase `N`, `G`, and `T` search all notebooks. This alias selection is separate from `--case-sensitive`, which controls matching the search text.
+Default aliases (shortcuts for common `>find` queries) are case-sensitive: `>n`, `>g`, and `>t` search the current notebook; `>N`, `>G`, and `>T` search all notebooks. This alias selection is separate from `--case-sensitive`, which controls matching the search text.
 
 | Alias | Description                                    | Expands to                              |
 | ----- | ---------------------------------------------- | --------------------------------------- |
-| `n`   | Search files by name in the current notebook   | `find --scope notebook --object name`   |
-| `g`   | Search files by content in the current notebook| `find --scope notebook --object content`|
-| `t`   | Search files by tag in the current notebook    | `find --scope notebook --object tag`    |
-| `N`   | Search files by name in all notebooks          | `find --scope all_notebook --object name` |
-| `G`   | Search files by content in all notebooks       | `find --scope all_notebook --object content` |
-| `T`   | Search files by tag in all notebooks           | `find --scope all_notebook --object tag` |
-| `b`   | Search files by content in open buffers        | `find --scope buffer --object content`  |
-| `f`   | Search files by name in the current folder     | `find --scope folder --object name`     |
+| `>n`   | Search files by name in the current notebook   | `>find --scope notebook --object name`   |
+| `>g`   | Search files by content in the current notebook| `>find --scope notebook --object content`|
+| `>t`   | Search files by tag in the current notebook    | `>find --scope notebook --object tag`    |
+| `>N`   | Search files by name in all notebooks          | `>find --scope all_notebook --object name` |
+| `>G`   | Search files by content in all notebooks       | `>find --scope all_notebook --object content` |
+| `>T`   | Search files by tag in all notebooks           | `>find --scope all_notebook --object tag` |
+| `>b`   | Search files by content in open buffers        | `>find --scope buffer --object content`  |
+| `>f`   | Search files by name in the current folder     | `>find --scope folder --object name`     |
 
-You can also call `find` directly with options for full control:
+You can also call `>find` directly with options for full control:
 
 - `-s, --scope` — `buffer`, `folder`, `notebook`, or `all_notebook`.
 - `-b, --object` — `name`, `content`, `tag`, or `path`.
@@ -49,7 +51,7 @@ You can also call `find` directly with options for full control:
 
 ## Adding your own aliases
 
-The default aliases cover only a slice of what `find` can do. You can define your own single-letter (or short) aliases in the configuration file under `core.unitedEntry.alias` (see [Settings](../customization/settings.md)). Choose unused names rather than overriding built-ins such as `t`. Each alias is an object with a `name` (what you type), a `description` (shown in the help list), and a `value` (the `find` command it expands to):
+The default aliases cover only a slice of what `>find` can do. You can define your own single-letter (or short) aliases in the configuration file under `core.unitedEntry.alias` (see [Settings](../customization/settings.md)). Choose unused names rather than overriding built-ins such as `t`. Each alias has a `name`, a `description` shown in help, and a `value` containing the command expansion. **Do not include `>` in the JSON `name` or `value`**: VNote adds it internally when parsing the expansion. You type `>q example`, but store `"name": "q"` and `"value": "find --scope all_notebook --object name"`, as in the [tagged alias parser](https://github.com/vnotex/vnote/blob/v4.14.4/src/unitedentry/unitedentryalias.cpp):
 
 ```json
 "core": {
@@ -93,16 +95,22 @@ The default aliases cover only a slice of what `find` can do. You can define you
 Mix and match any `--scope` with any `--object` (`name`, `content`, `tag`, `path`) to build the shortcuts you use most. Restart VNote for new aliases to take effect.
 
 !!! note "Migrating aliases from older VNote"
-    Older VNote versions used a top-level `united_entry.alias` key and a `--target file|folder|notebook` option. In the current version, aliases live under `core.unitedEntry.alias` and `find` no longer takes `--target` — use `--scope` and `--object` instead.
+    Older VNote versions used a top-level `united_entry.alias` key and a `--target file|folder|notebook` option. In the current version, aliases live under `core.unitedEntry.alias` and `>find` no longer takes `--target` — use `--scope` and `--object` instead.
+
+When upgrading from a version below **4.14.1**, VNote adds missing default aliases to a **nonempty** saved list, preserving custom definitions. An explicitly empty list stays empty. This migration is documented in the [4.14.2 release notes](https://github.com/vnotex/vnote/releases/tag/v4.14.2).
 
 ## Examples
 
-- `n 02` — find files whose name contains `02` in the current notebook.
-- `g interface` — search the current notebook for notes whose content contains `interface`.
-- `G interface` — search all notebooks for content containing `interface`.
-- `t java` / `T java` — find notes tagged `java` in the current notebook / all notebooks.
-- `b task` — find `task` among the currently open buffers.
-- `find -b tag -s all_notebook java` — find notes tagged `java` across all notebooks.
+- `release plan` — search filenames across all open notebooks; no command is needed.
+- `>history` — list recently opened files.
+- `>task Git` — filter runnable tasks by label.
+
+- `>n 02` — find files whose name contains `02` in the current notebook.
+- `>g interface` — search the current notebook for notes whose content contains `interface`.
+- `>G interface` — search all notebooks for content containing `interface`.
+- `>t java` / `>T java` — find notes tagged `java` in the current notebook / all notebooks.
+- `>b task` — find `task` among the currently open buffers.
+- `>find -b tag -s all_notebook java` — find notes tagged `java` across all notebooks.
 
 ## Locating a result
 

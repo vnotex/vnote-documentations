@@ -43,6 +43,8 @@ The **Outline** lists compiled headings. Selecting a heading navigates to its lo
 - Use the zoom controls to choose a scale or fit the page/width. The PDF context menu also offers **Fit width** and **Fit page**, plus **Copy**, **Select page text**, and **Clear selection**.
 - **Presentation Mode** (`F9`) presents the PDF; `Escape` exits. This presents compiled pages, not Markdown/reveal.js slides.
 
+Use the toolbar **Mind Map** action or `Ctrl+G, F` for a source-bound [outline mind map](mind-maps.md#outline-mind-maps). Safely mapped, writable Typst headings can be renamed, extended, and reordered from that preview; PDF-only or unmapped headings remain navigation-only.
+
 ## Theme and document styles
 
 **Menu → Theme Style in Preview** is enabled by default for each view. It applies theme colors to the default page background and text in previews; explicit document styles take precedence. Turn it off when you want to inspect the document without theme styling. VNote 4.12 also follows the active theme for editor fonts and preview backgrounds and discovers installed system fonts for missing glyphs while respecting configured font precedence.
@@ -51,15 +53,15 @@ Theme preview colors do not rewrite your source or become document styles in out
 
 ## PDF output and printing { #pdf-output-and-printing }
 
-The compiled PDF pane is a preview, not a saved PDF file. **VNote 4.12 has no dedicated compiled-PDF save/export or Print action in the native Typst view.** The main [Export](../productivity/export.md) dialog can produce a PDF containing the Typst **source as text**; that is not the typeset PDF shown in the preview.
+Since VNote 4.13, the main [Export](../productivity/export.md) dialog supports native Typst **PDF**, **HTML**, and **Typst** source output. Open it from the main file toolbar or press `Ctrl+G, T`, then choose the target:
 
-To create a typeset PDF file, save the `.typst` source and use a separately installed [Typst CLI](https://typst.app/open-source/). From the note's directory, the [official compile command](https://github.com/typst/typst#usage) is:
+- **PDF** compiles the document with the bundled Typst compiler, preserving authored page sizes, margins, and layout. It exports typeset pages, not source text; no separate Typst CLI or `wkhtmltopdf` installation is required.
+- **HTML** uses Typst's native HTML compiler. Compilation errors and unsupported constructs are reported in the export log; HTML is not a screenshot of the PDF pages.
+- **Typst** copies the source and internal relative images. Imported source files and dynamic image references are not bundled; inspect the log and supply those dependencies yourself.
 
-```sh
-typst compile "Field Notes.typst" "Field Notes.pdf"
-```
+**Current buffer** includes unsaved source changes; **Current note** and batch scopes read disk. Native compilation still requires an existing source file and its project directory, with resources available inside the project. A **Custom** command without **HTML input** uses the original disk file even for Current buffer; see [Custom export](../productivity/export.md#custom).
 
-Open the resulting PDF in a PDF application to print it. This external compiler installation is needed only for this output route, not VNote editing and previews. Keep the document's resources and required fonts available to that compiler; its version and fonts can affect the output.
+Native Typst PDF does not use the dialog's web rendering/syntax styles, HTML-based PDF page settings, `wkhtmltopdf`, or PDF **All-in-one**. Set the printed appearance in your Typst source. The shared [export stylesheet](../customization/themes-and-styles.md#applying-export-styles) can style HTML and HTML inputs for custom conversion, but not native Typst PDF. To print typeset pages, export PDF and open it in a PDF application.
 
 ## Insert images, links, and files
 
@@ -76,8 +78,8 @@ The directory containing the `.typst` file is its **Typst project root**. Keep i
 - Image viewing and source-location navigation reject paths that escape the project, including through filesystem links. Copy the resource into the project rather than trying to bypass the boundary.
 - Compilation does not automatically download packages. Do not assume a network import or an image outside the project will work merely because it works in another Typst setup.
 
-Local-file hyperlinks are different from resources loaded by the compiler: VNote routes them through its normal file-opening behavior. Markdown, Typst, and mind maps share external-link warnings and the remembered **Never Ask** preference. That preference does not disable separate local-file warnings or protected-note safeguards; see [Settings](../customization/settings.md#markdown-safety-and-math).
+Local-file hyperlinks are different from resources loaded by the compiler: VNote routes them through its normal file-opening behavior. Markdown, Typst, and mind maps share remembered **Never Ask** choices for local-file and custom-protocol link warnings. Context-menu **Open Link** requests a new tab regardless of the normal new-tab preference; externally handled targets still use their associated application. Warning opt-outs do not bypass protected-note safeguards; see [Settings](../customization/settings.md#markdown-safety-and-math).
 
 ## Typst inside Markdown
 
-You do not need to convert a Markdown note to `.typst` to use Typst formulas or figures. [Math & Diagrams](math-and-diagrams.md) explains the optional **Typst** math renderer and independent fenced `typst` blocks, including their Markdown preview/export behavior. Those embedded blocks are not the same as this native document editor or its PDF-output limitation.
+You do not need to convert a Markdown note to `.typst` to use Typst formulas or figures. [Math & Diagrams](math-and-diagrams.md) explains the optional **Typst** math renderer and independent fenced `typst` blocks, including their Markdown preview/export behavior. Those embedded blocks are not the same as this native document editor or its native export pipeline.

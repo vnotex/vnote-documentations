@@ -29,13 +29,17 @@
 
 ![列出笔记本中所有标签的标签停靠部件](../assets/screenshots/tags.webp){ .screenshot loading=lazy }
 
+## 调整标签层级 { #change-the-tag-hierarchy }
+
+在可写捆绑笔记本的**标签**树中，将一个标签拖到另一个标签上，即可把它设为后者的子标签。这会改变父子层级，而非笔记所在的文件夹。移动仅限同一笔记本内，且不能将标签移到自身或自己的后代之下。标签层级拖放始于 [4.13.0](https://github.com/vnotex/vnote/releases/tag/v4.13.0)。
+
 ## 用统一入口按标签查找
 
-[统一入口](../search/united-entry.md)可以按标签搜索，因此你无需打开停靠部件，就能用键盘跳转到带标签的笔记。使用 `find` 命令，配合标签对象与作用域：
+[统一入口](../search/united-entry.md)可以按标签搜索，因此你无需打开停靠部件，就能用键盘跳转到带标签的笔记。使用 `>find` 命令，配合标签对象与作用域；`>` 前缀不可省略：
 
-- `find -b tag -s notebook`——在当前笔记本中按标签搜索。
-- `find -b tag -s folder`——在当前文件夹中按标签搜索。
-- `find -b tag -s all_notebook`——在所有笔记本中按标签搜索。
+- `>find -b tag -s notebook`——在当前笔记本中按标签搜索。
+- `>find -b tag -s folder`——在当前文件夹中按标签搜索。
+- `>find -b tag -s all_notebook`——在所有笔记本中按标签搜索。
 
 输入命令，再输入标签关键词，即可即时筛选。
 

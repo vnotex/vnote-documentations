@@ -16,6 +16,10 @@ VNote 从应用数据文件夹和当前捆绑笔记本加载任务：
 
 每个任务由一个 `*.json` 入口文件定义，子文件夹会被递归扫描。应用数据位置参见[设置](../customization/settings.md)。自定义任务应使用自己的文件，不要直接修改升级时可能被替换的内置任务。
 
+### 笔记本任务信任 { #notebook-task-trust }
+
+自 [4.14.2](https://github.com/vnotex/vnote/releases/tag/v4.14.2) 起，**在求值任何任务变量或运行任务之前**，必须批准在**本机**信任该笔记本。批准前应检查笔记本中的任务定义，因为任务变量本身也可能执行 shell 命令。授权会在 VNote 重启后保留，但显式关闭笔记本时会被清除。只有新建的本地笔记本会自动获得信任；打开已有、复制、恢复或从远端获取的笔记本不会自动授权。此规则针对笔记本范围的任务，而非应用数据目录中的任务。
+
 ## 一个简单的任务
 
 在任务面板中点击**打开任务文件夹（Open Task Folder）**。创建一个名为 `hello` 的文件夹，并在其中创建文件 `hello.json`：
@@ -28,7 +32,7 @@ VNote 从应用数据文件夹和当前捆绑笔记本加载任务：
 }
 ```
 
-点击任务面板中的**重新加载（Reload）**，一个 `hello` 任务便会出现。双击它，或从右键菜单选择**运行（Run）**；输出显示在**控制台（Console）**中。这些 shell 示例使用 Windows 默认的 PowerShell，或 Linux/macOS 默认的 Bash。你也可以用**新建任务（New Task）**创建可编辑的初始文件，或在[统一入口](../search/united-entry.md)中用 `task` 命令运行任务。
+点击任务面板中的**重新加载（Reload）**，一个 `hello` 任务便会出现。双击它，或从右键菜单选择**运行（Run）**；输出显示在**控制台（Console）**中。这些 shell 示例使用 Windows 默认的 PowerShell，或 Linux/macOS 默认的 Bash。你也可以用**新建任务（New Task）**创建可编辑的初始文件，或在[统一入口](../search/united-entry.md)中用 `>task` 命令运行任务。
 
 ### 自定义菜单项
 
@@ -45,6 +49,8 @@ VNote 从应用数据文件夹和当前捆绑笔记本加载任务：
 把图标文件（`tasks-solid.svg`）与 JSON 入口文件放在一起。
 
 ### 子任务
+
+在任务树中双击 **Git** 等容器，或选中后按 `Enter`，可以展开或折叠它。即使筛选隐藏了子项，操作仍然有效；激活容器不会运行其子任务。叶子任务的执行方式保持不变。参见 [4.14.4](https://github.com/vnotex/vnote/releases/tag/v4.14.4)。
 
 任务可以任意层级嵌套。子任务继承版本、类型、命令、参数和执行选项，但不继承标签、输入定义或子任务列表。提示输入所需的 `inputs` 应定义在使用它的子任务中。
 
@@ -202,4 +208,4 @@ v4.12 中可用的输入类型为 `promptString`。虽然能解析 `pickString`�
 
 这里的工作目录会展开 VNote 变量，而 `LC_ALL` 是字面环境变量值。`--` 将 Git 选项与文件路径分开。此任务不会提交或修改文件。
 
-内置的 [Git 任务](https://github.com/vnotex/vnote/blob/3d4c806c29de7a01416da5352d22bfe21bc6a128/src/data/extra/tasks/git/git.json)也是一个参考：提交命令是静态的，提示输入的提交信息通过 `args` 传递，Windows 则使用单独的静态 PowerShell 命令。
+内置的 [Git 任务](https://github.com/vnotex/vnote/blob/v4.14.4/src/data/extra/tasks/git/git.json)也是一个参考：提交命令是静态的，提示输入的提交信息通过 `args` 传递，Windows 则使用单独的静态 PowerShell 命令。

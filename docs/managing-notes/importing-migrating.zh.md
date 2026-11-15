@@ -11,9 +11,9 @@ VNote 笔记本是一个文件目录，因此可以导入已有笔记，也可�
 
 你也可以从 VNote 之外直接把文件复制到笔记本根文件夹中。它们随后会显示为[外部文件](notebooks-folders-notes.md#the-index-and-external-files)，你可以用**导入到索引（Import to Index）**将其纳入——或者只要启用了**打开时导入外部文件（Import External Files on Open）**，VNote 会在你第一次打开时替你纳入。对于层级较深的目录树，**导入文件夹**更省事，因为纳入外部文件夹每次只能处理一层。
 
-### 什么时候更适合用原始笔记本
+### 什么时候更适合用原始笔记本 { #when-a-raw-notebook-is-the-better-fit }
 
-要动手体验，可[打开文档仓库中的示例笔记本](../getting-started/quick-start.md#try-the-demo-notebook)。笔记本面板菜单也提供**打开文件夹为原生笔记本（Open Folder As Raw Notebook）**：选中 `demo-notebook/` 即可就地浏览，不会复制文件。此操作不同于**导入文件夹**或**打开笔记本**；后者用于打开捆绑笔记本。
+要动手体验，可[打开文档仓库中的示例笔记本](../getting-started/quick-start.md#try-the-demo-notebook)。自 [4.13.0](https://github.com/vnotex/vnote/releases/tag/v4.13.0) 起，**打开文件夹为原生笔记本（Open Folder As Raw Notebook）**位于笔记本面板的**标题栏**，不再位于原先的三点菜单中：选中 `demo-notebook/` 即可就地浏览，不会复制文件。此操作不同于**导入文件夹**或**打开笔记本**；后者用于打开捆绑笔记本。
 
 当文件夹应当按其现状被接纳时，选择**类型 → 原始笔记本（Raw notebook）**并让 VNote 指向你的目录：
 
@@ -32,6 +32,8 @@ VNote 笔记本是一个文件目录，因此可以导入已有笔记，也可�
 2. VNote 读取该笔记本的配置文件并将其还原——文件夹、笔记和设置都会一如从前地重新出现。
 
 在另一台机器上创建的笔记本，或从备份中恢复的笔记本，都是这样接入的。原始笔记本的文件夹中没有配置，因此接入它的方式与创建时相同：使用**新建笔记本**并将**类型**设为**原始笔记本（Raw notebook）**，指向该目录即可。
+
+打开或恢复已有笔记本不会自动信任其中的笔记本任务。请先检查任务定义，再批准本机的[笔记本任务信任](../productivity/tasks.md#notebook-task-trust)；授权会在重启后保留，但显式关闭笔记本时会被清除。
 
 !!! warning "检查加密笔记的版本兼容性"
     VNote 4.10 引入了自包含的 v2 加密笔记和备份；旧版 VNote 无法读取。目标设备应使用 VNote 4.10 或更高版本，升级或恢复前请阅读[加密笔记迁移与恢复指引](encrypted-notes.md)。自包含密钥不能替代本页介绍的完整笔记本、完整分享文件夹或跨笔记本迁移流程。

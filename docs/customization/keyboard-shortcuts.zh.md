@@ -47,7 +47,17 @@ VNote 的部分快捷键是组合序列，写作以逗号分隔的两部分。�
 
 **PresentationMode** 默认为 `F9`，属于 `editor.core.shortcuts`，不在上面的应用级操作表中。它会演示当前的 [Markdown](../editing/editor-basics.md)、[文本](../editing/text.md)、[Typst](../editing/typst.md)、[思维导图](../editing/mind-maps.md)或 [PDF](../managing-notes/pdf-viewer.md) 视图，按 `Escape` 退出。它与主窗口的 `FullScreen` 操作（`F11`）不同。
 
-**NewQuickNote** 使用 `core.shortcuts.NewQuickNote`（默认为 `Ctrl+Alt+Q`），VNote 运行期间会将其注册为全局热键，能否使用取决于操作系统支持及快捷键冲突情况。即使主窗口隐藏，它也能打开[快速笔记](../productivity/quick-note.md)方案选择器。默认开启的**允许 Ctrl+Alt 快捷键**设置可在关闭并重启后停用它及其他 `Ctrl+Alt` 绑定；参见[设置](settings.md#general-settings)。
+**NewQuickNote** 使用 `core.shortcuts.NewQuickNote`（默认为 `Ctrl+Alt+Q`），VNote 运行期间会将其注册为全局热键，能否使用取决于操作系统支持及快捷键冲突情况。仅有一个可用方案时，它会直接创建[快速笔记](../productivity/quick-note.md)，跳过方案选择器；有多个方案时则打开选择器。主窗口隐藏时也可使用。默认开启的**允许 Ctrl+Alt 快捷键**设置可在关闭并重启后停用它及其他 `Ctrl+Alt` 绑定；参见[设置](settings.md#general-settings)。
+
+## 思维导图与任务列表快捷键 { #mind-map-and-task-list-shortcuts }
+
+**MindMap** 位于 `editor.core.shortcuts.MindMap`，默认为 `Ctrl+G, F`。它调用共用的视图窗口**思维导图（Mind Map）**操作；文档大纲的用途参见[大纲思维导图](../editing/mind-maps.md#outline-mind-maps)。已有配置会继承 4.14.4 的默认按键，除非已经显式自定义或禁用了该绑定。
+
+在 Markdown 中，`Ctrl+8` 插入未完成任务列表项，`Ctrl+9` 插入已完成任务列表项。这两个默认按键在 4.13 取代了无序/有序列表绑定。
+
+## 文本输入框快捷键 { #text-field-shortcuts }
+
+在可编辑的纯文本输入框中，`Ctrl+W` 删除选中文字或前一个词，`Ctrl+U` 删除选中文字或从光标到当前段落开头的全部内容。在单行输入框中，`Ctrl+U` 删除到输入框开头。这些快捷键作用于当前聚焦的输入框，而不是笔记标签页，也不会修改只读输入框。
 
 ## 快捷键在哪里定义
 
@@ -64,7 +74,8 @@ VNote 的部分快捷键是组合序列，写作以逗号分隔的两部分。�
     "core": {
         "shortcuts": {
             "ApplySnippet": "Ctrl+G, I",
-            "PresentationMode": "F9"
+            "PresentationMode": "F9",
+            "MindMap": "Ctrl+G, F"
         }
     }
 }
